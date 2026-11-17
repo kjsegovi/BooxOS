@@ -105,7 +105,7 @@ km_registered() {
 vold_msg() {
   # vold first, then kernel/fs_mgr, then keystore2 (noisy even on stock)
   m=$(logcat -d -b main,system 2>/dev/null | grep -E " [EF] (vold|Vold|fscrypt|MetadataCrypt|KeyStorage) *:" \
-      | head -1 | sed 's/^.* [VDIWEF] [^:]*: //')
+      | grep -v -i earlybootended | head -1 | sed 's/^.* [VDIWEF] [^:]*: //')
   [ -n "$m" ] || m=$(dmesg 2>/dev/null | grep -i -E "fs_mgr|userdata|metadata_encryption|default-key|f2fs" \
       | grep -i -E "fail|error|invalid|unable|cannot" | head -1 | sed 's/^\[[^]]*\] *//')
   [ -n "$m" ] || m=$(logcat -d -b main,system 2>/dev/null | grep -E " [EF] (keystore2|Keystore) *:" \
