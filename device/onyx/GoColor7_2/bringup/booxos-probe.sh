@@ -23,7 +23,11 @@ BR=/sys/class/backlight/onyx_bl_br/brightness
 CT=/sys/class/backlight/onyx_bl_ct/brightness
 STALL_SECS=90      # reboot if the state string stops changing this long
 DEADLINE_SECS=200  # reboot if not fully booted by then
-LOGDIR=/data/local/tmp/booxos
+MAXLEN=91          # property / reason file limit
+# The probe starts before APEX activation, so it stays in init's bootstrap
+# mount namespace and can't see /data directly. Go through init's view.
+INITROOT=/proc/1/root
+LOGDIR=$INITROOT/data/local/tmp/booxos
 
 klog() { ( echo "booxos-probe: $*" > /dev/kmsg ) 2>/dev/null; }
 uptime_s() { cut -d. -f1 /proc/uptime; }
@@ -45,6 +49,41 @@ waiting_on() {
 }
 
 short() { echo "$1" | cut -c1-$2; }
+
+# How init last saw a service die, from its kernel-log line
+# "Service 'NAME' (pid N) exited with status X" / "... received signal X".
+# Prints e<status> / s<signal> plus the death count, or x.
+svc_exit() {
+  l=$(dmesg 2>/dev/null | grep -E "Service '$1' \(pid [0-9]+\) (exited with status|received signal)")
+  [ -n "$l" ] || { echo x; return; }
+  n=$(echo "$l" | grep -c .)
+  last=$(echo "$l" | tail -1)
+  case "$last" in
+    *"exited with status "*) c=e$(echo "$last" | sed 's/.*exited with status \([0-9-]*\).*/\1/') ;;
+    *) c=s$(echo "$last" | sed 's/.*received signal \([0-9-]*\).*/\1/') ;;
+  esac
+  echo "${c}n$n"
+}
+
+# First useful error text for a crash: native abort message, else the first
+# exception/error line in the crash buffer, else zygote/AndroidRuntime errors.
+crash_msg() {
+  c=$(logcat -b crash -d 2>/dev/null)
+  m=$(echo "$c" | grep -m1 "Abort message:" | sed 's/.*Abort message: *//')
+  if [ -z "$m" ]; then
+    m=$(echo "$c" | grep -v "FATAL EXCEPTION" | grep -m1 -E "Exception|Error|failed|cannot|not found" \
+        | sed 's/^.* [VDIWEF] [^:]*: //')
+  fi
+  if [ -z "$m" ]; then
+    m=$(logcat -d -b main,system 2>/dev/null | grep -E " [EF] (Zygote|AndroidRuntime|zygote|zygote64|app_process|linker)" \
+        | grep -m1 -E "Exception|Error|failed|cannot|not found|died" | sed 's/^.* [VDIWEF] [^:]*: //')
+  fi
+  [ -n "$m" ] || m=none
+  # stock lowercases the reason; keep it compact and comma/space free
+  echo "$m" | tr -d "'\"" \
+    | sed 's/java\.lang\.//g; s/dalvik\.system\.//g; s/dlopen failed: /dlopen:/g; s/android\.//g; s/: */:/g' \
+    | tr 'A-Z' 'a-z' | tr -c 'a-z0-9._:/=\n-' '_' | tr -s '_' | sed 's/^_//' | head -1
+}
 
 # --- adb: mirrors stock vendor init.qcom.usb.rc (adb-only config) ---
 ADB=0   # 0 not tried, 1 configfs, 2 functionfs, 3 adbd started, 4 ep1, 5 UDC bound
@@ -117,7 +156,7 @@ HB=0
 
 while true; do
   NOW=$(uptime_s)
-  D=0; grep -q " /data " /proc/mounts && D=1
+  D=0; grep -q " /data " /proc/1/mounts && D=1
   APX=$(p apexd.status)
   K=$(p odsign.key.done)
   BPF=$(p init.svc.bpfloader)
@@ -134,14 +173,7 @@ while true; do
   [ $S = 6 ] && [ "$Z" = running ] && S=7
   [ "$BC" = 1 ] && S=8
 
-  if [ -n "$BOOXOS_PROBE_ONCE" ]; then
-    # test mode: print the state string once, no side effects
-    W=$(waiting_on)
-    echo "reboot,bx,s$S,d$D,a$(short "${APX:-x}" 3),k${K:-x},b$(short "${BPF:-x}" 3),v${V:-x},z$(short "${Z:-x}" 3),u$ADB$(udc_state),w$(short "$W" 14),t$((NOW-START))"
-    exit 0
-  fi
-
-  if [ $ADB = 0 ] && [ "$APX" = activated -o "$APX" = ready ]; then
+  if [ -z "$BOOXOS_PROBE_ONCE" ] && [ $ADB = 0 ] && [ "$APX" = activated -o "$APX" = ready ]; then
     adb_try
     klog "adb step=$ADB udc=$(udc_state)"
   fi
@@ -149,6 +181,24 @@ while true; do
   W=$(waiting_on)
   STATE="reboot,bx,s$S,d$D,a$(short "${APX:-x}" 3),k${K:-x},b$(short "${BPF:-x}" 3),v${V:-x},z$(short "${Z:-x}" 3),u$ADB$(udc_state),w$(short "$W" 14)"
   CRUMB="$STATE,t$((NOW-START))"
+
+  # Crash mode: once zygote has died at least once, report why instead.
+  # reboot,bx,c,s<stage>,z<e|s><code>n<deaths>,a<adbd state><e|s><code>,m<message>
+  ZX=$(svc_exit zygote)
+  if [ "$ZX" != x ] || [ "$Z" = restarting ] || [ "$BOOXOS_PROBE_ONCE" = crash ]; then
+    AX=$(svc_exit adbd)
+    HEAD="reboot,bx,c,s$S,z$ZX,a$(short "$(p init.svc.adbd)" 3)$AX,u$ADB,m"
+    ROOM=$((MAXLEN - ${#HEAD} - 6))   # keep room for ",stall"/",late"
+    [ $ROOM -gt 8 ] || ROOM=8
+    STATE="$HEAD$(crash_msg | cut -c1-$ROOM)"
+    CRUMB="$STATE"
+  fi
+
+  if [ -n "$BOOXOS_PROBE_ONCE" ]; then
+    # test mode: print the breadcrumb once, no side effects
+    echo "$CRUMB"
+    exit 0
+  fi
 
   if [ "$STATE" != "$LAST_STATE" ]; then
     klog "$CRUMB"
@@ -162,6 +212,7 @@ while true; do
     mkdir -p $LOGDIR 2>/dev/null && chmod 0777 $LOGDIR
     dmesg > $LOGDIR/dmesg.txt 2>&1
     logcat -b all -d -t 4000 > $LOGDIR/logcat.txt 2>&1
+    logcat -b crash -d > $LOGDIR/crash.txt 2>&1
     getprop > $LOGDIR/getprop.txt 2>&1
     echo "$CRUMB" >> $LOGDIR/crumbs.txt
     chmod 0666 $LOGDIR/*.txt 2>/dev/null
