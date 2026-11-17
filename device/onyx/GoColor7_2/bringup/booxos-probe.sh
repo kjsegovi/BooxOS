@@ -128,6 +128,30 @@ vold_msg() {
     | tr 'A-Z' 'a-z' | tr -c 'a-z0-9._:/=\n-' '_' | tr -s '_' | sed 's/^_//' | head -1
 }
 
+# --- paged report (probe v4) ---
+# One breadcrumb holds ~68 chars, so data mode builds a full report and shows
+# page N of it, where N advances by one on every guest boot (counter on
+# /metadata, untouched by stock). Read further pages by re-enabling the DSU
+# guest and rebooting; no rebuild needed.
+PAGEFILE=/metadata/booxos-probe-page
+clean() {
+  tr -d "'\"" | sed 's/keystore2 Keystore //; s/ returned service specific error: */=sse/; s/Failed to /f:/g; s/failed to /f:/g; s/: */:/g' \
+    | tr 'A-Z' 'a-z' | tr -c 'a-z0-9._:/=\n-' '_' | tr -s '_'
+}
+data_report() {
+  printf 's%s,k%s%s,r%s,f%s' "$S" "$(short "$(p init.svc.$KM_SVC)" 3)" "$(svc_exit $KM_SVC)" "$(km_registered)" "$(km_flag)"
+  VL=$(logcat -d -b main,system 2>/dev/null | grep -E " [EF] (vold|Vold|fscrypt|MetadataCrypt|KeyStorage|vdc) *:" \
+    | grep -v -i -E "earlybootended|strongbox|getting keymint device")
+  # drop vold's deliberate rollback-resistant attempt (KeyStorage.cpp:129)
+  if logcat -d -b main,system 2>/dev/null | grep -q "Failed to generate rollback-resistant key"; then
+    VL=$(echo "$VL" | sed '1{/generateKey returned/d;}')
+  fi
+  echo "$VL" | grep . | head -8 | sed 's/^.* [VDIWEF] [^:]*: //' | clean | sed 's/^/,/' | tr -d '\n'
+  dmesg 2>/dev/null | grep -E "fs_mgr|mount_all|vdc|/data|userdata|metadata|fscrypt|default-key|f2fs" \
+    | grep -i -E "fail|error|invalid|unable|cannot|not |denied|unsupported|unknown|bad |corrupt|wrong|mismatch" | head -6 \
+    | sed 's/^\[[^]]*\] *//; s/^init: *//' | clean | sed 's/^/,dm:/' | tr -d '\n'
+}
+
 # --- adb: mirrors stock vendor init.qcom.usb.rc (adb-only config) ---
 ADB=0   # 0 not tried, 1 configfs, 2 functionfs, 3 adbd started, 4 ep1, 5 UDC bound
 adb_try() {
@@ -191,7 +215,12 @@ do_reboot() {
 }
 
 # --- main loop ---
-klog "start uptime=$(uptime_s)"
+PAGEIDX=$(cat $PAGEFILE 2>/dev/null); case "$PAGEIDX" in ''|*[!0-9]*) PAGEIDX=0 ;; esac
+[ -n "$BOOXOS_PROBE_PAGE" ] && PAGEIDX=$BOOXOS_PROBE_PAGE
+if [ -z "$BOOXOS_PROBE_ONCE" ]; then
+  echo $((PAGEIDX + 1)) > $PAGEFILE 2>/dev/null && sync
+fi
+klog "start uptime=$(uptime_s) page=$PAGEIDX"
 START=$(uptime_s)
 LAST_STATE=""
 LAST_CHANGE=$START
@@ -242,11 +271,14 @@ while true; do
   # reboot,bx,d,s<stage>,k<km state><e|s><code>n<deaths>,r<km registered>,f<km log flag>,v<vold/fs_mgr msg>
   if { [ $D = 0 ] && [ "$APX" = activated -o "$APX" = ready ] && [ $((NOW-START)) -ge 20 ]; } \
      || [ "$BOOXOS_PROBE_ONCE" = data ]; then
-    HEAD="reboot,bx,d,s$S,k$(short "$(p init.svc.$KM_SVC)" 3)$(svc_exit $KM_SVC),r$(km_registered),f$(km_flag),v"
-    ROOM=$((MAXLEN - ${#HEAD} - 6))
-    [ $ROOM -gt 8 ] || ROOM=8
-    STATE="$HEAD$(vold_msg | cut -c1-$ROOM)"
+    # reboot,bx,p<page>/<pages>,<slice of the report>
+    REP=$(data_report)
+    PG=60
+    PAGES=$(( (${#REP} + PG - 1) / PG )); [ $PAGES -gt 0 ] || PAGES=1
+    K=$((PAGEIDX % PAGES))
+    STATE="reboot,bx,p$K/$PAGES,$(echo "$REP" | cut -c$((K*PG+1))-$(((K+1)*PG)))"
     CRUMB="$STATE"
+    [ -n "$BOOXOS_PROBE_ONCE" ] && echo "full report (${#REP} chars): $REP" >&2
   fi
 
   if [ -n "$BOOXOS_PROBE_ONCE" ]; then
