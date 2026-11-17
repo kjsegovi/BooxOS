@@ -85,6 +85,35 @@ crash_msg() {
     | tr 'A-Z' 'a-z' | tr -c 'a-z0-9._:/=\n-' '_' | tr -s '_' | sed 's/^_//' | head -1
 }
 
+# --- /data failure details (probe v3) ---
+# Keymaster HAL: stock libqtikeymaster4 waits forever for version properties,
+# then aborts with "Configure failed" / "get_date_support failed" /
+# "Android property not present" (see work/keymaster-hal-re-2026-11-17.md).
+KM_SVC=vendor.keymaster-4-1
+km_flag() {
+  l=$(logcat -d -b all 2>/dev/null | grep -E "Configure failed|get_date_support failed|Android property not present" | head -1)
+  case "$l" in
+    *"Configure failed"*) echo C ;;
+    *"get_date_support failed"*) echo G ;;
+    *"Android property not present"*) echo P ;;
+    *) echo - ;;
+  esac
+}
+km_registered() {
+  lshal list -i 2>/dev/null | grep -q "android.hardware.keymaster@4.1::IKeymasterDevice/default" && echo 1 || echo 0
+}
+vold_msg() {
+  # vold first, then kernel/fs_mgr, then keystore2 (noisy even on stock)
+  m=$(logcat -d -b main,system 2>/dev/null | grep -E " [EF] (vold|Vold|fscrypt|MetadataCrypt|KeyStorage) *:" \
+      | head -1 | sed 's/^.* [VDIWEF] [^:]*: //')
+  [ -n "$m" ] || m=$(dmesg 2>/dev/null | grep -i -E "fs_mgr|userdata|metadata_encryption|default-key|f2fs" \
+      | grep -i -E "fail|error|invalid|unable|cannot" | head -1 | sed 's/^\[[^]]*\] *//')
+  [ -n "$m" ] || m=$(logcat -d -b main,system 2>/dev/null | grep -E " [EF] (keystore2|Keystore) *:" \
+      | grep -v -i earlybootended | head -1 | sed 's/^.* [VDIWEF] [^:]*: //')
+  [ -n "$m" ] || m=none
+  echo "$m" | tr -d "'\"" | sed 's/: */:/g' | tr 'A-Z' 'a-z' | tr -c 'a-z0-9._:/=\n-' '_' | tr -s '_' | sed 's/^_//' | head -1
+}
+
 # --- adb: mirrors stock vendor init.qcom.usb.rc (adb-only config) ---
 ADB=0   # 0 not tried, 1 configfs, 2 functionfs, 3 adbd started, 4 ep1, 5 UDC bound
 adb_try() {
@@ -191,6 +220,18 @@ while true; do
     ROOM=$((MAXLEN - ${#HEAD} - 6))   # keep room for ",stall"/",late"
     [ $ROOM -gt 8 ] || ROOM=8
     STATE="$HEAD$(crash_msg | cut -c1-$ROOM)"
+    CRUMB="$STATE"
+  fi
+
+  # Data mode (probe v3): APEXes are up but /data isn't mounted after 20 s.
+  # Report the Keymaster HAL and vold instead (takes priority over crash mode).
+  # reboot,bx,d,s<stage>,k<km state><e|s><code>n<deaths>,r<km registered>,f<km log flag>,v<vold/fs_mgr msg>
+  if { [ $D = 0 ] && [ "$APX" = activated -o "$APX" = ready ] && [ $((NOW-START)) -ge 20 ]; } \
+     || [ "$BOOXOS_PROBE_ONCE" = data ]; then
+    HEAD="reboot,bx,d,s$S,k$(short "$(p init.svc.$KM_SVC)" 3)$(svc_exit $KM_SVC),r$(km_registered),f$(km_flag),v"
+    ROOM=$((MAXLEN - ${#HEAD} - 6))
+    [ $ROOM -gt 8 ] || ROOM=8
+    STATE="$HEAD$(vold_msg | cut -c1-$ROOM)"
     CRUMB="$STATE"
   fi
 
