@@ -72,3 +72,13 @@ Zip `e0903d45…`. Stock `sys.boot.reason.last`:
 - Keymaster HAL `vendor.keymaster-4-1` **running, no deaths (`krunx`), 4.1 registered (`r1`), no configure/date/property abort (`f-`)**. The configure-failure hypothesis from the RE work is **ruled out**.
 - `/data` still not mounted. The vold error shown was the **first** one: probably vold's deliberate rollback-resistant `generateKey` attempt (`KeyStorage.cpp:129`), which is expected to fail and is retried without rollback resistance. The real failure is later; likely candidate `generateWrappedStorageKey` (`KeyStorage.cpp:138-154`: AES-256 + `TAG_STORAGE_KEY` + vendor `KM_TAG_FBE_ICE`).
 - Probe fix: report the **last** vold error after skipping known benign lines, with the error count and the last keystore2 call's error code (`v<n>:generatekey=<code>:<msg>`).
+
+## Result: bring-up 9 (probe v3.1) test boot (2026-11-17 15:02)
+
+Zip `c063f8b3…`. Stock `sys.boot.reason.last`:
+
+`reboot,bx,d,s1,krunx,r1,f-,v4:f:prepare_/data/misc/vold/user_keys:no_such_file_or_dir,stall`
+
+- Keymaster again healthy. **No `generateKey` code**: apart from the expected rollback-resistance attempt, key generation didn't fail.
+- 4 non-benign vold errors; last = `Failed to prepare /data/misc/vold/user_keys: No such file or directory` → FBE user-key setup in post-fs-data runs on an **unmounted `/data`**. The failure is earlier, in the userdata mount (`mount_all --late` → metadata-encryption mount), and its text is in the earlier vold errors / init `fs_mgr` kmsg.
+- Next: probe v4 with paging (full report across boots via a page counter on /metadata).
