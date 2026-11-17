@@ -33,3 +33,17 @@ Correction to an earlier inference: the leftover `reboot,shell` after attempts 2
 adb shell getprop sys.boot.reason.last
 adb shell getprop persist.sys.boot.reason.history
 ```
+
+## Result: bring-up 6 test boot (2026-11-17 13:49)
+
+Zip `81870257…`. Guest rebooted itself back to stock after ~150 s (no Power-hold). Stock `sys.boot.reason.last`:
+
+`reboot,bx,s1,d0,aact,k1,bsto,v1,zres,u2not_,wnone,stall`
+
+- apexd activated, odsign key done, BPF loader stopped, odsign verification done → init got through post-fs-data and the zygote-start wait.
+- **`zres`: zygote is restarting (crash loop).** This is the real blocker.
+- **`u2`: functionfs mounted but adbd never reached `running`** (UDC not attached) → why USB never appeared.
+- `wnone`: init isn't waiting on an exec service.
+- Probe bug: `d0`/`s1` are artifacts. The probe starts before APEX activation, so it lives in init's bootstrap mount namespace and can't see `/data` (service.cpp:796). The stage chain depends on `d`, and snapshots only run when `d=1`, so none were taken. Raw fields are valid.
+
+The readout channel is confirmed end-to-end.
