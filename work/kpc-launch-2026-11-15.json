@@ -1,0 +1,6 @@
+{
+  "checked_at": "2026-11-15T17:08:57.606946+00:00",
+  "exit_code": 0,
+  "stdout": "{\"container_id\": \"dfeeafe3e6780d71b8308a22f2f8ebf98db095765f317c751f7fb8711a3079b1\", \"name\": \"booxos-lineage21-20261115\", \"image\": \"sha256:b4ece63d16da55dab0405cd8a691454e30dfac308602ee2797e88f35d53cadb2\", \"input_hashes_verified\": true, \"manifest_commit\": \"121f4ec5f11dc98ff2c427bc9d23165e914c54bb\", \"wsl_limit_GB\": 40, \"container_memory_GB\": 36, \"build_jobs\": 8, \"boox_access\": false}\n",
+  "stderr": ""
+}

@@ -1,0 +1,37 @@
+{
+  "status": "OFFLINE EXPERIMENT ONLY \u2014 NOT FLASH AUTHORIZATION",
+  "artifact": "/Users/kjsegovi/Projects/BooxOS/.private/stock-debug-boot-development-20261111/boot.img",
+  "artifact_bytes": 100663296,
+  "artifact_sha256": "92a3c30d80dccb91bc00eec0b54e261649a6e240272cad509f1d169237704d31",
+  "original_stock_sha256": "ede53420966b3af1a3a7b02cae3fef8583a0e01d19271006287dc14b4457ba63",
+  "unmodified_control_repack_byte_identical": true,
+  "original_ramdisk_entries_preserved": 16,
+  "added_ramdisk_files": [
+    "force_debuggable",
+    "adb_debug.prop",
+    "userdebug_plat_sepolicy.cil"
+  ],
+  "kernel_unchanged": true,
+  "dtb_unchanged": true,
+  "external_dtbo_not_modified": true,
+  "header_addresses_and_cmdline_preserved": true,
+  "internal_avb_footer_hash_verified": true,
+  "manufacturer_parent_vbmeta_boot_hash_matches": false,
+  "debug_policy_compiled_with_stock_init_flags": true,
+  "permissive_domain": "su only; global enforcing setting unchanged",
+  "adb_authentication_required": true,
+  "root_default": "privileges dropped until explicit authenticated adb root",
+  "additional_root_capability_is_read_only": false,
+  "new_software_installed_or_booted_on_reader": false,
+  "device_access_performed": false,
+  "runtime_or_modified_image_acceptance_tested": false,
+  "lineage_image": false,
+  "future_write_scope_for_review": "boot_a only, followed by restoring exact stock boot_a; never automatic",
+  "remaining_risks": [
+    "unlocked OEM bootloader acceptance of modified image untested",
+    "debug property and root-domain runtime untested",
+    "failed boot could need native fastboot restoration and A-slot repair",
+    "su can write raw storage; any trial needs a strict command scope and authentication",
+    "manufacturer parent hash differs; do not disable verification or modify vbmeta as a fallback"
+  ]
+}

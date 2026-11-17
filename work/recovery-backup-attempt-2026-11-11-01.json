@@ -1,0 +1,42 @@
+{
+  "result": "incomplete_read_failure",
+  "selected_partitions": 76,
+  "completed_partitions": 31,
+  "bytes_captured": 1194786816,
+  "bytes_independently_reread": 1161232384,
+  "failed_partition": "core_nhlos_b",
+  "reason": "Read acknowledgement or byte count failed",
+  "storage_write_commands_sent": false,
+  "reset_acknowledged": true,
+  "android_return": "Recovered after user-approved fastboot slot A selection and one normal reboot. Original model/build/slot/startup verified; user confirms home screen.",
+  "private_session_directory": "/Users/kjsegovi/Projects/BooxOS/.private/recovery-backup-20261111-095553",
+  "full_recovery_backup_created": false,
+  "restore_tested": false,
+  "offline_update_metadata": {
+    "filesystem": "ext4",
+    "filesystem_clean_state": 1,
+    "update_state_bytes": 0,
+    "update_state_empty": true,
+    "snapshot_record_names": [],
+    "snapshot_records_empty": true,
+    "aosp_interpretation": "None",
+    "no_pending_update_indicated": true
+  },
+  "command_audit": {
+    "command_counts": {
+      "configure": 1,
+      "read": 187,
+      "getstorageinfo": 1,
+      "power": 1
+    },
+    "userdata_read": false,
+    "storage_write_commands_observed": false
+  },
+  "next_entry_allowed_only_after_original_android_verified": true,
+  "prepared_transfer_revision": "4MiB read requests and 1MiB host USB receive buffer; not yet run.",
+  "recorded_at_utc": "2026-11-11T17:10:45.792852+00:00",
+  "backup_retry_allowed": false,
+  "bootloop_reported_at_utc": "2026-11-11T17:42:32.445002+00:00",
+  "later_recovery_report": "work/boot-loop-recovery-2026-11-11.json",
+  "edl_retry_disabled_pending_review": true
+}

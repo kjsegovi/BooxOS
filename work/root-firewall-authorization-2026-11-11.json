@@ -1,0 +1,18 @@
+{
+  "user_root_instruction": "i don't mind rooting and following hte guild (or you following the guide)",
+  "user_network_policy": "Yes\u2014only Readest should get internet",
+  "scope": "Root with exact matching stock boot image and configure a Readest-only internet firewall; preserve stock OS and e-ink support",
+  "no_need_for_cross_device_bootloader_replacement": true,
+  "edl_hold_retained": true,
+  "bootloader_relock_or_abl_frp_devinfo_changes": false,
+  "readest_uid_to_be_determined_after_install": true,
+  "system_network_essentials_may_need_narrow_dns_dhcp_exceptions": true,
+  "status": "Readest-only firewall completed using Rethink; optional root candidate not installed because both flashing modes reject writes",
+  "owner_presence_confirmed": "I\u2019m beside it and it\u2019s connected",
+  "image_inspection_passed": true,
+  "image_sha256": "c6a74118e66df486f4b8b073a7048767d9423737a02195c167fd63e78e390dab",
+  "target_partition": "boot_a",
+  "stock_backup_byte_matches_current_firmware": true,
+  "root_installed": false,
+  "firmware_write_completed": false
+}

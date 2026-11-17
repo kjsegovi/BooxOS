@@ -1,0 +1,3684 @@
+{
+  "model": "GoColor7_2",
+  "source": "matched full stock OTA",
+  "installable_candidate": false,
+  "boot_header": {
+    "version": 2,
+    "page_size": 4096,
+    "kernel_size": 60735504,
+    "ramdisk_size": 1149609,
+    "dtb_size": 407904,
+    "dtb_offset": 61894656
+  },
+  "files": [
+    {
+      "path": ".local/porting-inputs/stock-boot/kernel",
+      "offset": 4096,
+      "bytes": 60735504,
+      "sha256": "6b82120059c7e7fe65c36d4c18d792ccf23262a559e91dac6b57e624a6e59334"
+    },
+    {
+      "path": ".local/porting-inputs/stock-boot/ramdisk.gz",
+      "offset": 60743680,
+      "bytes": 1149609,
+      "sha256": "64dec2bb2d5b526156ecbcde4179ffa16423d47a335e13711231b7898f05a73a"
+    },
+    {
+      "path": ".local/porting-inputs/stock-boot/dtb.img",
+      "offset": 61894656,
+      "bytes": 407904,
+      "sha256": "ad8e0ec988e2c935dbe50eaf795ab5c5eecf9f172f56159bd12658d065ee9b17"
+    },
+    {
+      "path": ".local/porting-inputs/stock-boot/dtbo.img",
+      "bytes": 8388608,
+      "sha256": "7379d4fb7906fa3bdbb2b8048b7c868cb9fc584b1e26765ed9f4ee8941f54ab9"
+    }
+  ],
+  "base_device_trees": [
+    {
+      "total_bytes": 407731,
+      "version": 17,
+      "selected_properties": [
+        {
+          "node": "/",
+          "property": "model",
+          "value": "Qualcomm Technologies, Inc. Lagoon SoC"
+        },
+        {
+          "node": "/",
+          "property": "compatible",
+          "value": "qcom,lagoon"
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_standard_mode",
+          "property": "hw-thigh",
+          "value": [
+            "0xc9"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_standard_mode",
+          "property": "hw-tlow",
+          "value": [
+            "0xae"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_standard_mode",
+          "property": "hw-tsu-sto",
+          "value": [
+            "0xcc"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_standard_mode",
+          "property": "hw-tsu-sta",
+          "value": [
+            "0xe7"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_standard_mode",
+          "property": "hw-thd-dat",
+          "value": [
+            "0x16"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_standard_mode",
+          "property": "hw-thd-sta",
+          "value": [
+            "0xa2"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_standard_mode",
+          "property": "hw-tbuf",
+          "value": [
+            "0xe3"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_standard_mode",
+          "property": "hw-scl-stretch-en",
+          "value": ""
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_standard_mode",
+          "property": "hw-trdhld",
+          "value": [
+            "0x6"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_standard_mode",
+          "property": "hw-tsp",
+          "value": [
+            "0x3"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_standard_mode",
+          "property": "cci-clk-src",
+          "value": [
+            "0x23c3460"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_standard_mode",
+          "property": "status",
+          "value": "ok"
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_standard_mode",
+          "property": "phandle",
+          "value": [
+            "0x35f"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_mode",
+          "property": "hw-thigh",
+          "value": [
+            "0x26"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_mode",
+          "property": "hw-tlow",
+          "value": [
+            "0x38"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_mode",
+          "property": "hw-tsu-sto",
+          "value": [
+            "0x28"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_mode",
+          "property": "hw-tsu-sta",
+          "value": [
+            "0x28"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_mode",
+          "property": "hw-thd-dat",
+          "value": [
+            "0x16"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_mode",
+          "property": "hw-thd-sta",
+          "value": [
+            "0x23"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_mode",
+          "property": "hw-tbuf",
+          "value": [
+            "0x3e"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_mode",
+          "property": "hw-scl-stretch-en",
+          "value": ""
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_mode",
+          "property": "hw-trdhld",
+          "value": [
+            "0x6"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_mode",
+          "property": "hw-tsp",
+          "value": [
+            "0x3"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_mode",
+          "property": "cci-clk-src",
+          "value": [
+            "0x23c3460"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_mode",
+          "property": "status",
+          "value": "ok"
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_mode",
+          "property": "phandle",
+          "value": [
+            "0x360"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_custom_mode",
+          "property": "hw-thigh",
+          "value": [
+            "0x26"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_custom_mode",
+          "property": "hw-tlow",
+          "value": [
+            "0x38"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_custom_mode",
+          "property": "hw-tsu-sto",
+          "value": [
+            "0x28"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_custom_mode",
+          "property": "hw-tsu-sta",
+          "value": [
+            "0x28"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_custom_mode",
+          "property": "hw-thd-dat",
+          "value": [
+            "0x16"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_custom_mode",
+          "property": "hw-thd-sta",
+          "value": [
+            "0x23"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_custom_mode",
+          "property": "hw-tbuf",
+          "value": [
+            "0x3e"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_custom_mode",
+          "property": "hw-scl-stretch-en",
+          "value": [
+            "0x1"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_custom_mode",
+          "property": "hw-trdhld",
+          "value": [
+            "0x6"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_custom_mode",
+          "property": "hw-tsp",
+          "value": [
+            "0x3"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_custom_mode",
+          "property": "cci-clk-src",
+          "value": [
+            "0x23c3460"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_custom_mode",
+          "property": "status",
+          "value": "ok"
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_custom_mode",
+          "property": "phandle",
+          "value": [
+            "0x361"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_plus_mode",
+          "property": "hw-thigh",
+          "value": [
+            "0x10"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_plus_mode",
+          "property": "hw-tlow",
+          "value": [
+            "0x16"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_plus_mode",
+          "property": "hw-tsu-sto",
+          "value": [
+            "0x11"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_plus_mode",
+          "property": "hw-tsu-sta",
+          "value": [
+            "0x12"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_plus_mode",
+          "property": "hw-thd-dat",
+          "value": [
+            "0x10"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_plus_mode",
+          "property": "hw-thd-sta",
+          "value": [
+            "0xf"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_plus_mode",
+          "property": "hw-tbuf",
+          "value": [
+            "0x18"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_plus_mode",
+          "property": "hw-scl-stretch-en",
+          "value": ""
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_plus_mode",
+          "property": "hw-trdhld",
+          "value": [
+            "0x3"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_plus_mode",
+          "property": "hw-tsp",
+          "value": [
+            "0x3"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_plus_mode",
+          "property": "cci-clk-src",
+          "value": [
+            "0x23c3460"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_plus_mode",
+          "property": "status",
+          "value": "ok"
+        },
+        {
+          "node": "/soc/qcom,cci0/qcom,i2c_fast_plus_mode",
+          "property": "phandle",
+          "value": [
+            "0x362"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_standard_mode",
+          "property": "hw-thigh",
+          "value": [
+            "0xc9"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_standard_mode",
+          "property": "hw-tlow",
+          "value": [
+            "0xae"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_standard_mode",
+          "property": "hw-tsu-sto",
+          "value": [
+            "0xcc"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_standard_mode",
+          "property": "hw-tsu-sta",
+          "value": [
+            "0xe7"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_standard_mode",
+          "property": "hw-thd-dat",
+          "value": [
+            "0x16"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_standard_mode",
+          "property": "hw-thd-sta",
+          "value": [
+            "0xa2"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_standard_mode",
+          "property": "hw-tbuf",
+          "value": [
+            "0xe3"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_standard_mode",
+          "property": "hw-scl-stretch-en",
+          "value": ""
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_standard_mode",
+          "property": "hw-trdhld",
+          "value": [
+            "0x6"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_standard_mode",
+          "property": "hw-tsp",
+          "value": [
+            "0x3"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_standard_mode",
+          "property": "cci-clk-src",
+          "value": [
+            "0x23c3460"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_standard_mode",
+          "property": "status",
+          "value": "ok"
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_standard_mode",
+          "property": "phandle",
+          "value": [
+            "0x364"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_mode",
+          "property": "hw-thigh",
+          "value": [
+            "0x26"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_mode",
+          "property": "hw-tlow",
+          "value": [
+            "0x38"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_mode",
+          "property": "hw-tsu-sto",
+          "value": [
+            "0x28"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_mode",
+          "property": "hw-tsu-sta",
+          "value": [
+            "0x28"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_mode",
+          "property": "hw-thd-dat",
+          "value": [
+            "0x16"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_mode",
+          "property": "hw-thd-sta",
+          "value": [
+            "0x23"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_mode",
+          "property": "hw-tbuf",
+          "value": [
+            "0x3e"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_mode",
+          "property": "hw-scl-stretch-en",
+          "value": ""
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_mode",
+          "property": "hw-trdhld",
+          "value": [
+            "0x6"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_mode",
+          "property": "hw-tsp",
+          "value": [
+            "0x3"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_mode",
+          "property": "cci-clk-src",
+          "value": [
+            "0x23c3460"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_mode",
+          "property": "status",
+          "value": "ok"
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_mode",
+          "property": "phandle",
+          "value": [
+            "0x365"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_custom_mode",
+          "property": "hw-thigh",
+          "value": [
+            "0x26"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_custom_mode",
+          "property": "hw-tlow",
+          "value": [
+            "0x38"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_custom_mode",
+          "property": "hw-tsu-sto",
+          "value": [
+            "0x28"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_custom_mode",
+          "property": "hw-tsu-sta",
+          "value": [
+            "0x28"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_custom_mode",
+          "property": "hw-thd-dat",
+          "value": [
+            "0x16"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_custom_mode",
+          "property": "hw-thd-sta",
+          "value": [
+            "0x23"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_custom_mode",
+          "property": "hw-tbuf",
+          "value": [
+            "0x3e"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_custom_mode",
+          "property": "hw-scl-stretch-en",
+          "value": [
+            "0x1"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_custom_mode",
+          "property": "hw-trdhld",
+          "value": [
+            "0x6"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_custom_mode",
+          "property": "hw-tsp",
+          "value": [
+            "0x3"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_custom_mode",
+          "property": "cci-clk-src",
+          "value": [
+            "0x23c3460"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_custom_mode",
+          "property": "status",
+          "value": "ok"
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_custom_mode",
+          "property": "phandle",
+          "value": [
+            "0x366"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_plus_mode",
+          "property": "hw-thigh",
+          "value": [
+            "0x10"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_plus_mode",
+          "property": "hw-tlow",
+          "value": [
+            "0x16"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_plus_mode",
+          "property": "hw-tsu-sto",
+          "value": [
+            "0x11"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_plus_mode",
+          "property": "hw-tsu-sta",
+          "value": [
+            "0x12"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_plus_mode",
+          "property": "hw-thd-dat",
+          "value": [
+            "0x10"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_plus_mode",
+          "property": "hw-thd-sta",
+          "value": [
+            "0xf"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_plus_mode",
+          "property": "hw-tbuf",
+          "value": [
+            "0x18"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_plus_mode",
+          "property": "hw-scl-stretch-en",
+          "value": ""
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_plus_mode",
+          "property": "hw-trdhld",
+          "value": [
+            "0x3"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_plus_mode",
+          "property": "hw-tsp",
+          "value": [
+            "0x3"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_plus_mode",
+          "property": "cci-clk-src",
+          "value": [
+            "0x23c3460"
+          ]
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_plus_mode",
+          "property": "status",
+          "value": "ok"
+        },
+        {
+          "node": "/soc/qcom,cci1/qcom,i2c_fast_plus_mode",
+          "property": "phandle",
+          "value": [
+            "0x367"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins",
+          "property": "phandle",
+          "value": [
+            "0x396"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins/qupv3_se0_i2c_active",
+          "property": "phandle",
+          "value": [
+            "0x19c"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins/qupv3_se0_i2c_active/mux",
+          "property": "pins",
+          "value": "gpio0 | gpio1"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins/qupv3_se0_i2c_active/mux",
+          "property": "function",
+          "value": "qup00"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins/qupv3_se0_i2c_active/config",
+          "property": "pins",
+          "value": "gpio0 | gpio1"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins/qupv3_se0_i2c_active/config",
+          "property": "drive-strength",
+          "value": [
+            "0x2"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins/qupv3_se0_i2c_active/config",
+          "property": "bias-pull-up",
+          "value": []
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins/qupv3_se0_i2c_sleep",
+          "property": "phandle",
+          "value": [
+            "0x19d"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins/qupv3_se0_i2c_sleep/mux",
+          "property": "pins",
+          "value": "gpio0 | gpio1"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins/qupv3_se0_i2c_sleep/mux",
+          "property": "function",
+          "value": "gpio"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins/qupv3_se0_i2c_sleep/config",
+          "property": "pins",
+          "value": "gpio0 | gpio1"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins/qupv3_se0_i2c_sleep/config",
+          "property": "drive-strength",
+          "value": [
+            "0x2"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins/qupv3_se0_i2c_sleep/config",
+          "property": "bias-disable",
+          "value": []
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins",
+          "property": "phandle",
+          "value": [
+            "0x39d"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins/qupv3_se2_i2c_active",
+          "property": "phandle",
+          "value": [
+            "0x1a6"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins/qupv3_se2_i2c_active/mux",
+          "property": "pins",
+          "value": "gpio45 | gpio46"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins/qupv3_se2_i2c_active/mux",
+          "property": "function",
+          "value": "qup02"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins/qupv3_se2_i2c_active/config",
+          "property": "pins",
+          "value": "gpio45 | gpio46"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins/qupv3_se2_i2c_active/config",
+          "property": "drive-strength",
+          "value": [
+            "0x2"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins/qupv3_se2_i2c_active/config",
+          "property": "bias-pull-up",
+          "value": []
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins/qupv3_se2_i2c_sleep",
+          "property": "phandle",
+          "value": [
+            "0x1a7"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins/qupv3_se2_i2c_sleep/mux",
+          "property": "pins",
+          "value": "gpio45 | gpio46"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins/qupv3_se2_i2c_sleep/mux",
+          "property": "function",
+          "value": "gpio"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins/qupv3_se2_i2c_sleep/config",
+          "property": "pins",
+          "value": "gpio45 | gpio46"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins/qupv3_se2_i2c_sleep/config",
+          "property": "drive-strength",
+          "value": [
+            "0x2"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins/qupv3_se2_i2c_sleep/config",
+          "property": "bias-disable",
+          "value": []
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins",
+          "property": "phandle",
+          "value": [
+            "0x39e"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins/qupv3_se6_i2c_active",
+          "property": "phandle",
+          "value": [
+            "0x1ab"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins/qupv3_se6_i2c_active/mux",
+          "property": "pins",
+          "value": "gpio13 | gpio14"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins/qupv3_se6_i2c_active/mux",
+          "property": "function",
+          "value": "qup10"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins/qupv3_se6_i2c_active/config",
+          "property": "pins",
+          "value": "gpio13 | gpio14"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins/qupv3_se6_i2c_active/config",
+          "property": "drive-strength",
+          "value": [
+            "0x2"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins/qupv3_se6_i2c_active/config",
+          "property": "bias-pull-up",
+          "value": []
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins/qupv3_se6_i2c_sleep",
+          "property": "phandle",
+          "value": [
+            "0x1ac"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins/qupv3_se6_i2c_sleep/mux",
+          "property": "pins",
+          "value": "gpio13 | gpio14"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins/qupv3_se6_i2c_sleep/mux",
+          "property": "function",
+          "value": "gpio"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins/qupv3_se6_i2c_sleep/config",
+          "property": "pins",
+          "value": "gpio13 | gpio14"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins/qupv3_se6_i2c_sleep/config",
+          "property": "drive-strength",
+          "value": [
+            "0x2"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins/qupv3_se6_i2c_sleep/config",
+          "property": "bias-disable",
+          "value": []
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins",
+          "property": "phandle",
+          "value": [
+            "0x39f"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins/qupv3_se7_i2c_active",
+          "property": "phandle",
+          "value": [
+            "0x1b2"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins/qupv3_se7_i2c_active/mux",
+          "property": "pins",
+          "value": "gpio27 | gpio28"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins/qupv3_se7_i2c_active/mux",
+          "property": "function",
+          "value": "qup11"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins/qupv3_se7_i2c_active/config",
+          "property": "pins",
+          "value": "gpio27 | gpio28"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins/qupv3_se7_i2c_active/config",
+          "property": "drive-strength",
+          "value": [
+            "0x2"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins/qupv3_se7_i2c_active/config",
+          "property": "bias-pull-up",
+          "value": []
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins/qupv3_se7_i2c_sleep",
+          "property": "phandle",
+          "value": [
+            "0x1b3"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins/qupv3_se7_i2c_sleep/mux",
+          "property": "pins",
+          "value": "gpio27 | gpio28"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins/qupv3_se7_i2c_sleep/mux",
+          "property": "function",
+          "value": "gpio"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins/qupv3_se7_i2c_sleep/config",
+          "property": "pins",
+          "value": "gpio27 | gpio28"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins/qupv3_se7_i2c_sleep/config",
+          "property": "drive-strength",
+          "value": [
+            "0x2"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins/qupv3_se7_i2c_sleep/config",
+          "property": "bias-disable",
+          "value": []
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins",
+          "property": "phandle",
+          "value": [
+            "0x3a0"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins/qupv3_se8_i2c_active",
+          "property": "phandle",
+          "value": [
+            "0x1b4"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins/qupv3_se8_i2c_active/mux",
+          "property": "pins",
+          "value": "gpio19 | gpio20"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins/qupv3_se8_i2c_active/mux",
+          "property": "function",
+          "value": "qup12"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins/qupv3_se8_i2c_active/config",
+          "property": "pins",
+          "value": "gpio19 | gpio20"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins/qupv3_se8_i2c_active/config",
+          "property": "drive-strength",
+          "value": [
+            "0x2"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins/qupv3_se8_i2c_active/config",
+          "property": "bias-pull-up",
+          "value": []
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins/qupv3_se8_i2c_sleep",
+          "property": "phandle",
+          "value": [
+            "0x1b5"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins/qupv3_se8_i2c_sleep/mux",
+          "property": "pins",
+          "value": "gpio19 | gpio20"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins/qupv3_se8_i2c_sleep/mux",
+          "property": "function",
+          "value": "gpio"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins/qupv3_se8_i2c_sleep/config",
+          "property": "pins",
+          "value": "gpio19 | gpio20"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins/qupv3_se8_i2c_sleep/config",
+          "property": "drive-strength",
+          "value": [
+            "0x2"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins/qupv3_se8_i2c_sleep/config",
+          "property": "bias-disable",
+          "value": []
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins",
+          "property": "phandle",
+          "value": [
+            "0x3a1"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins/qupv3_se10_i2c_active",
+          "property": "phandle",
+          "value": [
+            "0x1b8"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins/qupv3_se10_i2c_active/mux",
+          "property": "pins",
+          "value": "gpio4 | gpio5"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins/qupv3_se10_i2c_active/mux",
+          "property": "function",
+          "value": "qup14"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins/qupv3_se10_i2c_active/config",
+          "property": "pins",
+          "value": "gpio4 | gpio5"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins/qupv3_se10_i2c_active/config",
+          "property": "drive-strength",
+          "value": [
+            "0x2"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins/qupv3_se10_i2c_active/config",
+          "property": "bias-pull-up",
+          "value": []
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins/qupv3_se10_i2c_sleep",
+          "property": "phandle",
+          "value": [
+            "0x1b9"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins/qupv3_se10_i2c_sleep/mux",
+          "property": "pins",
+          "value": "gpio4 | gpio5"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins/qupv3_se10_i2c_sleep/mux",
+          "property": "function",
+          "value": "gpio"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins/qupv3_se10_i2c_sleep/config",
+          "property": "pins",
+          "value": "gpio4 | gpio5"
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins/qupv3_se10_i2c_sleep/config",
+          "property": "drive-strength",
+          "value": [
+            "0x2"
+          ]
+        },
+        {
+          "node": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins/qupv3_se10_i2c_sleep/config",
+          "property": "bias-disable",
+          "value": []
+        },
+        {
+          "node": "/soc/i2c@880000",
+          "property": "compatible",
+          "value": "qcom,i2c-geni"
+        },
+        {
+          "node": "/soc/i2c@880000",
+          "property": "reg",
+          "value": [
+            "0x880000",
+            "0x4000"
+          ]
+        },
+        {
+          "node": "/soc/i2c@880000",
+          "property": "interrupts",
+          "value": [
+            "0x0",
+            "0x259",
+            "0x4"
+          ]
+        },
+        {
+          "node": "/soc/i2c@880000",
+          "property": "#address-cells",
+          "value": [
+            "0x1"
+          ]
+        },
+        {
+          "node": "/soc/i2c@880000",
+          "property": "#size-cells",
+          "value": ""
+        },
+        {
+          "node": "/soc/i2c@880000",
+          "property": "clock-names",
+          "value": "se-clk | m-ahb | s-ahb"
+        },
+        {
+          "node": "/soc/i2c@880000",
+          "property": "clocks",
+          "value": [
+            "0x1f",
+            "0x47",
+            "0x1f",
+            "0x61",
+            "0x1f",
+            "0x62"
+          ]
+        },
+        {
+          "node": "/soc/i2c@880000",
+          "property": "dmas",
+          "value": [
+            "0x19b",
+            "0x0",
+            "0x0",
+            "0x3",
+            "0x40",
+            "0x0",
+            "0x19b",
+            "0x1",
+            "0x0",
+            "0x3",
+            "0x40",
+            "0x0"
+          ]
+        },
+        {
+          "node": "/soc/i2c@880000",
+          "property": "dma-names",
+          "value": "tx | rx"
+        },
+        {
+          "node": "/soc/i2c@880000",
+          "property": "pinctrl-names",
+          "value": "default | sleep"
+        },
+        {
+          "node": "/soc/i2c@880000",
+          "property": "pinctrl-0",
+          "value": [
+            "0x19c"
+          ]
+        },
+        {
+          "node": "/soc/i2c@880000",
+          "property": "pinctrl-1",
+          "value": [
+            "0x19d"
+          ]
+        },
+        {
+          "node": "/soc/i2c@880000",
+          "property": "qcom,wrapper-core",
+          "value": [
+            "0x19e"
+          ]
+        },
+        {
+          "node": "/soc/i2c@880000",
+          "property": "status",
+          "value": "disabled"
+        },
+        {
+          "node": "/soc/i2c@880000",
+          "property": "phandle",
+          "value": [
+            "0x44e"
+          ]
+        },
+        {
+          "node": "/soc/i2c@888000",
+          "property": "compatible",
+          "value": "qcom,i2c-geni"
+        },
+        {
+          "node": "/soc/i2c@888000",
+          "property": "reg",
+          "value": [
+            "0x888000",
+            "0x4000"
+          ]
+        },
+        {
+          "node": "/soc/i2c@888000",
+          "property": "interrupts",
+          "value": [
+            "0x0",
+            "0x25b",
+            "0x4"
+          ]
+        },
+        {
+          "node": "/soc/i2c@888000",
+          "property": "#address-cells",
+          "value": [
+            "0x1"
+          ]
+        },
+        {
+          "node": "/soc/i2c@888000",
+          "property": "#size-cells",
+          "value": ""
+        },
+        {
+          "node": "/soc/i2c@888000",
+          "property": "clock-names",
+          "value": "se-clk | m-ahb | s-ahb"
+        },
+        {
+          "node": "/soc/i2c@888000",
+          "property": "clocks",
+          "value": [
+            "0x1f",
+            "0x4b",
+            "0x1f",
+            "0x61",
+            "0x1f",
+            "0x62"
+          ]
+        },
+        {
+          "node": "/soc/i2c@888000",
+          "property": "dmas",
+          "value": [
+            "0x19b",
+            "0x0",
+            "0x2",
+            "0x3",
+            "0x40",
+            "0x0",
+            "0x19b",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x40",
+            "0x0"
+          ]
+        },
+        {
+          "node": "/soc/i2c@888000",
+          "property": "dma-names",
+          "value": "tx | rx"
+        },
+        {
+          "node": "/soc/i2c@888000",
+          "property": "pinctrl-names",
+          "value": "default | sleep"
+        },
+        {
+          "node": "/soc/i2c@888000",
+          "property": "pinctrl-0",
+          "value": [
+            "0x1a6"
+          ]
+        },
+        {
+          "node": "/soc/i2c@888000",
+          "property": "pinctrl-1",
+          "value": [
+            "0x1a7"
+          ]
+        },
+        {
+          "node": "/soc/i2c@888000",
+          "property": "qcom,wrapper-core",
+          "value": [
+            "0x19e"
+          ]
+        },
+        {
+          "node": "/soc/i2c@888000",
+          "property": "status",
+          "value": "disabled"
+        },
+        {
+          "node": "/soc/i2c@888000",
+          "property": "phandle",
+          "value": [
+            "0x451"
+          ]
+        },
+        {
+          "node": "/soc/i2c@980000",
+          "property": "compatible",
+          "value": "qcom,i2c-geni"
+        },
+        {
+          "node": "/soc/i2c@980000",
+          "property": "reg",
+          "value": [
+            "0x980000",
+            "0x4000"
+          ]
+        },
+        {
+          "node": "/soc/i2c@980000",
+          "property": "interrupts",
+          "value": [
+            "0x0",
+            "0x161",
+            "0x4"
+          ]
+        },
+        {
+          "node": "/soc/i2c@980000",
+          "property": "#address-cells",
+          "value": [
+            "0x1"
+          ]
+        },
+        {
+          "node": "/soc/i2c@980000",
+          "property": "#size-cells",
+          "value": ""
+        },
+        {
+          "node": "/soc/i2c@980000",
+          "property": "clock-names",
+          "value": "se-clk | m-ahb | s-ahb"
+        },
+        {
+          "node": "/soc/i2c@980000",
+          "property": "clocks",
+          "value": [
+            "0x1f",
+            "0x55",
+            "0x1f",
+            "0x63",
+            "0x1f",
+            "0x64"
+          ]
+        },
+        {
+          "node": "/soc/i2c@980000",
+          "property": "dmas",
+          "value": [
+            "0x1aa",
+            "0x0",
+            "0x0",
+            "0x3",
+            "0x40",
+            "0x0",
+            "0x1aa",
+            "0x1",
+            "0x0",
+            "0x3",
+            "0x40",
+            "0x0"
+          ]
+        },
+        {
+          "node": "/soc/i2c@980000",
+          "property": "dma-names",
+          "value": "tx | rx"
+        },
+        {
+          "node": "/soc/i2c@980000",
+          "property": "pinctrl-names",
+          "value": "default | sleep"
+        },
+        {
+          "node": "/soc/i2c@980000",
+          "property": "pinctrl-0",
+          "value": [
+            "0x1ab"
+          ]
+        },
+        {
+          "node": "/soc/i2c@980000",
+          "property": "pinctrl-1",
+          "value": [
+            "0x1ac"
+          ]
+        },
+        {
+          "node": "/soc/i2c@980000",
+          "property": "qcom,wrapper-core",
+          "value": [
+            "0x1ad"
+          ]
+        },
+        {
+          "node": "/soc/i2c@980000",
+          "property": "status",
+          "value": "disabled"
+        },
+        {
+          "node": "/soc/i2c@980000",
+          "property": "phandle",
+          "value": [
+            "0x453"
+          ]
+        },
+        {
+          "node": "/soc/i2c@984000",
+          "property": "compatible",
+          "value": "qcom,i2c-geni"
+        },
+        {
+          "node": "/soc/i2c@984000",
+          "property": "reg",
+          "value": [
+            "0x984000",
+            "0x4000"
+          ]
+        },
+        {
+          "node": "/soc/i2c@984000",
+          "property": "interrupts",
+          "value": [
+            "0x0",
+            "0x162",
+            "0x4"
+          ]
+        },
+        {
+          "node": "/soc/i2c@984000",
+          "property": "#address-cells",
+          "value": [
+            "0x1"
+          ]
+        },
+        {
+          "node": "/soc/i2c@984000",
+          "property": "#size-cells",
+          "value": ""
+        },
+        {
+          "node": "/soc/i2c@984000",
+          "property": "clock-names",
+          "value": "se-clk | m-ahb | s-ahb"
+        },
+        {
+          "node": "/soc/i2c@984000",
+          "property": "clocks",
+          "value": [
+            "0x1f",
+            "0x57",
+            "0x1f",
+            "0x63",
+            "0x1f",
+            "0x64"
+          ]
+        },
+        {
+          "node": "/soc/i2c@984000",
+          "property": "dmas",
+          "value": [
+            "0x1aa",
+            "0x0",
+            "0x1",
+            "0x3",
+            "0x40",
+            "0x0",
+            "0x1aa",
+            "0x1",
+            "0x1",
+            "0x3",
+            "0x40",
+            "0x0"
+          ]
+        },
+        {
+          "node": "/soc/i2c@984000",
+          "property": "dma-names",
+          "value": "tx | rx"
+        },
+        {
+          "node": "/soc/i2c@984000",
+          "property": "pinctrl-names",
+          "value": "default | sleep"
+        },
+        {
+          "node": "/soc/i2c@984000",
+          "property": "pinctrl-0",
+          "value": [
+            "0x1b2"
+          ]
+        },
+        {
+          "node": "/soc/i2c@984000",
+          "property": "pinctrl-1",
+          "value": [
+            "0x1b3"
+          ]
+        },
+        {
+          "node": "/soc/i2c@984000",
+          "property": "qcom,wrapper-core",
+          "value": [
+            "0x1ad"
+          ]
+        },
+        {
+          "node": "/soc/i2c@984000",
+          "property": "status",
+          "value": "disabled"
+        },
+        {
+          "node": "/soc/i2c@984000",
+          "property": "phandle",
+          "value": [
+            "0x456"
+          ]
+        },
+        {
+          "node": "/soc/i2c@988000",
+          "property": "compatible",
+          "value": "qcom,i2c-geni"
+        },
+        {
+          "node": "/soc/i2c@988000",
+          "property": "reg",
+          "value": [
+            "0x988000",
+            "0x4000"
+          ]
+        },
+        {
+          "node": "/soc/i2c@988000",
+          "property": "interrupts",
+          "value": [
+            "0x0",
+            "0x163",
+            "0x4"
+          ]
+        },
+        {
+          "node": "/soc/i2c@988000",
+          "property": "#address-cells",
+          "value": [
+            "0x1"
+          ]
+        },
+        {
+          "node": "/soc/i2c@988000",
+          "property": "#size-cells",
+          "value": ""
+        },
+        {
+          "node": "/soc/i2c@988000",
+          "property": "clock-names",
+          "value": "se-clk | m-ahb | s-ahb"
+        },
+        {
+          "node": "/soc/i2c@988000",
+          "property": "clocks",
+          "value": [
+            "0x1f",
+            "0x59",
+            "0x1f",
+            "0x63",
+            "0x1f",
+            "0x64"
+          ]
+        },
+        {
+          "node": "/soc/i2c@988000",
+          "property": "dmas",
+          "value": [
+            "0x1aa",
+            "0x0",
+            "0x2",
+            "0x3",
+            "0x40",
+            "0x0",
+            "0x1aa",
+            "0x1",
+            "0x2",
+            "0x3",
+            "0x40",
+            "0x0"
+          ]
+        },
+        {
+          "node": "/soc/i2c@988000",
+          "property": "dma-names",
+          "value": "tx | rx"
+        },
+        {
+          "node": "/soc/i2c@988000",
+          "property": "pinctrl-names",
+          "value": "default | sleep"
+        },
+        {
+          "node": "/soc/i2c@988000",
+          "property": "pinctrl-0",
+          "value": [
+            "0x1b4"
+          ]
+        },
+        {
+          "node": "/soc/i2c@988000",
+          "property": "pinctrl-1",
+          "value": [
+            "0x1b5"
+          ]
+        },
+        {
+          "node": "/soc/i2c@988000",
+          "property": "qcom,wrapper-core",
+          "value": [
+            "0x1ad"
+          ]
+        },
+        {
+          "node": "/soc/i2c@988000",
+          "property": "status",
+          "value": "disabled"
+        },
+        {
+          "node": "/soc/i2c@988000",
+          "property": "phandle",
+          "value": [
+            "0x457"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "compatible",
+          "value": "qcom,i2c-geni"
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "reg",
+          "value": [
+            "0x990000",
+            "0x4000"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "interrupts",
+          "value": [
+            "0x0",
+            "0x165",
+            "0x4"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "#address-cells",
+          "value": [
+            "0x1"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "#size-cells",
+          "value": ""
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "clock-names",
+          "value": "se-clk | m-ahb | s-ahb"
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "clocks",
+          "value": [
+            "0x1f",
+            "0x5d",
+            "0x1f",
+            "0x63",
+            "0x1f",
+            "0x64"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "dmas",
+          "value": [
+            "0x1aa",
+            "0x0",
+            "0x4",
+            "0x3",
+            "0x40",
+            "0x0",
+            "0x1aa",
+            "0x1",
+            "0x4",
+            "0x3",
+            "0x40",
+            "0x0"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "dma-names",
+          "value": "tx | rx"
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "pinctrl-names",
+          "value": "default | sleep"
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "pinctrl-0",
+          "value": [
+            "0x1b8"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "pinctrl-1",
+          "value": [
+            "0x1b9"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "qcom,wrapper-core",
+          "value": [
+            "0x1ad"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "qcom,shared",
+          "value": []
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "status",
+          "value": "ok"
+        },
+        {
+          "node": "/soc/i2c@990000",
+          "property": "phandle",
+          "value": [
+            "0x459"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/fsa4480@42",
+          "property": "compatible",
+          "value": "qcom,fsa4480-i2c"
+        },
+        {
+          "node": "/soc/i2c@990000/fsa4480@42",
+          "property": "reg",
+          "value": [
+            "0x42"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/fsa4480@42",
+          "property": "pinctrl-names",
+          "value": "default"
+        },
+        {
+          "node": "/soc/i2c@990000/fsa4480@42",
+          "property": "pinctrl-0",
+          "value": [
+            "0x1ba"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/fsa4480@42",
+          "property": "phandle",
+          "value": [
+            "0x211"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8",
+          "property": "compatible",
+          "value": "qcom,i2c-pmic"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8",
+          "property": "reg",
+          "value": [
+            "0x8"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8",
+          "property": "#address-cells",
+          "value": [
+            "0x1"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8",
+          "property": "#size-cells",
+          "value": ""
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8",
+          "property": "interrupt-controller",
+          "value": []
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8",
+          "property": "#interrupt-cells",
+          "value": [
+            "0x3"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8",
+          "property": "interrupt-names",
+          "value": "pm8008"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8",
+          "property": "qcom,periph-map",
+          "value": [
+            "0x9",
+            "0x24",
+            "0xc0",
+            "0xc1"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8",
+          "property": "interrupt-parent",
+          "value": [
+            "0x18"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8",
+          "property": "interrupts",
+          "value": [
+            "0x3b",
+            "0x1"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8",
+          "property": "pinctrl-names",
+          "value": "default"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8",
+          "property": "pinctrl-0",
+          "value": [
+            "0x1bb",
+            "0x1bc"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8",
+          "property": "phandle",
+          "value": [
+            "0x45a"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/qcom,pm8008-chip@900",
+          "property": "compatible",
+          "value": "qcom,pm8008-chip"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/qcom,pm8008-chip@900",
+          "property": "reg",
+          "value": [
+            "0x900"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/qcom,pm8008-chip@900",
+          "property": "interrupts",
+          "value": [
+            "0x9",
+            "0x4",
+            "0x1"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/qcom,pm8008-chip@900",
+          "property": "interrupt-names",
+          "value": "ocp"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/qcom,pm8008-chip@900",
+          "property": "phandle",
+          "value": [
+            "0x45b"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/qcom,pm8008-chip@900/qcom,pm8008-chip-en",
+          "property": "regulator-name",
+          "value": "pm8008-chip-en"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/qcom,pm8008-chip@900/qcom,pm8008-chip-en",
+          "property": "phandle",
+          "value": [
+            "0x1be"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/qcom,revid@100",
+          "property": "compatible",
+          "value": "qcom,qpnp-revid"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/qcom,revid@100",
+          "property": "reg",
+          "value": [
+            "0x100"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/pinctrl@c000",
+          "property": "compatible",
+          "value": "qcom,spmi-gpio"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/pinctrl@c000",
+          "property": "reg",
+          "value": [
+            "0xc000",
+            "0x200"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/pinctrl@c000",
+          "property": "interrupts",
+          "value": [
+            "0xc0",
+            "0x0",
+            "0x1",
+            "0xc1",
+            "0x0",
+            "0x1"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/pinctrl@c000",
+          "property": "interrupt-names",
+          "value": "pm8008_gpio1 | pm8008_gpio2"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/pinctrl@c000",
+          "property": "gpio-controller",
+          "value": []
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/pinctrl@c000",
+          "property": "#gpio-cells",
+          "value": [
+            "0x2"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/pinctrl@c000",
+          "property": "phandle",
+          "value": [
+            "0x45c"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/pinctrl@c000/pm8008_gpio1_active",
+          "property": "pins",
+          "value": "gpio1"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/pinctrl@c000/pm8008_gpio1_active",
+          "property": "function",
+          "value": "func1"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/pinctrl@c000/pm8008_gpio1_active",
+          "property": "power-source",
+          "value": [
+            "0x1"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/pinctrl@c000/pm8008_gpio1_active",
+          "property": "output-enable",
+          "value": []
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/pinctrl@c000/pm8008_gpio1_active",
+          "property": "input-disable",
+          "value": []
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/pinctrl@c000/pm8008_gpio1_active",
+          "property": "bias-disable",
+          "value": []
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@8/pinctrl@c000/pm8008_gpio1_active",
+          "property": "phandle",
+          "value": [
+            "0x1bd"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9",
+          "property": "compatible",
+          "value": "qcom,i2c-pmic"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9",
+          "property": "reg",
+          "value": [
+            "0x9"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9",
+          "property": "#address-cells",
+          "value": [
+            "0x1"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9",
+          "property": "#size-cells",
+          "value": ""
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9",
+          "property": "pinctrl-names",
+          "value": "default"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9",
+          "property": "pinctrl-0",
+          "value": [
+            "0x1bd"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9",
+          "property": "phandle",
+          "value": [
+            "0x45d"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator",
+          "property": "compatible",
+          "value": "qcom,pm8008-regulator"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator",
+          "property": "pm8008_en-supply",
+          "value": [
+            "0x1be"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator",
+          "property": "qcom,enable-ocp-broadcast",
+          "value": []
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator",
+          "property": "vdd_l1_l2-supply",
+          "value": [
+            "0x1bf"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator",
+          "property": "vdd_l3_l4-supply",
+          "value": [
+            "0x1c0"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator",
+          "property": "vdd_l5-supply",
+          "value": [
+            "0x1c0"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator",
+          "property": "vdd_l6-supply",
+          "value": [
+            "0x1c1"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator",
+          "property": "vdd_l7-supply",
+          "value": [
+            "0x1c0"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator",
+          "property": "phandle",
+          "value": [
+            "0x45e"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l1@4000",
+          "property": "reg",
+          "value": " |  | @"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l1@4000",
+          "property": "regulator-name",
+          "value": "pm8008_l1"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l1@4000",
+          "property": "regulator-min-microvolt",
+          "value": [
+            "0x80e80"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l1@4000",
+          "property": "regulator-max-microvolt",
+          "value": [
+            "0x101d00"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l1@4000",
+          "property": "qcom,min-dropout-voltage",
+          "value": [
+            "0x33068"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l1@4000",
+          "property": "qcom,hpm-min-load",
+          "value": ""
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l1@4000",
+          "property": "phandle",
+          "value": [
+            "0x45f"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l2@4100",
+          "property": "reg",
+          "value": " |  | A"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l2@4100",
+          "property": "regulator-name",
+          "value": "pm8008_l2"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l2@4100",
+          "property": "regulator-min-microvolt",
+          "value": [
+            "0x80e80"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l2@4100",
+          "property": "regulator-max-microvolt",
+          "value": [
+            "0x10d880"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l2@4100",
+          "property": "qcom,min-dropout-voltage",
+          "value": [
+            "0x33068"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l2@4100",
+          "property": "qcom,hpm-min-load",
+          "value": ""
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l2@4100",
+          "property": "phandle",
+          "value": [
+            "0x460"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l3@4200",
+          "property": "reg",
+          "value": " |  | B"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l3@4200",
+          "property": "regulator-name",
+          "value": "pm8008_l3"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l3@4200",
+          "property": "regulator-min-microvolt",
+          "value": [
+            "0x16e360"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l3@4200",
+          "property": "regulator-max-microvolt",
+          "value": [
+            "0x2ab980"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l3@4200",
+          "property": "qcom,min-dropout-voltage",
+          "value": [
+            "0x1f400"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l3@4200",
+          "property": "qcom,hpm-min-load",
+          "value": ""
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l3@4200",
+          "property": "phandle",
+          "value": [
+            "0x461"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l4@4300",
+          "property": "reg",
+          "value": " |  | C"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l4@4300",
+          "property": "regulator-name",
+          "value": "pm8008_l4"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l4@4300",
+          "property": "regulator-min-microvolt",
+          "value": [
+            "0x16e360"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l4@4300",
+          "property": "regulator-max-microvolt",
+          "value": [
+            "0x2c4fc0"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l4@4300",
+          "property": "qcom,min-dropout-voltage",
+          "value": [
+            "0x17700"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l4@4300",
+          "property": "qcom,hpm-min-load",
+          "value": ""
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l4@4300",
+          "property": "phandle",
+          "value": [
+            "0x462"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l5@4400",
+          "property": "reg",
+          "value": " |  | D"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l5@4400",
+          "property": "regulator-name",
+          "value": "pm8008_l5"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l5@4400",
+          "property": "regulator-min-microvolt",
+          "value": [
+            "0x16e360"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l5@4400",
+          "property": "regulator-max-microvolt",
+          "value": [
+            "0x2ab980"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l5@4400",
+          "property": "qcom,min-dropout-voltage",
+          "value": [
+            "0x493e0"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l5@4400",
+          "property": "qcom,hpm-min-load",
+          "value": ""
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l5@4400",
+          "property": "phandle",
+          "value": [
+            "0x463"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l6@4400",
+          "property": "reg",
+          "value": " |  | E"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l6@4400",
+          "property": "regulator-name",
+          "value": "pm8008_l6"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l6@4400",
+          "property": "regulator-min-microvolt",
+          "value": [
+            "0x16e360"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l6@4400",
+          "property": "regulator-max-microvolt",
+          "value": [
+            "0x1b7740"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l6@4400",
+          "property": "qcom,min-dropout-voltage",
+          "value": [
+            "0xdac0"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l6@4400",
+          "property": "qcom,hpm-min-load",
+          "value": ""
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l6@4400",
+          "property": "phandle",
+          "value": [
+            "0x464"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l7@4400",
+          "property": "reg",
+          "value": " |  | F"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l7@4400",
+          "property": "regulator-name",
+          "value": "pm8008_l7"
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l7@4400",
+          "property": "regulator-min-microvolt",
+          "value": [
+            "0x16e360"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l7@4400",
+          "property": "regulator-max-microvolt",
+          "value": [
+            "0x2ab980"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l7@4400",
+          "property": "qcom,min-dropout-voltage",
+          "value": [
+            "0x1d4c0"
+          ]
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l7@4400",
+          "property": "qcom,hpm-min-load",
+          "value": ""
+        },
+        {
+          "node": "/soc/i2c@990000/qcom,pm8008@9/qcom,pm8008-regulator/qcom,pm8008-l7@4400",
+          "property": "phandle",
+          "value": [
+            "0x465"
+          ]
+        },
+        {
+          "node": "/soc/qcom,msm-audio-apr/qcom,q6core-audio/sound",
+          "property": "fsa4480-i2c-handle",
+          "value": [
+            "0x211"
+          ]
+        },
+        {
+          "node": "/soc/qcom,mdss_mdp/qcom,sde-dspp-blocks",
+          "property": "qcom,sde-dspp-memcolor",
+          "value": [
+            "0x880",
+            "0x10007"
+          ]
+        },
+        {
+          "node": "/__symbols__",
+          "property": "i2c_freq_100Khz_cci0",
+          "value": "/soc/qcom,cci0/qcom,i2c_standard_mode"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "i2c_freq_400Khz_cci0",
+          "value": "/soc/qcom,cci0/qcom,i2c_fast_mode"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "i2c_freq_custom_cci0",
+          "value": "/soc/qcom,cci0/qcom,i2c_custom_mode"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "i2c_freq_1Mhz_cci0",
+          "value": "/soc/qcom,cci0/qcom,i2c_fast_plus_mode"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "i2c_freq_100Khz_cci1",
+          "value": "/soc/qcom,cci1/qcom,i2c_standard_mode"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "i2c_freq_400Khz_cci1",
+          "value": "/soc/qcom,cci1/qcom,i2c_fast_mode"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "i2c_freq_custom_cci1",
+          "value": "/soc/qcom,cci1/qcom,i2c_custom_mode"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "i2c_freq_1Mhz_cci1",
+          "value": "/soc/qcom,cci1/qcom,i2c_fast_plus_mode"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se0_i2c_pins",
+          "value": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se0_i2c_active",
+          "value": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins/qupv3_se0_i2c_active"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se0_i2c_sleep",
+          "value": "/soc/pinctrl@f100000/qupv3_se0_i2c_pins/qupv3_se0_i2c_sleep"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se2_i2c_pins",
+          "value": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se2_i2c_active",
+          "value": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins/qupv3_se2_i2c_active"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se2_i2c_sleep",
+          "value": "/soc/pinctrl@f100000/qupv3_se2_i2c_pins/qupv3_se2_i2c_sleep"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se6_i2c_pins",
+          "value": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se6_i2c_active",
+          "value": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins/qupv3_se6_i2c_active"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se6_i2c_sleep",
+          "value": "/soc/pinctrl@f100000/qupv3_se6_i2c_pins/qupv3_se6_i2c_sleep"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se7_i2c_pins",
+          "value": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se7_i2c_active",
+          "value": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins/qupv3_se7_i2c_active"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se7_i2c_sleep",
+          "value": "/soc/pinctrl@f100000/qupv3_se7_i2c_pins/qupv3_se7_i2c_sleep"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se8_i2c_pins",
+          "value": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se8_i2c_active",
+          "value": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins/qupv3_se8_i2c_active"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se8_i2c_sleep",
+          "value": "/soc/pinctrl@f100000/qupv3_se8_i2c_pins/qupv3_se8_i2c_sleep"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se10_i2c_pins",
+          "value": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se10_i2c_active",
+          "value": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins/qupv3_se10_i2c_active"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se10_i2c_sleep",
+          "value": "/soc/pinctrl@f100000/qupv3_se10_i2c_pins/qupv3_se10_i2c_sleep"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se0_i2c",
+          "value": "/soc/i2c@880000"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se2_i2c",
+          "value": "/soc/i2c@888000"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se6_i2c",
+          "value": "/soc/i2c@980000"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se7_i2c",
+          "value": "/soc/i2c@984000"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se8_i2c",
+          "value": "/soc/i2c@988000"
+        },
+        {
+          "node": "/__symbols__",
+          "property": "qupv3_se10_i2c",
+          "value": "/soc/i2c@990000"
+        }
+      ]
+    }
+  ],
+  "dtbo_table": {
+    "entries": 2,
+    "page_size": 4096,
+    "version": 0
+  },
+  "overlays": [
+    {
+      "index": 0,
+      "id": 0,
+      "revision": 0,
+      "custom": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 213099,
+      "sha256": "eb0bd6230057d220ab6d34a9fa4f4b4ea18a5e2ea0d585b8ed635bf6474aaa85",
+      "fdt": {
+        "total_bytes": 213099,
+        "version": 17,
+        "selected_properties": [
+          {
+            "node": "/",
+            "property": "model",
+            "value": "Qualcomm Technologies, Inc. Lagoon MTP Go7 V10 for Color"
+          },
+          {
+            "node": "/",
+            "property": "compatible",
+            "value": "qcom,lagoon-mtp | qcom,lagoon | qcom,mtp"
+          },
+          {
+            "node": "/fragment@0/__overlay__/qcom,mdss_dsi_epdc_cmd",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_grb"
+          },
+          {
+            "node": "/fragment@0/__overlay__/qcom,mdss_dsi_epdc_cmd",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@0/__overlay__/qcom,mdss_dsi_epdc_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@0/__overlay__/qcom,mdss_dsi_epdc_video",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_grb"
+          },
+          {
+            "node": "/fragment@0/__overlay__/qcom,mdss_dsi_epdc_video",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@0/__overlay__/qcom,mdss_dsi_epdc_video",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "panel_name",
+            "value": "ED070KC3"
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "frame_rate",
+            "value": [
+              "0x5a"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "panel_width",
+            "value": [
+              "0x10"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "sdclk-frequency",
+            "value": [
+              "0x2625a00"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "density",
+            "value": [
+              "0xc8"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "xres",
+            "value": [
+              "0x4f0"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "yres",
+            "value": [
+              "0x690"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "left_margin",
+            "value": [
+              "0xa"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "right_margin",
+            "value": [
+              "0x22"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "upper_margin",
+            "value": [
+              "0x4"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "lower_margin",
+            "value": [
+              "0xe"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "hsync_len",
+            "value": [
+              "0xf"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "vsync_len",
+            "value": [
+              "0x1"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "kernel_init_mode_disable",
+            "value": [
+              "0x1"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "phandle",
+            "value": [
+              "0x64"
+            ]
+          },
+          {
+            "node": "/fragment@2/__overlay__/qcom,mdss_dsi_rm69299_visionox_amoled_cmd",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_rgb"
+          },
+          {
+            "node": "/fragment@2/__overlay__/qcom,mdss_dsi_rm69299_visionox_amoled_cmd",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@2/__overlay__/qcom,mdss_dsi_rm69299_visionox_amoled_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@2/__overlay__/qcom,mdss_dsi_rm69299_visionox_amoled_video",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_rgb"
+          },
+          {
+            "node": "/fragment@2/__overlay__/qcom,mdss_dsi_rm69299_visionox_amoled_video",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@2/__overlay__/qcom,mdss_dsi_rm69299_visionox_amoled_video",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@9/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_60hz_cmd",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_rgb"
+          },
+          {
+            "node": "/fragment@9/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_60hz_cmd",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@9/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_60hz_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@10/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_90hz_cmd",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_rgb"
+          },
+          {
+            "node": "/fragment@10/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_90hz_cmd",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@10/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_90hz_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@11/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_120hz_cmd",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_rgb"
+          },
+          {
+            "node": "/fragment@11/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_120hz_cmd",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@11/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_120hz_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@12/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_60hz_video",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@13/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_90hz_video",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@14/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_120hz_video",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@15/__overlay__/qcom,mdss_dsi_sharp_qsync_fhd_video",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@15/__overlay__/qcom,mdss_dsi_sharp_qsync_fhd_video",
+            "property": "qcom,mdss-dsi-panel-hdr-color-primaries",
+            "value": [
+              "0x3a98",
+              "0x3e80",
+              "0x83d6",
+              "0x3db8",
+              "0x33c2",
+              "0x8692",
+              "0x1d4c",
+              "0xbb8"
+            ]
+          },
+          {
+            "node": "/fragment@16/__overlay__/qcom,mdss_dsi_sharp_qsync_fhd_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@16/__overlay__/qcom,mdss_dsi_sharp_qsync_fhd_cmd",
+            "property": "qcom,mdss-dsi-panel-hdr-color-primaries",
+            "value": [
+              "0x3a98",
+              "0x3e80",
+              "0x83d6",
+              "0x3db8",
+              "0x33c2",
+              "0x8692",
+              "0x1d4c",
+              "0xbb8"
+            ]
+          },
+          {
+            "node": "/fragment@17/__overlay__/qcom,mdss_dsi_sim_cmd",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_rgb"
+          },
+          {
+            "node": "/fragment@17/__overlay__/qcom,mdss_dsi_sim_cmd",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@17/__overlay__/qcom,mdss_dsi_sim_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@17/__overlay__/qcom,mdss_dsi_sim_cmd",
+            "property": "qcom,mdss-dsi-panel-hdr-color-primaries",
+            "value": [
+              "0x38a4",
+              "0x3c8c",
+              "0x7d00",
+              "0x4268",
+              "0x3c8c",
+              "0x7530",
+              "0x1f40",
+              "0xbb8"
+            ]
+          },
+          {
+            "node": "/fragment@18/__overlay__/qcom,mdss_dsi_sim_video",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@18/__overlay__/qcom,mdss_dsi_sim_video",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@18/__overlay__/qcom,mdss_dsi_sim_video",
+            "property": "qcom,mdss-dsi-panel-hdr-color-primaries",
+            "value": [
+              "0x38a4",
+              "0x3c8c",
+              "0x7d00",
+              "0x4268",
+              "0x3c8c",
+              "0x7530",
+              "0x1f40",
+              "0xbb8"
+            ]
+          },
+          {
+            "node": "/fragment@19/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_144hz_cmd",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_rgb"
+          },
+          {
+            "node": "/fragment@19/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_144hz_cmd",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@19/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_144hz_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@52/__overlay__/wacom_i2c",
+            "property": "phandle",
+            "value": [
+              "0xda"
+            ]
+          },
+          {
+            "node": "/fragment@52/__overlay__/wacom_i2c/mux",
+            "property": "pins",
+            "value": "gpio10 | gpio49 | gpio52 | gpio54"
+          },
+          {
+            "node": "/fragment@52/__overlay__/wacom_i2c/mux",
+            "property": "function",
+            "value": "gpio"
+          },
+          {
+            "node": "/fragment@52/__overlay__/wacom_i2c/config",
+            "property": "pins",
+            "value": "gpio10 | gpio49 | gpio52 | gpio54"
+          },
+          {
+            "node": "/fragment@52/__overlay__/wacom_i2c/config",
+            "property": "bias-pull-up",
+            "value": []
+          },
+          {
+            "node": "/fragment@52/__overlay__/wacom_i2c/config",
+            "property": "drive-strength",
+            "value": [
+              "0x4"
+            ]
+          },
+          {
+            "node": "/fragment@59/__overlay__/aw87xxx_pa@78",
+            "property": "onyx,real-i2c-reg",
+            "value": [
+              "0x58"
+            ]
+          },
+          {
+            "node": "/fragment@59/__overlay__/aw87xxx_pa@79",
+            "property": "onyx,real-i2c-reg",
+            "value": [
+              "0x59"
+            ]
+          },
+          {
+            "node": "/fragment@66/__overlay__",
+            "property": "vdd-i2c-supply",
+            "value": [
+              "0xffffffff"
+            ]
+          },
+          {
+            "node": "/fragment@67/__overlay__/lm3630a@38",
+            "property": "lm3630a-vdd-i2c-supply",
+            "value": [
+              "0xffffffff"
+            ]
+          },
+          {
+            "node": "/fragment@68/__overlay__/haptic_hv@5A",
+            "property": "aw-vdd-i2c-supply",
+            "value": [
+              "0xffffffff"
+            ]
+          },
+          {
+            "node": "/__symbols__",
+            "property": "eink_timings",
+            "value": "/fragment@1/__overlay__/eink-timings"
+          },
+          {
+            "node": "/__symbols__",
+            "property": "wacom_i2c",
+            "value": "/fragment@52/__overlay__/wacom_i2c"
+          },
+          {
+            "node": "/__fixups__",
+            "property": "qupv3_se10_i2c",
+            "value": "/fragment@41:target:0 | /fragment@59:target:0 | /fragment@67:target:0"
+          },
+          {
+            "node": "/__fixups__",
+            "property": "qupv3_se8_i2c",
+            "value": "/fragment@63:target:0 | /fragment@64:target:0 | /fragment@65:target:0 | /fragment@80:target:0"
+          },
+          {
+            "node": "/__fixups__",
+            "property": "qupv3_se0_i2c",
+            "value": "/fragment@68:target:0"
+          },
+          {
+            "node": "/__fixups__",
+            "property": "qupv3_se7_i2c",
+            "value": "/fragment@75:target:0 | /fragment@77:target:0"
+          }
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "id": 0,
+      "revision": 0,
+      "custom": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 213403,
+      "sha256": "ee867786931e713365c2ca41123c5894d87300a899f805ef0ad6134254a2bcbf",
+      "fdt": {
+        "total_bytes": 213403,
+        "version": 17,
+        "selected_properties": [
+          {
+            "node": "/",
+            "property": "model",
+            "value": "Qualcomm Technologies, Inc. Lagoon MTP  Go7 V20 for Color"
+          },
+          {
+            "node": "/",
+            "property": "compatible",
+            "value": "qcom,lagoon-mtp | qcom,lagoon | qcom,mtp"
+          },
+          {
+            "node": "/fragment@0/__overlay__/qcom,mdss_dsi_epdc_cmd",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_grb"
+          },
+          {
+            "node": "/fragment@0/__overlay__/qcom,mdss_dsi_epdc_cmd",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@0/__overlay__/qcom,mdss_dsi_epdc_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@0/__overlay__/qcom,mdss_dsi_epdc_video",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_grb"
+          },
+          {
+            "node": "/fragment@0/__overlay__/qcom,mdss_dsi_epdc_video",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@0/__overlay__/qcom,mdss_dsi_epdc_video",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "panel_name",
+            "value": "ED070KC3"
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "frame_rate",
+            "value": [
+              "0x5a"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "panel_width",
+            "value": [
+              "0x10"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "sdclk-frequency",
+            "value": [
+              "0x2625a00"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "density",
+            "value": [
+              "0xc8"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "xres",
+            "value": [
+              "0x4f0"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "yres",
+            "value": [
+              "0x690"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "left_margin",
+            "value": [
+              "0xa"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "right_margin",
+            "value": [
+              "0x22"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "upper_margin",
+            "value": [
+              "0x4"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "lower_margin",
+            "value": [
+              "0xe"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "hsync_len",
+            "value": [
+              "0xf"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "vsync_len",
+            "value": [
+              "0x1"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "kernel_init_mode_disable",
+            "value": [
+              "0x1"
+            ]
+          },
+          {
+            "node": "/fragment@1/__overlay__/eink-timings",
+            "property": "phandle",
+            "value": [
+              "0x64"
+            ]
+          },
+          {
+            "node": "/fragment@2/__overlay__/qcom,mdss_dsi_rm69299_visionox_amoled_cmd",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_rgb"
+          },
+          {
+            "node": "/fragment@2/__overlay__/qcom,mdss_dsi_rm69299_visionox_amoled_cmd",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@2/__overlay__/qcom,mdss_dsi_rm69299_visionox_amoled_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@2/__overlay__/qcom,mdss_dsi_rm69299_visionox_amoled_video",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_rgb"
+          },
+          {
+            "node": "/fragment@2/__overlay__/qcom,mdss_dsi_rm69299_visionox_amoled_video",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@2/__overlay__/qcom,mdss_dsi_rm69299_visionox_amoled_video",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@9/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_60hz_cmd",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_rgb"
+          },
+          {
+            "node": "/fragment@9/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_60hz_cmd",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@9/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_60hz_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@10/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_90hz_cmd",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_rgb"
+          },
+          {
+            "node": "/fragment@10/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_90hz_cmd",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@10/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_90hz_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@11/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_120hz_cmd",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_rgb"
+          },
+          {
+            "node": "/fragment@11/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_120hz_cmd",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@11/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_120hz_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@12/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_60hz_video",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@13/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_90hz_video",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@14/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_120hz_video",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@15/__overlay__/qcom,mdss_dsi_sharp_qsync_fhd_video",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@15/__overlay__/qcom,mdss_dsi_sharp_qsync_fhd_video",
+            "property": "qcom,mdss-dsi-panel-hdr-color-primaries",
+            "value": [
+              "0x3a98",
+              "0x3e80",
+              "0x83d6",
+              "0x3db8",
+              "0x33c2",
+              "0x8692",
+              "0x1d4c",
+              "0xbb8"
+            ]
+          },
+          {
+            "node": "/fragment@16/__overlay__/qcom,mdss_dsi_sharp_qsync_fhd_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@16/__overlay__/qcom,mdss_dsi_sharp_qsync_fhd_cmd",
+            "property": "qcom,mdss-dsi-panel-hdr-color-primaries",
+            "value": [
+              "0x3a98",
+              "0x3e80",
+              "0x83d6",
+              "0x3db8",
+              "0x33c2",
+              "0x8692",
+              "0x1d4c",
+              "0xbb8"
+            ]
+          },
+          {
+            "node": "/fragment@17/__overlay__/qcom,mdss_dsi_sim_cmd",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_rgb"
+          },
+          {
+            "node": "/fragment@17/__overlay__/qcom,mdss_dsi_sim_cmd",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@17/__overlay__/qcom,mdss_dsi_sim_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@17/__overlay__/qcom,mdss_dsi_sim_cmd",
+            "property": "qcom,mdss-dsi-panel-hdr-color-primaries",
+            "value": [
+              "0x38a4",
+              "0x3c8c",
+              "0x7d00",
+              "0x4268",
+              "0x3c8c",
+              "0x7530",
+              "0x1f40",
+              "0xbb8"
+            ]
+          },
+          {
+            "node": "/fragment@18/__overlay__/qcom,mdss_dsi_sim_video",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@18/__overlay__/qcom,mdss_dsi_sim_video",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@18/__overlay__/qcom,mdss_dsi_sim_video",
+            "property": "qcom,mdss-dsi-panel-hdr-color-primaries",
+            "value": [
+              "0x38a4",
+              "0x3c8c",
+              "0x7d00",
+              "0x4268",
+              "0x3c8c",
+              "0x7530",
+              "0x1f40",
+              "0xbb8"
+            ]
+          },
+          {
+            "node": "/fragment@19/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_144hz_cmd",
+            "property": "qcom,mdss-dsi-color-order",
+            "value": "rgb_swap_rgb"
+          },
+          {
+            "node": "/fragment@19/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_144hz_cmd",
+            "property": "qcom,mdss-dsi-underflow-color",
+            "value": [
+              "0xff"
+            ]
+          },
+          {
+            "node": "/fragment@19/__overlay__/qcom,mdss_dsi_r66451_fhd_plus_144hz_cmd",
+            "property": "qcom,mdss-dsi-border-color",
+            "value": ""
+          },
+          {
+            "node": "/fragment@52/__overlay__/wacom_i2c",
+            "property": "phandle",
+            "value": [
+              "0xda"
+            ]
+          },
+          {
+            "node": "/fragment@52/__overlay__/wacom_i2c/mux",
+            "property": "pins",
+            "value": "gpio10 | gpio49 | gpio52 | gpio54"
+          },
+          {
+            "node": "/fragment@52/__overlay__/wacom_i2c/mux",
+            "property": "function",
+            "value": "gpio"
+          },
+          {
+            "node": "/fragment@52/__overlay__/wacom_i2c/config",
+            "property": "pins",
+            "value": "gpio10 | gpio49 | gpio52 | gpio54"
+          },
+          {
+            "node": "/fragment@52/__overlay__/wacom_i2c/config",
+            "property": "bias-pull-up",
+            "value": []
+          },
+          {
+            "node": "/fragment@52/__overlay__/wacom_i2c/config",
+            "property": "drive-strength",
+            "value": [
+              "0x4"
+            ]
+          },
+          {
+            "node": "/fragment@59/__overlay__/aw87xxx_pa@78",
+            "property": "onyx,real-i2c-reg",
+            "value": [
+              "0x58"
+            ]
+          },
+          {
+            "node": "/fragment@59/__overlay__/aw87xxx_pa@79",
+            "property": "onyx,real-i2c-reg",
+            "value": [
+              "0x59"
+            ]
+          },
+          {
+            "node": "/fragment@66/__overlay__",
+            "property": "vdd-i2c-supply",
+            "value": [
+              "0xffffffff"
+            ]
+          },
+          {
+            "node": "/fragment@67/__overlay__/lm3630a@38",
+            "property": "lm3630a-vdd-i2c-supply",
+            "value": [
+              "0xffffffff"
+            ]
+          },
+          {
+            "node": "/fragment@68/__overlay__/haptic_hv@5A",
+            "property": "aw-vdd-i2c-supply",
+            "value": [
+              "0xffffffff"
+            ]
+          },
+          {
+            "node": "/__symbols__",
+            "property": "eink_timings",
+            "value": "/fragment@1/__overlay__/eink-timings"
+          },
+          {
+            "node": "/__symbols__",
+            "property": "wacom_i2c",
+            "value": "/fragment@52/__overlay__/wacom_i2c"
+          },
+          {
+            "node": "/__fixups__",
+            "property": "qupv3_se10_i2c",
+            "value": "/fragment@41:target:0 | /fragment@59:target:0 | /fragment@67:target:0"
+          },
+          {
+            "node": "/__fixups__",
+            "property": "qupv3_se8_i2c",
+            "value": "/fragment@63:target:0 | /fragment@64:target:0 | /fragment@65:target:0 | /fragment@80:target:0"
+          },
+          {
+            "node": "/__fixups__",
+            "property": "qupv3_se0_i2c",
+            "value": "/fragment@68:target:0"
+          },
+          {
+            "node": "/__fixups__",
+            "property": "qupv3_se7_i2c",
+            "value": "/fragment@75:target:0 | /fragment@77:target:0 | /fragment@82:target:0"
+          }
+        ]
+      }
+    }
+  ]
+}

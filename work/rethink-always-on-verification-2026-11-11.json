@@ -1,0 +1,7 @@
+{
+  "always_on_vpn_package": "com.celzero.bravedns",
+  "block_connections_without_vpn": true,
+  "wifi_before_testing": "0",
+  "wifi_enabled_temporarily_for_network_test": true,
+  "restore_original_wifi_state_after_test": true
+}

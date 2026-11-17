@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "volume": "booxos-lineage21-source-20261111",
+  "image": "sha256:b4ece63d16da55dab0405cd8a691454e30dfac308602ee2797e88f35d53cadb2",
+  "boox_access": false,
+  "full_platform_sync": false,
+  "pins": {
+    "build/blueprint": "cf7fdff39eeae23d21e41fcdeecbad5eecbee3c8",
+    "build/make": "bc95152efc6a43f3b103b1848c946e9bf8d4e493",
+    "build/soong": "7e2be266cfde19c5e0cbc8e4ed016d5572abd4fb",
+    "prebuilts/build-tools": "84d04c76b72691cf1f4639c12bda519930229e09",
+    "prebuilts/go/linux-x86": "278e43da00640f7005cfff1519f51be476ebc388",
+    "prebuilts/clang/host/linux-x86": "7154d3eddcb62ff7909a6ae2bf0c03e445e65bc4",
+    "prebuilts/rust": "4ebcd0d4c717e312c2773f4019e0874b994ac2b8",
+    "prebuilts/jdk/jdk17": "8f1e82f22eadc7057e2a9528fd599a182d694214"
+  },
+  "rust_sparse_path": "linux-x86/1.75.0",
+  "exit_code": 0,
+  "elapsed_seconds": 106.2,
+  "physical_host_free_bytes_after": 332611252224
+}

@@ -1,0 +1,153 @@
+{
+  "offline_metadata_result": "accepted_for_further_review",
+  "role": "stock",
+  "device": "GoColor7_2",
+  "sdk": 33,
+  "zip_sha256": "e9eb0e57b0716e6d19abc1ae749631edb956f0974072dc796399d638348fd308",
+  "known_validated_stock_archive": true,
+  "partitions": [
+    {
+      "name": "abl",
+      "bytes": 159744,
+      "sha256": "8c086d92b2910a3b8f49efff6bd082ccda77b482d95f6060df6edcc9b9f4b66c",
+      "category": "physical",
+      "operation_types": [
+        8
+      ]
+    },
+    {
+      "name": "boot",
+      "bytes": 100663296,
+      "sha256": "ede53420966b3af1a3a7b02cae3fef8583a0e01d19271006287dc14b4457ba63",
+      "category": "physical",
+      "operation_types": [
+        0,
+        1,
+        8
+      ]
+    },
+    {
+      "name": "dtbo",
+      "bytes": 8388608,
+      "sha256": "7379d4fb7906fa3bdbb2b8048b7c868cb9fc584b1e26765ed9f4ee8941f54ab9",
+      "category": "physical",
+      "operation_types": [
+        1,
+        8
+      ]
+    },
+    {
+      "name": "modem",
+      "bytes": 62099456,
+      "sha256": "1d8fb924a51536f87090076dd1a6978353e9ca162d206a50c1d5ca6367867045",
+      "category": "physical",
+      "operation_types": [
+        8
+      ]
+    },
+    {
+      "name": "odm",
+      "bytes": 1056768,
+      "sha256": "db101ba203846cc257b04a954c9330b9feb1ad8ab12d0a5cc7cddff0bd88c15b",
+      "category": "logical",
+      "operation_types": [
+        8
+      ]
+    },
+    {
+      "name": "product",
+      "bytes": 649891840,
+      "sha256": "aea60d9c0d6e617fe26a320de483fd8c04fa3bf2db847089a41fc9689586be0b",
+      "category": "logical",
+      "operation_types": [
+        0,
+        1,
+        8
+      ]
+    },
+    {
+      "name": "recovery",
+      "bytes": 100663296,
+      "sha256": "4f040455a462a516d1c8e2261d34c1e93e4d3a63564788899faa0359363d1ac7",
+      "category": "physical",
+      "operation_types": [
+        0,
+        1,
+        8
+      ]
+    },
+    {
+      "name": "system",
+      "bytes": 3112579072,
+      "sha256": "d9195d059c689d3dfb380afd201313a6a3c97b4a231557550dc3c4cc35ec5a81",
+      "category": "logical",
+      "operation_types": [
+        0,
+        1,
+        8
+      ]
+    },
+    {
+      "name": "system_ext",
+      "bytes": 483565568,
+      "sha256": "302f5a98be50abf604985d3036358b97ef1e2583dfa41f623f9890f32cdfaf08",
+      "category": "logical",
+      "operation_types": [
+        0,
+        1,
+        8
+      ]
+    },
+    {
+      "name": "vbmeta",
+      "bytes": 8192,
+      "sha256": "54e52b9415f3885f2d6c505054ccbd7531fb47f2e2b7dfac0fd89be169f4b2c8",
+      "category": "physical",
+      "operation_types": [
+        8
+      ]
+    },
+    {
+      "name": "vbmeta_system",
+      "bytes": 4096,
+      "sha256": "fab18337eecba4891c6be62efe4ce5285838dc3195d1745eaceee52afde324d1",
+      "category": "physical",
+      "operation_types": [
+        8
+      ]
+    },
+    {
+      "name": "vendor",
+      "bytes": 594817024,
+      "sha256": "147fe58efadd4e444b1236704e3880f1da3bcee08d4016d839b7d4630f1c3372",
+      "category": "logical",
+      "operation_types": [
+        0,
+        1,
+        8
+      ]
+    },
+    {
+      "name": "xbl",
+      "bytes": 3379200,
+      "sha256": "807fed47caa861c3ac530a568b8a4dc4eaff3d10977b8d0623c6c3ed71f22ddc",
+      "category": "physical",
+      "operation_types": [
+        8
+      ]
+    }
+  ],
+  "logical_image_bytes": 4841910272,
+  "payload_max_timestamp": 1776750860,
+  "payload_metadata_signature_bytes": 267,
+  "new_signature_or_avb_verification_performed": false,
+  "install_ready": false,
+  "device_operation_performed": false,
+  "remaining_checks": [
+    "trusted release signing and full payload integrity",
+    "AVB/rollback and boot/recovery pairing",
+    "live partition/snapshot layout",
+    "exact color-model integration and restore route",
+    "explicit install approval"
+  ]
+}

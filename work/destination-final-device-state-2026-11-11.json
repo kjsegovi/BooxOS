@@ -1,0 +1,12 @@
+{
+  "model": "GoColor7_2",
+  "build": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+  "slot": "_a",
+  "boot_completed": "1",
+  "always_on_vpn_app": "com.celzero.bravedns",
+  "always_on_vpn_lockdown": "1",
+  "firewall_running": true,
+  "readest_running": true,
+  "wifi_on": "1",
+  "screen_timeout": "300000"
+}

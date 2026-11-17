@@ -1,0 +1,36 @@
+{
+  "result": "passed",
+  "saved_slot_status": {
+    "product": "GoColor7_2",
+    "is-userspace": "yes",
+    "current-slot": "a",
+    "slot-successful:a": "yes",
+    "slot-unbootable:a": "no",
+    "slot-successful:b": "yes",
+    "slot-unbootable:b": "no",
+    "snapshot-update-status": "none"
+  },
+  "android_before": {
+    "ro.product.model": "GoColor7_2",
+    "ro.build.display.id": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "ro.boot.slot_suffix": "_a",
+    "sys.boot_completed": "1"
+  },
+  "android_after": {
+    "ro.product.model": "GoColor7_2",
+    "ro.build.display.id": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "ro.boot.slot_suffix": "_a",
+    "sys.boot_completed": "1"
+  },
+  "boot_success_flag_yes": true,
+  "normal_restart_passed": true,
+  "slot_or_success_flags_explicitly_changed": false,
+  "firmware_flashed": false,
+  "data_erased": false,
+  "edl_used": false,
+  "normal_reboot_requested": true,
+  "failure_reason": null,
+  "private_result": "/Users/kjsegovi/Projects/BooxOS/.private/boot-status-check-20261111T181440Z/result.json",
+  "checked_at_utc": "2026-11-11T18:16:23.561417+00:00",
+  "scope_completed": true
+}

@@ -1,0 +1,25 @@
+{
+  "source": "validated stock boot kernel",
+  "compression": "raw",
+  "kernel_bytes": 60735504,
+  "ikconfig_start": 22591520,
+  "ikconfig_found": true,
+  "config_sha256": "681af35e04773432cf9195e9cfdfcff29f5344f4b12870f74c6875ac9f7aafdb",
+  "features": {
+    "CONFIG_BPF": "y",
+    "CONFIG_BPF_SYSCALL": "y",
+    "CONFIG_BPF_JIT": "y",
+    "CONFIG_BPF_JIT_ALWAYS_ON": "y",
+    "CONFIG_HAVE_EBPF_JIT": "y",
+    "CONFIG_CGROUP_BPF": "y",
+    "CONFIG_NET_CLS_BPF": "y",
+    "CONFIG_NET_ACT_BPF": "n",
+    "CONFIG_NETFILTER_XT_MATCH_BPF": "y",
+    "CONFIG_IPV6": "y",
+    "CONFIG_SECURITY_SELINUX": "y",
+    "CONFIG_MODULES": "y",
+    "CONFIG_IKCONFIG": "y",
+    "CONFIG_IKCONFIG_PROC": "y"
+  },
+  "total_config_keys": 5124
+}

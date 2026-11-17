@@ -1,0 +1,22 @@
+{
+  "identity": {
+    "exit_code": 0,
+    "output": "GoColor7_2\n2026-04-21_13-54_4.2-rel_0421_19324b3ea\n_a\n1"
+  },
+  "network_gate": {
+    "exit_code": 0,
+    "output": "0\nnull\nnull\ncom.celzero.bravedns\n1"
+  },
+  "firewall": {
+    "exit_code": 0,
+    "output": "2655\n    User 0: ceDataInode=26340 installed=true hidden=false suspended=false distractionFlags=0 stopped=false notLaunched=false enabled=1 instant=false virtual=false\n    User 0:"
+  },
+  "reader": {
+    "exit_code": 0,
+    "output": "User 0: ceDataInode=25382 installed=true hidden=false suspended=false distractionFlags=0 stopped=false notLaunched=false enabled=0 instant=false virtual=false\n    User 0:"
+  },
+  "usb_network": {
+    "exit_code": 0,
+    "output": "mtp,adb\nbond0\nbonding_masters\ndummy0\nip6_vti0\nip6tnl0\nip_vti0\nlo\np2p0\nsit0\ntun0\nwifi-aware0\nwlan0"
+  }
+}

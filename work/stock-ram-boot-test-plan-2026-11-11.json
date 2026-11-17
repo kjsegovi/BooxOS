@@ -1,0 +1,31 @@
+{
+  "model": "GoColor7_2",
+  "build": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+  "asset": {
+    "path": "/Users/kjsegovi/Projects/BooxOS/.local/firmware/GoColor7_2/2026-04-21_13-54_4.2-rel_0421_19324b3ea/images/boot.img",
+    "bytes": 100663296,
+    "sha256": "ede53420966b3af1a3a7b02cae3fef8583a0e01d19271006287dc14b4457ba63",
+    "modified": false
+  },
+  "scope": "one unchanged stock boot image downloaded and executed from RAM",
+  "entry": "original Android A -> native bootloader",
+  "required_status": "product=lito, is-userspace=no, A successful and bootable, sufficient download size",
+  "trial": "exact validated stock image via fastboot boot, at most once",
+  "success": "command accepted and exact original Android A startup completed",
+  "fallback": "if command is rejected and native A remains bootable, one normal reboot; otherwise stop for owner",
+  "no_commands_for": [
+    "flash",
+    "erase",
+    "format",
+    "set_active",
+    "unlock",
+    "EDL",
+    "root"
+  ],
+  "persistent_partition_image_write_requested": false,
+  "runtime_storage_is_read_only": false,
+  "owner_needed": "stay nearby with USB connected for power-button fallback",
+  "modified_image_support_proven_by_this_test": false,
+  "lineage_install_or_restore_test": false,
+  "approval_required": true
+}

@@ -1,0 +1,7 @@
+{
+  "method": "BOOX Apps > Freeze Settings > Readest unchecked",
+  "readest_frozen": false,
+  "other_apps_unchanged": true,
+  "rethink_not_in_freeze_list": true,
+  "rethink_always_on_and_battery_exemption_already_enabled": true
+}

@@ -1,0 +1,35 @@
+{
+  "projects": [
+    "build/blueprint",
+    "build/make",
+    "build/soong",
+    "prebuilts/build-tools",
+    "prebuilts/go/linux-x86",
+    "prebuilts/clang/host/linux-x86",
+    "prebuilts/rust",
+    "prebuilts/jdk/jdk17"
+  ],
+  "volume": "booxos-lineage21-source-20261111",
+  "image": "sha256:b4ece63d16da55dab0405cd8a691454e30dfac308602ee2797e88f35d53cadb2",
+  "platform_wide_sync": false,
+  "boox_access": false,
+  "docker_settings_changed": false,
+  "minimum_host_free_bytes": 107374182400,
+  "started_at_utc": "2026-11-11T19:19:08.892102+00:00",
+  "exit_code": 137,
+  "elapsed_seconds": 1622.93,
+  "pins": [],
+  "passed": false,
+  "failure_tail": [
+    "Git LFS initialized.",
+    "warning: Changing --git-lfs settings will only affect new project checkouts.",
+    "         Existing projects will require manual updates.",
+    "",
+    "repo: reusing existing repo client checkout in /work",
+    "",
+    "repo has been initialized in /work"
+  ],
+  "physical_host_free_bytes_after": 336221458432,
+  "stop_reason": "Deliberately stopped this container to replace slow per-file checkout of unused darwin Rust versions with batched selected Linux 1.75 blobs; exit 137 is not evidence of OOM",
+  "continuation": "tools/build-host/finish_toolchain_subset.py"
+}

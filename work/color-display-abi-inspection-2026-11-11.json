@@ -1,0 +1,7 @@
+{
+  "source_file": ".local/porting-inputs/stock-static/vendor/bin/hw/vendor.qti.hardware.display.composer-service",
+  "sha256": "c13c43af3f9258e7faed8bfd11fef88b10d303a8d5966a9e316e085c04623d17",
+  "offline_only": true,
+  "symbol_identified_functions": [],
+  "color_runtime_proven": false
+}

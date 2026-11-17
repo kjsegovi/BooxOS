@@ -1,0 +1,8 @@
+{
+  "dns_block_url": "o4511086364131328.ingest.us.sentry.io",
+  "dns_block_blocked_desc": "blocked 9 min. ago",
+  "dns_block_blocklist_info_txt": "Isolate",
+  "dns_app_name": "Readest (10114)",
+  "dns_block_info_details": "127.0.0.3:53",
+  "dns_message": "9a391f0f19c67a4d; tunnel; no error; {block(ip?false, tr?true, req?true)}"
+}

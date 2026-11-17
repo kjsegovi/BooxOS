@@ -1,0 +1,49 @@
+{
+  "scope": "Synthetic negative checks of local package metadata/scope guard; no real Lineage image exists; no firmware signature validation by this guard",
+  "checks": [
+    {
+      "case": "allowed_scope",
+      "accepted_for_scope_review": true,
+      "expected": true,
+      "passed": true,
+      "reason": "accepted_for_further_review"
+    },
+    {
+      "case": "wrong_model",
+      "accepted_for_scope_review": false,
+      "expected": false,
+      "passed": true,
+      "reason": "Wrong hardware target: Go7"
+    },
+    {
+      "case": "bootloader_forbidden",
+      "accepted_for_scope_review": false,
+      "expected": false,
+      "passed": true,
+      "reason": "Unsupported, protected or duplicate partition: abl"
+    },
+    {
+      "case": "incremental_forbidden",
+      "accepted_for_scope_review": false,
+      "expected": false,
+      "passed": true,
+      "reason": "Incremental payload is unsuitable as the first installation asset"
+    },
+    {
+      "case": "oversized_boot",
+      "accepted_for_scope_review": false,
+      "expected": false,
+      "passed": true,
+      "reason": "Image exceeds physical slot capacity: boot"
+    },
+    {
+      "case": "userdata_forbidden",
+      "accepted_for_scope_review": false,
+      "expected": false,
+      "passed": true,
+      "reason": "Unsupported, protected or duplicate partition: userdata"
+    }
+  ],
+  "all_passed": true,
+  "device_access": false
+}

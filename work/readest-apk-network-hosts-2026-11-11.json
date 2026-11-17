@@ -1,0 +1,64 @@
+{
+  "release": "0.12.20",
+  "hosts": {
+    "asset.localhost": [
+      "assets/tauri.conf.json",
+      "assets/tauri.conf.json",
+      "assets/tauri.conf.json"
+    ],
+    "cdn.jsdelivr.net": [
+      "assets/tauri.conf.json",
+      "assets/tauri.conf.json"
+    ],
+    "fonts.googleapis.com": [
+      "assets/tauri.conf.json"
+    ],
+    "cdnjs.cloudflare.com": [
+      "assets/tauri.conf.json",
+      "assets/tauri.conf.json"
+    ],
+    "storage.readest.com": [
+      "assets/tauri.conf.json",
+      "assets/tauri.conf.json"
+    ],
+    "db.onlinewebfonts.com": [
+      "assets/tauri.conf.json"
+    ],
+    "fonts.gstatic.com": [
+      "assets/tauri.conf.json"
+    ],
+    "rangefile.localhost": [
+      "assets/tauri.conf.json",
+      "assets/tauri.conf.json"
+    ],
+    "ipc.localhost": [
+      "assets/tauri.conf.json",
+      "assets/tauri.conf.json"
+    ],
+    "translate.googleapis.com": [
+      "assets/tauri.conf.json"
+    ],
+    "translate.toil.cc": [
+      "assets/tauri.conf.json"
+    ],
+    "edge.microsoft.com": [
+      "assets/tauri.conf.json"
+    ],
+    "graph.microsoft.com": [
+      "assets/tauri.conf.json"
+    ],
+    "login.microsoftonline.com": [
+      "assets/tauri.conf.json"
+    ],
+    "localhost": [
+      "assets/tauri.conf.json"
+    ],
+    "download.readest.com": [
+      "assets/tauri.conf.json"
+    ],
+    "github.com": [
+      "assets/tauri.conf.json"
+    ]
+  },
+  "caution": "embedded optional integrations and library URLs are not automatic allowlist candidates"
+}

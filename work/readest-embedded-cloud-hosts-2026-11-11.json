@@ -1,0 +1,16 @@
+{
+  "storage.readest.com": [
+    "lib/arm64-v8a/libreadestlib.so",
+    "lib/arm64-v8a/libreadestlib.so"
+  ],
+  "clicom.googleusercontent.apps.209390247301-ctpmep68ppfa56r1b8tr35e4qi4p60kqweb.readest.com": [
+    "lib/arm64-v8a/libreadestlib.so"
+  ],
+  "download.readest.com": [
+    "lib/arm64-v8a/libreadestlib.so",
+    "assets/tauri.conf.json"
+  ],
+  "web.readest.com": [
+    "assets/tauri.conf.json"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "system_ext": [
+    {
+      "path": "/lib64/libcomposerextn.qti.so",
+      "bytes": 377016,
+      "is_directory": false,
+      "sha256": "d77eeb4965b1f0fa83622e14800e2d0538a42e1f0ab9b363eeeaf77072f9b067",
+      "extracted": ".local/porting-inputs/stock-static/system_ext/lib64/libcomposerextn.qti.so"
+    },
+    {
+      "path": "/lib64/vendor.qti.hardware.display.composer@3.0.so",
+      "bytes": 312600,
+      "is_directory": false,
+      "sha256": "1b26abcf96444c3aaabfa4528359a34ec5acde2354b51377ff0c15d428003fca",
+      "extracted": ".local/porting-inputs/stock-static/system_ext/lib64/vendor.qti.hardware.display.composer@3.0.so"
+    },
+    {
+      "path": "/lib64/vendor.qti.hardware.display.composer@3.1.so",
+      "bytes": 340768,
+      "is_directory": false,
+      "sha256": "fdd1ca42058c71759d73acb8bfc0e07c8f81ceb76d87fea2eee81271e855c65a",
+      "extracted": ".local/porting-inputs/stock-static/system_ext/lib64/vendor.qti.hardware.display.composer@3.1.so"
+    },
+    {
+      "path": "/lib/libcomposerextn.qti.so",
+      "bytes": 266064,
+      "is_directory": false,
+      "sha256": "767062ae1a58db625f66be2ba3b06e55238b3fd7edb6b4791540fda3a97a9422",
+      "extracted": ".local/porting-inputs/stock-static/system_ext/lib/libcomposerextn.qti.so"
+    }
+  ],
+  "product": [],
+  "vendor": [
+    {
+      "path": "/lib64/vendor.qti.hardware.display.composer@1.0.so",
+      "bytes": 250136,
+      "is_directory": false,
+      "sha256": "ff9de584fd177080a331bbb316713db782f58d4652bf1c62f43978e35a833f37",
+      "extracted": ".local/porting-inputs/stock-static/vendor/lib64/vendor.qti.hardware.display.composer@1.0.so"
+    },
+    {
+      "path": "/lib64/vendor.qti.hardware.display.composer@2.0.so",
+      "bytes": 300840,
+      "is_directory": false,
+      "sha256": "ac9a6daddc8423608409e9087b1bdddd5bfab49541b33d30c9cf40ffdb26aabf",
+      "extracted": ".local/porting-inputs/stock-static/vendor/lib64/vendor.qti.hardware.display.composer@2.0.so"
+    },
+    {
+      "path": "/lib64/vendor.qti.hardware.display.composer@3.0.so",
+      "bytes": 342472,
+      "is_directory": false,
+      "sha256": "1c4df52aeaaab2c7da27164c479159e48803a53e62814f72f4bff7ef883e41ea",
+      "extracted": ".local/porting-inputs/stock-static/vendor/lib64/vendor.qti.hardware.display.composer@3.0.so"
+    },
+    {
+      "path": "/lib/vendor.qti.hardware.display.composer@1.0.so",
+      "bytes": 140060,
+      "is_directory": false,
+      "sha256": "aaadaa2fdd84603ec71ac734374b8386e9525f6b13ad8db679916eeca3a0faa0",
+      "extracted": ".local/porting-inputs/stock-static/vendor/lib/vendor.qti.hardware.display.composer@1.0.so"
+    },
+    {
+      "path": "/lib/vendor.qti.hardware.display.composer@2.0.so",
+      "bytes": 170012,
+      "is_directory": false,
+      "sha256": "9846d4d67cc25ed0a346d2a8c1be4d405f603c44214587298d09730aa096a370",
+      "extracted": ".local/porting-inputs/stock-static/vendor/lib/vendor.qti.hardware.display.composer@2.0.so"
+    },
+    {
+      "path": "/bin/hw/vendor.qti.hardware.display.composer-service",
+      "bytes": 641192,
+      "is_directory": false,
+      "sha256": "c13c43af3f9258e7faed8bfd11fef88b10d303a8d5966a9e316e085c04623d17",
+      "extracted": ".local/porting-inputs/stock-static/vendor/bin/hw/vendor.qti.hardware.display.composer-service"
+    },
+    {
+      "path": "/bin/hwclock",
+      "bytes": 13,
+      "is_directory": false,
+      "sha256": "4d92074668f28f79c7749bed00b96dc9f904fa561870ceb0d398a0579ae00074",
+      "extracted": ".local/porting-inputs/stock-static/vendor/bin/hwclock"
+    },
+    {
+      "path": "/etc/init/vendor.qti.hardware.display.composer-service.rc",
+      "bytes": 324,
+      "is_directory": false,
+      "sha256": "3c9608c7ba15731bf8170407470ed5cdf66d6ed91087cfcb1c70ad8bc08ac87f",
+      "extracted": ".local/porting-inputs/stock-static/vendor/etc/init/vendor.qti.hardware.display.composer-service.rc"
+    },
+    {
+      "path": "/etc/permissions/android.hardware.onyx_unavailable_features.xml",
+      "bytes": 2043,
+      "is_directory": false,
+      "sha256": "4aa4f6aefb6f4d42c967a19f5fe9ba2771d795e4cefe3fab6c36cff40d0c8b79",
+      "extracted": ".local/porting-inputs/stock-static/vendor/etc/permissions/android.hardware.onyx_unavailable_features.xml"
+    }
+  ],
+  "odm": []
+}

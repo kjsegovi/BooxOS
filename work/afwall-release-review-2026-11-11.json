@@ -1,0 +1,14 @@
+{
+  "tag_name": "v5.0.0",
+  "published_at": "2026-10-12T03:12:52Z",
+  "html_url": "https://github.com/ukanth/afwall/releases/tag/v5.0.0",
+  "body": "Version 5.0.0\r\n\u2022 Global rules: allow/block an address, port or protocol for all apps\r\n\u2022 Direct rules can block, per Wi-Fi/mobile/VPN\r\n\u2022 System services without an app can be allowed/blocked\r\n\u2022 Faster, atomic rule apply; rewritten root engine\r\n\u2022 Backups in Download/AFWall, all profiles\r\n\u2022 Log history up to 90 days; allow/block from the log\r\n\u2022 Safer custom scripts with live checks and snippets\r\n\u2022 Android 16, Private Space and many other fixes\r\n\r\nFull changelog: https://github.com/ukanth/afwall/blob/beta/Changelog.md\r\n",
+  "assets": [
+    {
+      "name": "AFWall_5.0.0_Free.apk",
+      "size": 13093640,
+      "browser_download_url": "https://github.com/ukanth/afwall/releases/download/v5.0.0/AFWall_5.0.0_Free.apk",
+      "digest": "sha256:7b787581171a727269e7d5ab11c43001b8136511d6972d78842d6dbd211d6be9"
+    }
+  ]
+}

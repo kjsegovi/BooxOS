@@ -1,0 +1,7 @@
+{
+  "wifi_restored_off": true,
+  "screen_off_timeout_restored_ms": 300000,
+  "always_on_vpn_package": "com.celzero.bravedns",
+  "block_without_vpn": true,
+  "firewall_process_present": true
+}

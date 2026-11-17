@@ -1,0 +1,95 @@
+{
+  "stock_baseline_compiled": true,
+  "stock_neverallow_check_passed": false,
+  "policy_version": 30,
+  "policy_inputs": [
+    {
+      "path": "system/plat_sepolicy.cil",
+      "sha256": "ee3ed02b7dd1100e8fc79d80bb6516ec5ba2889e8d87b03b1394ecd17531f437"
+    },
+    {
+      "path": "system/mapping/30.0.cil",
+      "sha256": "1b68a4765eef019e15ce5e1fcbcb79f8faf3de5debb4f90395d95d8f2fd58022"
+    },
+    {
+      "path": "system/mapping/30.0.compat.cil",
+      "sha256": "760a5aa8f81926445d48f52fb52edc124f6f51c4c4085d9e6f2ccaecebd38cbb"
+    },
+    {
+      "path": "system_ext/system_ext_sepolicy.cil",
+      "sha256": "b8ae91a5337be3fa0ae5a8a11d41e5c2e8bc92a60ba9eb1d53f6b58e85556175"
+    },
+    {
+      "path": "system_ext/mapping/30.0.cil",
+      "sha256": "41fd35cbeaa2683ed7e2b99a808065cf69e105ec9890b0211bc705c2f3ac0c41"
+    },
+    {
+      "path": "system_ext/mapping/30.0.compat.cil",
+      "sha256": "28fa5e866b6535b90dda0c2940d04198cd6070c43e85c94503f7cbfe63f72937"
+    },
+    {
+      "path": "product/product_sepolicy.cil",
+      "sha256": "3b5a9e73ae00c1f8bd897e2a351ae5075862b96d4991569d5c9ef9093878c0c9"
+    },
+    {
+      "path": "product/mapping/30.0.cil",
+      "sha256": "3feafdd33140967b5a1a1e46c74d185aa18672dfb33b719a5fc62128658c7d75"
+    },
+    {
+      "path": "vendor/plat_pub_versioned.cil",
+      "sha256": "97085ae9a1daaf4bb16dbaa36a0725a330a4f91aae4a1009a519ceb9a701c305"
+    },
+    {
+      "path": "vendor/vendor_sepolicy.cil",
+      "sha256": "f47919053d9a624d106c4f55f2cd922134be3efe1790d1bf50d78585a80ca91e"
+    }
+  ],
+  "checks": [
+    {
+      "name": "stock_policy_matching_init_flags",
+      "exit_code": 0,
+      "output": "",
+      "elapsed_seconds": 1.2
+    },
+    {
+      "name": "stock_policy_neverallow_check",
+      "exit_code": 255,
+      "output": "_versioned.cil:10558\n      (allow vr_hwc_30_0 pdx_display_client_endpoint_socket_type (sock_file (ioctl read write getattr lock append map open watch watch_reads)))\n\nneverallow check failed at /inputs/system/plat_sepolicy.cil:8272 from system/sepolicy/public/domain.te:635\n  (neverallow base_typeattr_224 base_typeattr_245 (service_manager (add)))\n    <root>\n    allow at /inputs/vendor/plat_pub_versioned.cil:10548\n      (allow vr_hwc_30_0 vr_hwc_service_30_0 (service_manager (add find)))\n\nneverallow check failed at /inputs/system/plat_sepolicy.cil:8046 from system/sepolicy/public/domain.te:507\n  (neverallow domain system_file_type (file (write create setattr relabelfrom append unlink link rename)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7716\n      (allow shell_30_0 system_file_30_0 (file (ioctl read write getattr lock append map open watch watch_reads)))\n\nneverallow check failed at /inputs/system/plat_sepolicy.cil:7899 from system/sepolicy/public/domain.te:436\n  (neverallow base_typeattr_197 base_typeattr_231 (file (entrypoint)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7715\n      (allow shell_30_0 system_file_30_0 (file (entrypoint)))\n\nneverallow check failed at /inputs/system/plat_sepolicy.cil:7889 from system/sepolicy/public/domain.te:427\n  (neverallow base_typeattr_229 hw_random_device (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))\n    <root>\n    allow at /inputs/vendor/plat_pub_versioned.cil:7791\n      (allow init_30_0 hw_random_device_30_0 (chr_file (read open)))\n    <root>\n    allow at /inputs/vendor/plat_pub_versioned.cil:7801\n      (allow init_30_0 base_typeattr_445_30_0 (chr_file (setattr)))\n    <root>\n    allow at /inputs/vendor/plat_pub_versioned.cil:7915\n      (allow init_30_0 hw_random_device_30_0 (chr_file (ioctl read getattr lock map open watch watch_reads)))\n\nneverallow check failed at /inputs/system/plat_sepolicy.cil:7869 from system/sepolicy/public/domain.te:410\n  (neverallow base_typeattr_197 kernel (security (setenforce)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:6402\n      (allow vendor_qti_init_shell kernel_30_0 (security (setenforce)))\n\nneverallow check failed at /inputs/system/plat_sepolicy.cil:7831 from system/sepolicy/public/domain.te:380\n  (neverallow base_typeattr_226 unlabeled (dir (create)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7763\n      (allow system_app_30_0 unlabeled_30_0 (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7865\n      (allow vold_30_0 unlabeled_30_0 (dir (ioctl read write create getattr setattr lock mounton open watch watch_reads add_name remove_name search rmdir)))\n\nneverallow check failed at /inputs/system/plat_sepolicy.cil:7830 from system/sepolicy/public/domain.te:380\n  (neverallow base_typeattr_226 unlabeled (file (create)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7764\n      (allow system_app_30_0 unlabeled_30_0 (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))\n\nneverallow check failed at /inputs/system/plat_sepolicy.cil:7113 from system/sepolicy/public/app.te:195\n  (neverallow base_typeattr_208 input_device (chr_file (ioctl read write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7681\n      (allow platform_app_30_0 input_device_30_0 (chr_file (ioctl read getattr lock map open watch watch_reads)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7756\n      (allow system_app_30_0 input_device_30_0 (chr_file (ioctl read getattr lock map open watch watch_reads)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7802\n      (allow untrusted_app_30_0 input_device_30_0 (chr_file (ioctl read getattr lock map open watch watch_reads)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7810\n      (allow untrusted_app_30_0 input_device_30_0 (chr_file (ioctl read getattr lock map open watch watch_reads)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7816\n      (allow untrusted_app_25_30_0 input_device_30_0 (chr_file (ioctl read getattr lock map open watch watch_reads)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7821\n      (allow untrusted_app_27_30_0 input_device_30_0 (chr_file (ioctl read getattr lock map open watch watch_reads)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7823\n      (allow untrusted_app_29_30_0 input_device_30_0 (chr_file (ioctl read getattr lock map open watch watch_reads)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7831\n      (allow untrusted_app_29_30_0 input_device_30_0 (chr_file (ioctl read getattr lock map open watch watch_reads)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7834\n      (allow untrusted_app_all input_device_30_0 (chr_file (ioctl read getattr lock map open watch watch_reads)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7842\n      (allow untrusted_app_all input_device_30_0 (chr_file (ioctl read getattr lock map open watch watch_reads)))\n\nneverallow check failed at /inputs/system/plat_sepolicy.cil:7060 from system/sepolicy/public/app.te:165\n  (neverallow base_typeattr_213 sysfs (file (write)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7689\n      (allow platform_app_30_0 sysfs_30_0 (file (write)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7718\n      (allow shell_30_0 sysfs_30_0 (file (ioctl read write getattr lock append map open watch watch_reads)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7757\n      (allow system_app_30_0 sysfs_30_0 (file (ioctl read write getattr lock append map open watch watch_reads)))\n\nneverallow check failed at /inputs/system/plat_sepolicy.cil:6839 from system/sepolicy/public/app.te:104\n  (neverallow appdomain system_file (file (write create setattr relabelfrom relabelto append unlink link rename)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7716\n      (allow shell_30_0 system_file_30_0 (file (ioctl read write getattr lock append map open watch watch_reads)))\n\nneverallow check failed at /inputs/system/plat_sepolicy.cil:6742 from system/sepolicy/public/app.te:33\n  (neverallow appdomain audio_device (chr_file (read write)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7724\n      (allow shell_30_0 audio_device_30_0 (chr_file (ioctl read write getattr lock append map open watch watch_reads)))\n\nneverallow check failed at /inputs/system/plat_sepolicy.cil:6737 from system/sepolicy/public/app.te:23\n  (neverallow appdomain dev_type (blk_file (read write)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7769\n      (allow system_app_30_0 splash_block_device (blk_file (read write open)))\n\nneverallow check failed at /inputs/system/plat_sepolicy.cil:6729 from system/sepolicy/public/app.te:20\n  (neverallow base_typeattr_201 self (capability (chown dac_override dac_read_search fowner fsetid kill setgid setuid setpcap linux_immutable net_bind_service net_broadcast net_admin net_raw ipc_lock ipc_owner sys_module sys_rawio sys_chroot sys_ptrace sys_pacct sys_admin sys_boot sys_nice sys_resource sys_time sys_tty_config mknod lease audit_write audit_control setfcap)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7717\n      (allow shell_30_0 self (capability (kill)))\n    <root>\n    allow at /inputs/vendor/vendor_sepolicy.cil:7723\n      (allow shell_30_0 self (capability (dac_override dac_read_search)))\n\nFailed to generate binary\nFailed to build policydb\n",
+      "elapsed_seconds": 25.98
+    },
+    {
+      "name": "compiled_policy_stats",
+      "exit_code": 0,
+      "output": "Statistics for policy file: /out/stock-baseline.policy\nPolicy Version:             30 (MLS enabled)\nTarget Policy:              selinux\nHandle unknown classes:     deny\n  Classes:             103    Permissions:         305\n  Sensitivities:         1    Categories:         1024\n  Types:              2600    Attributes:          294\n  Users:                 1    Roles:                 4\n  Booleans:              0    Cond. Expr.:           0\n  Allow:             50075    Neverallow:            0\n  Auditallow:           17    Dontaudit:          1307\n  Type_trans:         1163    Type_change:           0\n  Type_member:           0    Range_trans:           0\n  Role allow:            0    Role_trans:            0\n  Constraints:           0    Validatetrans:         0\n  MLS Constrain:        89    MLS Val. Tran:         0\n  Permissives:           0    Polcap:                4\n  Defaults:              0    Typebounds:            0\n  Allowxperm:          809    Neverallowxperm:       0\n  Auditallowxperm:       0    Dontauditxperm:        3\n  Ibendportcon:          0    Ibpkeycon:             0\n  Initial SIDs:         27    Fs_use:               20\n  Genfscon:            595    Portcon:               0\n  Netifcon:              0    Nodecon:               0\n",
+      "elapsed_seconds": 0.51,
+      "corrected_command": [
+        "seinfo",
+        "/out/stock-baseline.policy"
+      ]
+    },
+    {
+      "name": "stock_adbd_to_su_permissions",
+      "exit_code": 0,
+      "output": "",
+      "elapsed_seconds": 1.12
+    },
+    {
+      "name": "stock_su_raw_block_permissions",
+      "exit_code": 0,
+      "output": "allowxperm domain dev_type:blk_file ioctl 0x5450-0x5451;\nallowxperm domain dev_type:blk_file ioctl { 0x1268 0x1272 };\nallowxperm domain domain:blk_file ioctl 0x5450-0x5451;\nallowxperm domain file_type:blk_file ioctl 0x5450-0x5451;\nallowxperm domain fs_type:blk_file ioctl 0x5450-0x5451;\n",
+      "elapsed_seconds": 0.91
+    },
+    {
+      "name": "compiler_package_versions",
+      "exit_code": 0,
+      "output": "libsepol2=3.3-1build1\nsecilc=3.3-1\nsetools=4.4.0-1build1\n",
+      "elapsed_seconds": 0.04
+    }
+  ],
+  "policy_modified": false,
+  "image_created": false,
+  "device_access": false,
+  "compiled_policy_sha256": "ae9a2f370384d7f39719d0dcc485486cf3af0191790ef9200b2b7e25c9d26b94",
+  "compiler_image": "sha256:4ba729f3a8cb2fd5567b62c5a6932474014cb5ed11454ac9be304f8a26654b64",
+  "interpretation": "Unchanged saved policy compiles with the same -N flag used by stock init. Stricter neverallow checking fails on existing OEM rules; this is not a clean policy validation or a debug-policy candidate. Compiled policy has no adbd-to-su process grant or su raw-block read/open grant."
+}

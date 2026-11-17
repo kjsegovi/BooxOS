@@ -1,0 +1,10 @@
+{
+  "test_identity": "Shell",
+  "destination": "1.1.1.1:80",
+  "decision": "blocked",
+  "reason": "Lockdown",
+  "backend_message": "tcp: firewalled",
+  "uploaded": "0 B \ud83d\udd3a",
+  "downloaded": "0 B \ud83d\udd3b",
+  "proof": "actual blocked record detail, not inferred from netcat exit code"
+}

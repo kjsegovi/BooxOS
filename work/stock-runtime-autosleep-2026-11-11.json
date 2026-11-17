@@ -1,0 +1,6 @@
+{
+  "read_only": true,
+  "rc": 1,
+  "stock_runtime_autosleep": null,
+  "query_error": "cat: /sys/power/autosleep: Permission denied"
+}

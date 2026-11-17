@@ -1,0 +1,25 @@
+{
+  "flavor": "bringup (debug-only; never a daily build)",
+  "host": "KPC",
+  "started": "2026-11-17T00:01:55+00:00",
+  "finished": "2026-11-17T00:06:15+00:00",
+  "incremental_steps": 72,
+  "build_change": "BOOXOS_BRINGUP=1 -> WITH_ADB_INSECURE=true (Lineage vendor/lineage/config/common.mk); post_process_props then adds persist.sys.usb.config=adb. No device-tree change.",
+  "verified_props": {"ro.adb.secure": "0", "persist.sys.usb.config": "adb", "ro.build.version.incremental": "eng.builde.20261117.000448"},
+  "outputs_sha256": {
+    "system.img": "777d42c34a54c8de9792399ed89340259b0382d973da5db4c285516e62bee880",
+    "product.img": "1d1e852f794f75102065f48e21fec50c498a1857bae7d29f6e8100fafae26135",
+    "system_ext.img": "9a256d82a6681add0380a015dcaa642e504efeda0d112757c0747ee7be13fad6",
+    "vbmeta.img": "c687bbe4ef4d9b36aa184fc304c89ab9d8552ef8718d8bad0c82c264947e4fcb",
+    "vbmeta_system.img": "56e84ad93bd8716ba3790423a8af9b2d0ba772357a97784667843c54e929c58d"
+  },
+  "dsu_zip": {
+    "kpc_path": "source/out/target/product/GoColor7_2/booxos-dsu-bringup.zip",
+    "mac_path": ".local/builds/dsu-bringup-20261116/booxos-dsu-bringup.zip",
+    "bytes": 1720717632,
+    "sha256": "adc546deb95d0b009ca1c6759bb568668b5f751e798084a25c1fad8f54a815d8",
+    "entries": "system.img, system_ext.img, product.img (stored, uncompressed)"
+  },
+  "standard_build_preserved": "KPC outputs/standard-20261116 (hashes match kpc-images-passed-2026-11-16.json); logs-standard-20261116",
+  "boox_access": false
+}

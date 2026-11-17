@@ -1,0 +1,10 @@
+{
+  "bs_conn_track_app_name": "Readest",
+  "bs_conn_track_port_detail_chip": "allowed on TCP/443 1 hr. ago",
+  "bs_conn_track_app_info_txt": "Bypassed App",
+  "bs_conn_dns_cache_text": "o4511086364131328.ingest.us.sentry.io",
+  "bs_conn_conn_upload": "1.5 KB \ud83d\udd3a",
+  "bs_conn_conn_download": "4.7 KB \ud83d\udd3b",
+  "connection_message": "no error",
+  "interpretation": "Historical allowed Sentry TCP transfer from before destination restrictions, shown as 1 hr ago / Bypassed App. This is NOT a confirmed current block. Current requests must be checked in DNS logs."
+}

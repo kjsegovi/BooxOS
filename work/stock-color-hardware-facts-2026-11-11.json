@@ -1,0 +1,307 @@
+[
+  {
+    "kind": "base",
+    "tree_index": 0,
+    "node": "/",
+    "property": "model",
+    "value": "Qualcomm Technologies, Inc. Lagoon SoC"
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/",
+    "property": "model",
+    "value": "Qualcomm Technologies, Inc. Lagoon MTP Go7 V10 for Color"
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "panel_name",
+    "value": "ED070KC3"
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "frame_rate",
+    "value": [
+      "0x5a"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "panel_width",
+    "value": [
+      "0x10"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "sdclk-frequency",
+    "value": [
+      "0x2625a00"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "density",
+    "value": [
+      "0xc8"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "xres",
+    "value": [
+      "0x4f0"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "yres",
+    "value": [
+      "0x690"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "left_margin",
+    "value": [
+      "0xa"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "right_margin",
+    "value": [
+      "0x22"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "upper_margin",
+    "value": [
+      "0x4"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "lower_margin",
+    "value": [
+      "0xe"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "hsync_len",
+    "value": [
+      "0xf"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "vsync_len",
+    "value": [
+      "0x1"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "kernel_init_mode_disable",
+    "value": [
+      "0x1"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "phandle",
+    "value": [
+      "0x64"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 0,
+    "node": "/fragment@67/__overlay__/lm3630a@38",
+    "property": "lm3630a-vdd-i2c-supply",
+    "value": [
+      "0xffffffff"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/",
+    "property": "model",
+    "value": "Qualcomm Technologies, Inc. Lagoon MTP  Go7 V20 for Color"
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "panel_name",
+    "value": "ED070KC3"
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "frame_rate",
+    "value": [
+      "0x5a"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "panel_width",
+    "value": [
+      "0x10"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "sdclk-frequency",
+    "value": [
+      "0x2625a00"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "density",
+    "value": [
+      "0xc8"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "xres",
+    "value": [
+      "0x4f0"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "yres",
+    "value": [
+      "0x690"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "left_margin",
+    "value": [
+      "0xa"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "right_margin",
+    "value": [
+      "0x22"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "upper_margin",
+    "value": [
+      "0x4"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "lower_margin",
+    "value": [
+      "0xe"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "hsync_len",
+    "value": [
+      "0xf"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "vsync_len",
+    "value": [
+      "0x1"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "kernel_init_mode_disable",
+    "value": [
+      "0x1"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@1/__overlay__/eink-timings",
+    "property": "phandle",
+    "value": [
+      "0x64"
+    ]
+  },
+  {
+    "kind": "overlay",
+    "tree_index": 1,
+    "node": "/fragment@67/__overlay__/lm3630a@38",
+    "property": "lm3630a-vdd-i2c-supply",
+    "value": [
+      "0xffffffff"
+    ]
+  }
+]

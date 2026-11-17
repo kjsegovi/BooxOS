@@ -1,0 +1,56 @@
+{
+  "approved_scope": "One read-only backup-access qualification: Android to EDL, pinned RAM programmer, GPT and two small xbl_config_a reads, reset and return-state check. No whole-storage backup or storage writes.",
+  "entry_attempted": true,
+  "service_usb_detected": true,
+  "preflight": {
+    "model": "GoColor7_2",
+    "build": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "slot": "_a",
+    "boot_completed": "1",
+    "battery_percent": 99
+  },
+  "worker_exit_code": 0,
+  "qualification_reads_passed": false,
+  "repeat_reads_identical": false,
+  "boot_configuration_bytes": null,
+  "gpt_primary_crc_valid": false,
+  "gpt_backup_consistent": false,
+  "partition_count": null,
+  "requested_read_bytes": 0,
+  "failure_type": "StopTest",
+  "reset_attempted": true,
+  "reset_command_acknowledged": null,
+  "post_test_android": {
+    "model": "GoColor7_2",
+    "build": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "slot": "_a"
+  },
+  "returned_to_original_build_and_slot": true,
+  "private_session_directory": "/Users/kjsegovi/Projects/BooxOS/.private/backup-access-20261111-091636",
+  "full_device_backup_created": false,
+  "restore_tested": false,
+  "persistent_storage_commands_permitted": false,
+  "completed_at_utc": "2026-11-11T16:19:40.815946+00:00",
+  "result": "stopped_before_programmer_upload_android_restored",
+  "stop_reason": "Hardware/programmer trust identity mismatch",
+  "programmer_uploaded": false,
+  "programmer_executed": false,
+  "storage_read_performed": false,
+  "identity_check": {
+    "chipset_matches_catalogue": true,
+    "signing_key_prefix_matches_catalogued_programmer": false
+  },
+  "manual_restart_requested": true,
+  "return_state": "Verified original Android build and slot after user power-button restart",
+  "test_outcome": "Stopped at pre-upload compatibility gate; original Android verified after manual restart.",
+  "manual_restart_completed": true,
+  "post_return_verified_at_utc": "2026-11-11T16:23:16.068254+00:00",
+  "offline_programmer_check": {
+    "chipset_family_matches": true,
+    "filename_digest_reproduced_by_pinned_parser": true,
+    "embedded_root_sha384_matches_reported_device_key": false,
+    "algorithm_or_padding_difference_explains_mismatch": false,
+    "programmer_acceptance_remains_unverified": true
+  },
+  "later_interpretation": "Stopped by a host-side compatibility assumption before upload; programmer incompatibility was not established. Subsequent exact-model reports support revised qualification; see programmer-compatibility-followup-2026-11-11.json."
+}

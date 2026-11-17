@@ -1,0 +1,15 @@
+I/ItemViewFactory( 2691): bindExtraInfoBadges packageName:com.topjohnwu.magisk activityClassName:com.topjohnwu.magisk.ui.MainActivity action:null labelName:Magisk iconDrawableName:null customName:null isSystemApp:false isAutoFreeze:true isEACEnabled:true isCustomizedApp:false isEnable:false userId:0
+I/ActivityTaskManager( 1645): START u0 {flg=0x10000000 cmp=com.topjohnwu.magisk/.ui.MainActivity} from uid 2000
+D/AndroidRuntime( 5594): >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+I/AndroidRuntime( 5594): Using default boot image
+I/AndroidRuntime( 5594): Leaving lock profiling enabled
+D/AndroidRuntime( 5594): Calling main entry com.android.commands.uiautomator.Launcher
+D/AndroidRuntime( 5594): Shutting down VM
+I/ActivityTaskManager( 1645): START u0 {flg=0x10000000 cmp=com.topjohnwu.magisk/.ui.MainActivity} from uid 2000
+D/AndroidRuntime( 5687): >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+I/AndroidRuntime( 5687): Using default boot image
+I/AndroidRuntime( 5687): Leaving lock profiling enabled
+D/AndroidRuntime( 5687): Calling main entry com.android.commands.uiautomator.Launcher
+D/AndroidRuntime( 5687): Shutting down VM
+I/ActivityManager( 1645): Force stopping com.topjohnwu.magisk appid=10111 user=0: from pid 5751
+I/ActivityTaskManager( 1645): START u0 {flg=0x10000000 cmp=com.topjohnwu.magisk/.ui.MainActivity} from uid 2000

@@ -1,0 +1,17 @@
+[
+  "apps/readest-app/.claude/memory/supabase-exit-host-migration.md",
+  "apps/readest-app/src-tauri/src/macos/apple_auth.rs",
+  "apps/readest-app/src-tauri/src/macos/safari_auth.rs",
+  "apps/readest-app/src/__tests__/helpers/supabase-mock.ts",
+  "apps/readest-app/src/__tests__/services/sync/cloudSyncProvider.test.ts",
+  "apps/readest-app/src/__tests__/utils/supabase-auth-proxy.test.ts",
+  "apps/readest-app/src/__tests__/utils/supabase-storage-key.test.ts",
+  "apps/readest-app/src/context/AuthContext.tsx",
+  "apps/readest-app/src/services/ai/constants.ts",
+  "apps/readest-app/src/services/constants.ts",
+  "apps/readest-app/src/services/sync/cloudSyncProvider.ts",
+  "apps/readest-app/src/services/translators/custom/constants.ts",
+  "apps/readest-app/src/utils/supabase.ts",
+  "apps/readest.koplugin/readest_supabaseauth.lua",
+  "apps/readest.koplugin/supabase-auth-api.json"
+]

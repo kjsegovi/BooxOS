@@ -1,0 +1,13 @@
+{
+  "revision": "4ebcd0d4c717e312c2773f4019e0874b994ac2b8",
+  "files": {
+    "soong/Android.bp": "75d7e511b5a9a55787f8199992f3d311b506eebf896ee162a4a570c1d51e217d",
+    "soong/rustprebuilts.go": "3c261d61d33662eda25ae5ae3e4fb94d3ecfd0436b84166d49e9d86594611199",
+    "soong/OWNERS": "e53627f29e80f95e85b27eca179c4f1b67f9cac16d58aec8fd79ab2934a554bf"
+  },
+  "sparse_paths": [
+    "linux-x86/1.75.0",
+    "soong"
+  ],
+  "device_access": false
+}

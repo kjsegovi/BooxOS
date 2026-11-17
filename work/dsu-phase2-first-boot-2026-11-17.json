@@ -1,0 +1,25 @@
+{
+  "phase": "2 - DSU install and first boot (FIRST_BOOT_TEST_PLAN.md)",
+  "host": "KPC adb (Google platform-tools 37.0.1)",
+  "firmware_partitions_written": false,
+  "attempts": [
+    {
+      "build": "bring-up 1 (zip adc546de...)",
+      "install": "READY/INSTALL_COMPLETED in ~20 s; images created as system_gsi/system_ext_gsi/product_gsi under /data/gsi. 'OK_NOT_SIGNED / getAvbPublicKey failed' warnings only.",
+      "boot_1": "User tapped notification Restart: plain reboot,userrequested; guest stayed 'installed, disabled'; no DSU lines in first-stage log. The Onyx notification Restart did NOT enable DSU.",
+      "enable": "adb shell gsi_tool enable --single-boot works from the shell (status -> installed, enabled).",
+      "boot_2": "Guest booted: back on stock ~60 s later with boot reason reboot,bpfloader-failed. LineageOS first-stage + second-stage init ran; netbpfload failed and init's reboot_on_failure returned to stock (one-shot)."
+    },
+    {
+      "build": "bring-up 2 (zip eeab4a70...), adds BOOXOS_BRINGUP-only removal of 'reboot_on_failure reboot,bpfloader-failed' in netbpfload.rc and netbpfload.mainline.rc (upstream's documented debug step); verified in system/etc/init and tethering apex intermediates",
+      "install": "old guest wiped via gsi_tool wipe; new guest READY/INSTALL_COMPLETED; enabled single-boot; adb reboot ~11:22 local",
+      "result": "No USB device enumerated on KPC for 19+ minutes: guest hung before USB/adbd start. Likely init blocked after the bpfloader failure (e.g. waiting on bpf.progs_loaded) - hypothesis, not yet shown.",
+      "recovery": "Hold Power ~10 s; DSU is one-shot so next boot should be stock."
+    }
+  ],
+  "key_findings": [
+    "DSU works on this stock firmware with an unlocked bootloader; multi-image zip accepted.",
+    "LineageOS 21 system boots far enough on stock kernel 4.19 + stock vendor to run second-stage init.",
+    "Current blocker: netbpfload (Android 14 BPF loader) fails on this kernel. Kernel 4.19 meets U's 4.14 minimum, so a specific program/helper/config is failing; logs not yet captured."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "target": "lineage_GoColor7_2-ap2a-userdebug",
+  "source_volume": "booxos-lineage21-source-20261111",
+  "images": {
+    "boot": "ede53420966b3af1a3a7b02cae3fef8583a0e01d19271006287dc14b4457ba63",
+    "dtbo": "7379d4fb7906fa3bdbb2b8048b7c868cb9fc584b1e26765ed9f4ee8941f54ab9",
+    "odm": "db101ba203846cc257b04a954c9330b9feb1ad8ab12d0a5cc7cddff0bd88c15b",
+    "vendor": "0de3bbecd82076ace81c45e830acd7355587dc82184efe9a5aae3bb3913c474f"
+  },
+  "source_files": {
+    "lineage_GoColor7_2.mk": "bcab09c7de6bd7c6ae896eab0e0ff377e882abb6131b7e5fee926912d23f1171",
+    "AndroidProducts.mk": "256423d464432f3a003e98da57f7bac4de26b12b47437e6a6a363073acd1cf6c",
+    "README.md": "78cc46a7cedd99c2698be6182ffebee63dd3316d2f4957e380af1b8bea789367",
+    ".gitignore": "5014a40a3a4c6753a6f76d2c8b31755ff704bb5a5d650e31d166b2423ca82524",
+    "BoardConfig.mk": "1cf598eedabeeb670dac0fc89cbdd598eece91d3b56190ded409b7c2d967b239"
+  },
+  "key_copied_only_to_local_private_linux_volume": true,
+  "boox_access": false,
+  "image_built": false,
+  "install_ready": false
+}

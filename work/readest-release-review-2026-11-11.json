@@ -1,0 +1,26 @@
+{
+  "tag_name": "v0.12.20",
+  "html_url": "https://github.com/readest/readest/releases/tag/v0.12.20",
+  "published_at": "2026-11-05T22:40:01Z",
+  "target_commitish": "main",
+  "android_assets": [
+    {
+      "name": "Readest_0.12.20_arm64.apk",
+      "size": 57688416,
+      "browser_download_url": "https://github.com/readest/readest/releases/download/v0.12.20/Readest_0.12.20_arm64.apk",
+      "digest": "sha256:0f8278610ba9fc5e9852b5f5a382a6f928e0c1607e957d8c34a8447f1be6ed1a"
+    },
+    {
+      "name": "Readest_0.12.20_armv7.apk",
+      "size": 46704562,
+      "browser_download_url": "https://github.com/readest/readest/releases/download/v0.12.20/Readest_0.12.20_armv7.apk",
+      "digest": "sha256:e8e15a29535dbb0240984bb9f2b9ad147f84d6f90060b0d262c7671cbb25b9fa"
+    },
+    {
+      "name": "Readest_0.12.20_legacy.apk",
+      "size": 123356345,
+      "browser_download_url": "https://github.com/readest/readest/releases/download/v0.12.20/Readest_0.12.20_legacy.apk",
+      "digest": "sha256:3aacb7d3c109f1afc3ecaf687e6c5e7c16fb39efea945047e2190a08c5608f2d"
+    }
+  ]
+}

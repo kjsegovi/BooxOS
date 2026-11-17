@@ -1,0 +1,12 @@
+{
+  "image_tag": "booxos-android-build:ubuntu22-20261111",
+  "platform": "linux/amd64",
+  "context": "/Users/kjsegovi/Projects/BooxOS/tools/build-host/container",
+  "started_at_utc": "2026-11-11T18:47:53.446394+00:00",
+  "boox_access": false,
+  "docker_settings_changed": false,
+  "exit_code": 0,
+  "elapsed_seconds": 108.18,
+  "passed": true,
+  "image_id_arch_size": "\"sha256:b4ece63d16da55dab0405cd8a691454e30dfac308602ee2797e88f35d53cadb2\" \"amd64\" 276700437"
+}

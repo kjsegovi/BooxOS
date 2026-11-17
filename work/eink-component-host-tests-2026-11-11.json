@@ -1,0 +1,14 @@
+{
+  "source_commit": "70e894fd48e0a2c27e94ca6555235fc792eb91b5",
+  "test_target": "native aarch64-apple-darwin host unit tests only",
+  "android_build": false,
+  "boox_access": false,
+  "started_at_utc": "2026-11-11T18:55:07.576598+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 4.01,
+  "result_lines": [
+    "running 69 tests",
+    "test result: ok. 69 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s"
+  ],
+  "passed": true
+}

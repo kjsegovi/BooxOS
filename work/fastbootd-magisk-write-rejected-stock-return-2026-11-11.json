@@ -1,0 +1,28 @@
+{
+  "fastbootd_flash_rejected": "Unrecognized command flash",
+  "slot_changed": false,
+  "commands": [
+    {
+      "query": "product",
+      "response": "product: GoColor7_2\nFinished. Total time: 0.000s"
+    },
+    {
+      "query": "is-userspace",
+      "response": "is-userspace: yes\nFinished. Total time: 0.000s"
+    },
+    {
+      "query": "current-slot",
+      "response": "current-slot: a\nFinished. Total time: 0.001s"
+    },
+    {
+      "query": "slot-successful:a",
+      "response": "slot-successful:a: yes\nFinished. Total time: 0.058s"
+    },
+    {
+      "query": "slot-unbootable:a",
+      "response": "slot-unbootable:a: no\nFinished. Total time: 0.003s"
+    }
+  ],
+  "android_returned": true,
+  "root_and_wifi_probe": "0"
+}

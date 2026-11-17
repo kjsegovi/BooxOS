@@ -1,0 +1,33 @@
+{
+  "upstream_repository": "https://github.com/go7-lineage/eink-shim",
+  "upstream_commit": "70e894fd48e0a2c27e94ca6555235fc792eb91b5",
+  "upstream_hardware_target": "monochrome BOOX Go7",
+  "local_purpose": "Lineage21 Rust1.75 compiler compatibility development",
+  "changed_files": [
+    "Android.bp",
+    "Cargo.lock",
+    "Cargo.toml",
+    "src/commit.rs",
+    "src/diff.rs",
+    "src/dmabuf.rs",
+    "src/drm.rs",
+    "src/exports.rs",
+    "src/fence.rs",
+    "src/formats.rs",
+    "src/framebuffers.rs",
+    "src/log.rs",
+    "src/modes.rs",
+    "src/policy.rs",
+    "src/request.rs",
+    "src/settings.rs",
+    "src/settle.rs",
+    "src/sysprop.rs"
+  ],
+  "refresh_policy_or_mode_values_changed": "optional color-panel feature selects AUTO with no transient A2 or frame cutting by default; original explicit modes retained",
+  "frontlight_driver_included": false,
+  "enabled_in_any_device_product": false,
+  "color_model_qualified": false,
+  "full_platform_compilation_passed": false,
+  "color_profile_build_passed": true,
+  "color_hardware_qualified": false
+}

@@ -1,0 +1,15 @@
+{
+  "probe": "DNS resolution for www.gov.cn",
+  "elapsed_seconds": 1.77,
+  "exit_code": 0,
+  "output": "PING www.gov.cn (127.0.0.1) 56(84) bytes of data.\n64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.083 ms\n\n--- www.gov.cn ping statistics ---\n1 packets transmitted, 1 received, 0% packet loss, time 0ms\nrtt min/avg/max/mdev = 0.083/0.083/0.083/0.000 ms\n",
+  "interpretation": "Confirmed global domain-rule block for www.gov.cn, using local blocking resolver 127.0.0.3:53; ping hit localhost, not the external server.",
+  "confirmed_firewall_decision": {
+    "dns_block_url": "www.gov.cn",
+    "dns_block_blocked_desc": "blocked 12 min. ago",
+    "dns_block_blocklist_info_txt": "Domain (Univ)",
+    "dns_block_ip_address": "ZZ (0.0.0.0)",
+    "dns_block_info_details": "127.0.0.3:53",
+    "dns_message": "54345126d530e057; tunnel; no error; {block(ip?false, tr?true, req?true)}"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "scope": "read-only customization inventory",
+  "device_connected": true,
+  "firmware_changed": false,
+  "packages_changed": false,
+  "settings_changed": false,
+  "query_exit_code": 0,
+  "inventory": "GoColor7_2\n2026-04-21_13-54_4.2-rel_0421_19324b3ea\n_a\n1\npriority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true\ncom.onyx/.StartupActivity\npackage:com.google.android.contactkeys\npackage:com.google.android.verifier\npackage:com.google.android.webview\npackage:com.amazon.kindle\npackage:com.google.android.contactkeys\npackage:com.google.android.verifier\npackage:com.onyx.android.production.test\n0.0\n0.0\n0.0\ndefault_input_method=com.onyx.kime/.TrimeImeService\nenabled_accessibility_services=com.onyx.floatingbutton/com.onyx.floatingbutton.service.FloatButtonAccessibilityService\nenabled_input_methods=com.onyx.kime/.TrimeImeService:com.google.android.tts/com.google.android.apps.speech.tts.googletts.settings.asr.voiceime.VoiceInputMethodService:com.onyx.latinime/.latin.LatinIME\nselected_spell_checker=com.onyx.latinime/.latin.spellcheck.AndroidSpellCheckerService\nsysui_qs_tiles=eink,custom(com.onyx.aiassistant/.service.AIAssistantTileService),rotation_lock,notification_mute,airplane,active_pen,custom(com.onyx.floatingbutton/.service.FloatButtonTileService),screenshot,feedback,refresh_screen,screen_record,usage_mode,location,custom(com.onyx.easytransfer/.service.ScreenCastingTileService),custom(com.onyx.android.note/.common.service.QuickNoteTileService),custom(com.onyx.gallery/.service.OverlayTileService),long_screenshot,dnd,hotspot,custom(com.onyx.easytransfer/.service.TransferTileService)\ncustom_doze_component=com.onyx/.common.dream.OnyxDaydreamService\nkey_onyx_keyguard_dream_orientation=3\nkey_onyx_orientation=-1\nnavigation_bar_key_map=left[.5WC];back[1WC];home[1WC];recent[1WC];eink[1WC];refresh[1WC];right[.5WC]\nonyx_volume_state=1"
+}

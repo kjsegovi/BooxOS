@@ -1,0 +1,18 @@
+{
+  "all_vendor_entries_compared": 2830,
+  "new_vendor_entries": 2831,
+  "removed_paths": [],
+  "added_paths": [
+    "/lib64/libeink_shim.so"
+  ],
+  "modified_paths": [
+    "/bin/hw/vendor.qti.hardware.display.composer-service",
+    "/build.prop",
+    "/etc/selinux/vendor_file_contexts"
+  ],
+  "existing_modes_owners_groups_and_xattrs_unchanged": true,
+  "new_library_label_matches_stock_libdrm": true,
+  "elapsed_seconds": 8.08,
+  "passed": true,
+  "boox_access": false
+}

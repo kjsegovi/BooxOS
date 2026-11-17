@@ -1,0 +1,11 @@
+{
+  "user_instruction": "i say let's ball and just try to install lineage",
+  "scope": "experimental LineageOS installation on this user-owned GoColor7_2, including ordinary data reset if needed; build and inspect an actual candidate first",
+  "matching_image_available": false,
+  "unrelated_stock_debug_boot_trial_authorized_by_this_instruction": false,
+  "skip_further_optional_backup_trials": true,
+  "edl_hold_retained": true,
+  "bootloader_relock_or_bootloader_firmware_writes_authorized": false,
+  "currently_active": false,
+  "superseded_by": "User chose to customize existing BOOX software instead, initially for Readest; 2026-11-11"
+}

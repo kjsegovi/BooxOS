@@ -1,0 +1,17 @@
+{
+  "directory": "/Users/kjsegovi/Projects/BooxOS/.private/recovery-kit-GoColor7_2-20261111",
+  "files": 62,
+  "bytes": 8226851627,
+  "captured_device_partitions": 31,
+  "copy_hashes_verified": true,
+  "complete_device_backup": false,
+  "restore_tested": false,
+  "verified_downloads_copy": {
+    "directory": "/Users/kjsegovi/Downloads/BOOX-Recovery-GoColor7-GenII-2026-11-11",
+    "files": 64,
+    "bytes": 8226869408,
+    "all_file_sizes_and_sha256_verified": true,
+    "external_drive_copy": false,
+    "verification_report": "work/recovery-kit-downloads-copy-2026-11-11.json"
+  }
+}

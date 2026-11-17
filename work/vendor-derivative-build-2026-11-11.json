@@ -1,0 +1,25 @@
+{
+  "modified_paths": [
+    "/bin/hw/vendor.qti.hardware.display.composer-service",
+    "/build.prop",
+    "/etc/selinux/vendor_file_contexts"
+  ],
+  "added_paths": [
+    "/lib64/libeink_shim.so"
+  ],
+  "composer_first_needed": "libeink_shim.so",
+  "permissions_and_labels_preserved": true,
+  "new_library_label": "u:object_r:same_process_hal_file:s0",
+  "filesystem_check_passed": true,
+  "source_vendor_sha256": "147fe58efadd4e444b1236704e3880f1da3bcee08d4016d839b7d4630f1c3372",
+  "derivative_vendor_sha256": "0de3bbecd82076ace81c45e830acd7355587dc82184efe9a5aae3bb3913c474f",
+  "bytes": 594817024,
+  "component_sha256": "18a880b91066056ac6a5277526df23ecc03998eb26555aad8f2e3aff2598374a",
+  "dm_verity_hash": "sha256",
+  "optional_fec_present": false,
+  "footer_and_full_hashtree_verified": true,
+  "boox_access": false,
+  "install_ready": false,
+  "complete_vendor_inventory_comparison_pending": false,
+  "complete_vendor_inventory_comparison_passed": true
+}

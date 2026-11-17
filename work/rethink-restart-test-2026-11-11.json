@@ -1,0 +1,19 @@
+{
+  "test": "ordinary Android restart preserves firewall protection",
+  "before": [
+    "com.celzero.bravedns",
+    "1",
+    "1"
+  ],
+  "firmware_write": false,
+  "slot_change": false,
+  "android_returned": true,
+  "after": [
+    "com.celzero.bravedns",
+    "1",
+    "1",
+    "2632"
+  ],
+  "always_on_settings_persisted": true,
+  "firewall_process_present": true
+}

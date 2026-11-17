@@ -1,0 +1,18 @@
+{
+  "vendor_rc_files_checked": 99,
+  "power_control_hits": [
+    {
+      "file": "/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc",
+      "line": 26,
+      "text": "chown radio wakelock /sys/power/wake_lock"
+    },
+    {
+      "file": "/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc",
+      "line": 27,
+      "text": "chmod 0660 /sys/power/wake_lock"
+    }
+  ],
+  "absence_of_autosleep_commands_in_checked_vendor_rcs": true,
+  "stock_kernel_autosleep_compiled": true,
+  "runtime_default_and_new_framework_review_pending": true
+}

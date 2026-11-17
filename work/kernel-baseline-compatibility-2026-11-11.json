@@ -1,0 +1,17 @@
+{
+  "baseline": "Android R / FCM5 android-4.19 android-base.config from selected platform source",
+  "required_nonconditional_config_keys": 250,
+  "mismatches": [
+    {
+      "key": "CONFIG_PM_AUTOSLEEP",
+      "required": "n",
+      "stock": "y"
+    }
+  ],
+  "all_other_nonconditional_keys_matched": true,
+  "conditional_xml_requirements_checked": false,
+  "stock_kernel_changed": false,
+  "mismatch_hidden_or_overridden": false,
+  "runtime_impact_not_yet_qualified": true,
+  "install_ready": false
+}

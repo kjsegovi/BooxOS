@@ -1,0 +1,6 @@
+[
+  "app/src/main/java/com/celzero/bravedns/database/AppInfo.kt",
+  "app/src/main/java/com/celzero/bravedns/database/AppInfoDAO.kt",
+  "app/src/main/java/com/celzero/bravedns/service/FirewallManager.kt",
+  "app/src/main/java/com/celzero/bravedns/service/PersistentState.kt"
+]

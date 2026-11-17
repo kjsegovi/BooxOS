@@ -1,0 +1,14 @@
+{
+  "scope": "readable ordinary hardware-configuration files; no raw filesystem image",
+  "device_writes": false,
+  "edl_used": false,
+  "full_partition_backup": false,
+  "filesystem_metadata_preserved": false,
+  "saved_files": 4,
+  "saved_bytes": 4198406,
+  "inventoried_files": 19,
+  "capture_directory": "/Users/kjsegovi/Projects/BooxOS/.private/hardware-file-backup-20261111",
+  "inventory_had_inaccessible_entries": true,
+  "names_and_contents_kept_private": true,
+  "original_android_a_verified": true
+}

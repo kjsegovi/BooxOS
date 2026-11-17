@@ -1,0 +1,7 @@
+{
+  "protected": true,
+  "dns_status": "Connected \u00b7 204 ms",
+  "universal_rules_count": 3,
+  "bypassed_apps_count": 2,
+  "boox_app_test_component": "com.onyx.appmarket/.activity.AppMarketActivity"
+}

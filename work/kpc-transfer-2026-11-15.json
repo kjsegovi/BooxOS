@@ -1,0 +1,9 @@
+{
+  "started_at": "2026-11-15T16:06:47.707511+00:00",
+  "destination": "/home/kjseg/booxos-lineage21-20261115",
+  "image": "sha256:b4ece63d16da55dab0405cd8a691454e30dfac308602ee2797e88f35d53cadb2",
+  "passed": true,
+  "boox_access": false,
+  "source_out_directory_excluded": true,
+  "finished_at": "2026-11-15T17:08:39.930744+00:00"
+}

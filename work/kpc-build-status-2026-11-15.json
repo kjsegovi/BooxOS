@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-11-15T16:08:54.273350+00:00",
+  "host": "KPC",
+  "ssh_available": true,
+  "windows_visible_memory_KiB": 58501444,
+  "wsl_memory_limit": "40GB",
+  "wsl_verified_memory_display": "39Gi",
+  "gpu_reservation_user_set_GB": 8,
+  "workspace": "/home/kjseg/booxos-lineage21-20261115",
+  "stage": "transferring prepared sources",
+  "transfer_session": 58409,
+  "boox_access": false,
+  "images_built": false
+}

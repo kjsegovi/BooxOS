@@ -1,0 +1,66 @@
+{
+  "test_number": 3,
+  "approved_scope": "Continuation of approved revised read-only backup test after correcting NULL-disk simulation setting. Original pinned RAM programmer; only GPT and two small xbl_config_a reads; normal storage initialization, all storage-write XML commands blocked; restart and verify original Android. No full-device backup or firmware writes.",
+  "entry_attempted": true,
+  "service_usb_detected": true,
+  "preflight": {
+    "model": "GoColor7_2",
+    "build": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "slot": "_a",
+    "boot_completed": "1",
+    "battery_percent": 100
+  },
+  "worker_exit_code": 0,
+  "qualification_reads_passed": true,
+  "repeat_reads_identical": true,
+  "boot_configuration_bytes": 131072,
+  "gpt_primary_crc_valid": true,
+  "gpt_backup_consistent": true,
+  "partition_count": 80,
+  "requested_read_bytes": 284672,
+  "hardware_identity_matched": true,
+  "programmer_upload_success_logged": true,
+  "programmer_connection_accepted": true,
+  "failure_type": null,
+  "reset_attempted": true,
+  "reset_command_acknowledged": true,
+  "reset_error_type": null,
+  "observed_firehose_command_counts": {
+    "configure": 1,
+    "getstorageinfo": 1,
+    "power": 1,
+    "read": 8
+  },
+  "forbidden_storage_command_observed": false,
+  "normal_storage_configuration_requested": true,
+  "post_test_android": {
+    "model": "GoColor7_2",
+    "build": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "slot": "_a"
+  },
+  "returned_to_original_build_and_slot": true,
+  "private_session_directory": "/Users/kjsegovi/Projects/BooxOS/.private/backup-access-real-storage-20261111-094142",
+  "full_device_backup_created": false,
+  "restore_tested": false,
+  "persistent_storage_commands_permitted": false,
+  "completed_at_utc": "2026-11-11T16:43:22.050326+00:00",
+  "result": "passed",
+  "independent_host_verification": {
+    "two_131072_byte_reads_identical": true,
+    "boot_configuration_has_elf_header": true,
+    "both_gpt_header_crcs_valid": true,
+    "both_gpt_entry_array_crcs_valid": true,
+    "private_file_hash_manifest_written": true
+  },
+  "small_configuration_backup_created": true,
+  "automatically_returned_to_android": true,
+  "manual_restart_required": false,
+  "read_scope": "Only LUN0 GPT metadata plus two 128KiB xbl_config_a reads; initial storage-probe read included.",
+  "post_test_storage_properties": {
+    "ro.crypto.state": "encrypted",
+    "ro.crypto.type": "file",
+    "ro.crypto.metadata.enabled": "true",
+    "ro.virtual_ab.enabled": "true",
+    "ro.boot.slot_suffix": "_a"
+  }
+}

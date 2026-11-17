@@ -1,0 +1,25 @@
+{
+  "public_owner_report_hash_matches_this_unit": true,
+  "public_report_hardware_family_matches_this_unit": true,
+  "public_report_main_capacity_matches_this_unit": true,
+  "sources": [
+    "https://www.mobileread.com/forums/showthread.php?p=4517275",
+    "https://www.mobileread.com/forums/showthread.php?p=4617000"
+  ],
+  "note": "Reported loader success is firsthand evidence on other units, not this unit. This comparison does not mean that certificate-root equality is a device requirement.",
+  "reported_gen2_ota_assets_match_local_system_build": true,
+  "reported_owner_original_installed_firmware_known": false,
+  "full_hardware_identity_matches_public_report": true,
+  "revised_qualification_basis": "Exact observed hardware identity and device-reported public key pinned to same-model firsthand reports, with the unchanged programmer file digest; no requirement inferred that filename digest must equal ROM key report.",
+  "new_service_mode_entry_performed": false,
+  "first_controller_preserved_with_matching_digest": true,
+  "revised_controller_host_checks_passed": true,
+  "revised_controller_sha256": "7b605bb358d393f374f7642d2df9f6ddc128c5feb3793d8403cfad068cc7022a",
+  "revised_guard_still_pins_full_reported_hardware_identity": true,
+  "revised_guard_still_pins_original_programmer_digest": true,
+  "write_command_blocks_and_small_read_scope_unchanged": true,
+  "programmer_execution_or_new_device_entry_performed": false,
+  "subsequent_local_read_qualification_passed": true,
+  "subsequent_local_read_qualification_report": "work/backup-access-test-2026-11-11-03.json",
+  "programmer_acceptance_is_now_locally_observed": true
+}

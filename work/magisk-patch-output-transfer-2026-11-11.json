@@ -1,0 +1,6 @@
+{
+  "source": "Magisk app patch on the exact BOOX device",
+  "remote_file": "/sdcard/Download/magisk_patched-31100_H7jWH.img",
+  "local_file": ".private/magisk-root-20261111/boot.img",
+  "firmware_written": false
+}

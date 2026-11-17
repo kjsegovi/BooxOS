@@ -1,0 +1,52 @@
+{
+  "test_number": 2,
+  "approved_scope": "Revised read-only backup-access test: one Android-to-EDL session, original pinned RAM programmer, GPT plus two small xbl_config_a reads, restart and verify original Android. No full-device backup, firmware writes or setting/slot changes.",
+  "entry_attempted": true,
+  "service_usb_detected": true,
+  "preflight": {
+    "model": "GoColor7_2",
+    "build": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "slot": "_a",
+    "boot_completed": "1",
+    "battery_percent": 100
+  },
+  "worker_exit_code": 0,
+  "qualification_reads_passed": false,
+  "repeat_reads_identical": false,
+  "boot_configuration_bytes": null,
+  "gpt_primary_crc_valid": false,
+  "gpt_backup_consistent": false,
+  "partition_count": null,
+  "requested_read_bytes": 0,
+  "hardware_identity_matched": true,
+  "programmer_upload_success_logged": true,
+  "programmer_connection_accepted": false,
+  "failure_type": "StopTest",
+  "reset_attempted": true,
+  "reset_command_acknowledged": true,
+  "reset_error_type": null,
+  "observed_firehose_command_counts": {
+    "configure": 1,
+    "power": 1
+  },
+  "forbidden_storage_command_observed": false,
+  "post_test_android": {
+    "model": "GoColor7_2",
+    "build": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "slot": "_a"
+  },
+  "returned_to_original_build_and_slot": true,
+  "private_session_directory": "/Users/kjsegovi/Projects/BooxOS/.private/backup-access-revised-20261111-093724",
+  "full_device_backup_created": false,
+  "restore_tested": false,
+  "persistent_storage_commands_permitted": false,
+  "completed_at_utc": "2026-11-11T16:39:20.207212+00:00",
+  "result": "incomplete_or_stopped",
+  "stop_reason": "Unexpected storage negotiation",
+  "configuration_diagnosis": {
+    "programmer_accepted_and_responded": true,
+    "skipwrite_one_selects_null_device_string_present_in_pinned_programmer": true,
+    "normal_storage_reads_not_attempted": true,
+    "configuration_fix_needed": "Use normal SkipWrite=0 storage configuration; retain the enforced read/query/reset-only XML command allowlist."
+  }
+}

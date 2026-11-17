@@ -1,0 +1,68 @@
+{
+  "tag_name": "v0.5.8",
+  "published_at": "2026-10-13T20:51:16Z",
+  "html_url": "https://github.com/celzero/rethink-app/releases/tag/v0.5.8",
+  "body": "### \ud83c\udf0d Lok 3\r\n\r\n- _New_: Tasker/Macrodroid intents to automate start, stop, pause, resume *Advanced* mode WireGuards.\r\n- _New_: *Configure -> Settings -> Packet capture* auto-turn off, auto-truncation, and manual delete option for `.pcap` captures.\r\n- _New_: *Configure -> DNS -> Use System DNS on Captive Portals* to only use *System DNS* to get past captive portals auth.\r\n- _New_: *IzzyOnDroid* flavour with a different package name (`com.celzero.bravedns.izzy`) to F-Droid (`com.celzero.bravedns`).\r\n- _Improvement_: Reduced power use. Down from 5% - 10% to 2% to 3% in our tests.\r\n- _Improvement_: Quick setting to bypass apps from RPN.\r\n- _UI_: In *Advanced* mode, warn when client connects to the same WireGuard peer multiple times.\r\n- _UI_: Text clipping issues on some devices.\r\n- _Fix_: Handling of post-purchase device authorization and pre-purchase errors for RPN.\r\n\r\nNote: *This is a fast-follow release, the last major release was [v057](https://github.com/celzero/rethink-app/releases/tag/v0.5.7).*",
+  "assets": [
+    {
+      "name": "rethink-70-arm64-v8a.apk",
+      "size": 31780409,
+      "browser_download_url": "https://github.com/celzero/rethink-app/releases/download/v0.5.8/rethink-70-arm64-v8a.apk",
+      "digest": "sha256:2eb2c79f3c3e87dcaf42f5c43d307fe3665c7e1c8a25c6f966212ee49fb53eeb"
+    },
+    {
+      "name": "rethink-70-armeabi-v7a.apk",
+      "size": 31188568,
+      "browser_download_url": "https://github.com/celzero/rethink-app/releases/download/v0.5.8/rethink-70-armeabi-v7a.apk",
+      "digest": "sha256:fcda300f9e3657519c0505e4cbabe12033065d31442d509ae8fa2aefc99820d9"
+    },
+    {
+      "name": "rethink-70-x86.apk",
+      "size": 31398810,
+      "browser_download_url": "https://github.com/celzero/rethink-app/releases/download/v0.5.8/rethink-70-x86.apk",
+      "digest": "sha256:b23d043dadc8dbdbf3780ddb781d148a7e3dcacf253932c755f5b0791e5c7f91"
+    },
+    {
+      "name": "rethink-70-x86_64.apk",
+      "size": 33119817,
+      "browser_download_url": "https://github.com/celzero/rethink-app/releases/download/v0.5.8/rethink-70-x86_64.apk",
+      "digest": "sha256:237778cc6f4446bb77853f769359e98329d323385341cdcece391ab8af5cd161"
+    },
+    {
+      "name": "rethink-70.apk",
+      "size": 72146804,
+      "browser_download_url": "https://github.com/celzero/rethink-app/releases/download/v0.5.8/rethink-70.apk",
+      "digest": "sha256:f8b78513e91bc47066ccf51f5bd742274abb3970388d5e7a7ebcae9c9cd9c9d2"
+    },
+    {
+      "name": "rethink-v0.5.8-izzy-arm64-v8a.apk",
+      "size": 30940198,
+      "browser_download_url": "https://github.com/celzero/rethink-app/releases/download/v0.5.8/rethink-v0.5.8-izzy-arm64-v8a.apk",
+      "digest": "sha256:fa1de4d7ed520036eb389e5dbd4ade4f752f8dc741f60288a8fd11c686faa7e2"
+    },
+    {
+      "name": "rethink-v0.5.8-izzy-armeabi-v7a.apk",
+      "size": 30348340,
+      "browser_download_url": "https://github.com/celzero/rethink-app/releases/download/v0.5.8/rethink-v0.5.8-izzy-armeabi-v7a.apk",
+      "digest": "sha256:e8b5414cef80968a6c28644c5de36fc9301cc09cf0bf438976e0ba16d556e036"
+    },
+    {
+      "name": "rethink-v0.5.8-izzy-universal.apk",
+      "size": 71306600,
+      "browser_download_url": "https://github.com/celzero/rethink-app/releases/download/v0.5.8/rethink-v0.5.8-izzy-universal.apk",
+      "digest": "sha256:3701e77c1a8fc0f75c7721115f2c17f9aef3f6a1087a74dfc82c8f4e3b993f6a"
+    },
+    {
+      "name": "rethink-v0.5.8-izzy-x86.apk",
+      "size": 30558564,
+      "browser_download_url": "https://github.com/celzero/rethink-app/releases/download/v0.5.8/rethink-v0.5.8-izzy-x86.apk",
+      "digest": "sha256:b09266cc261978c237c26295f24ed35e9e8e2c67ffdce183117073a26f141460"
+    },
+    {
+      "name": "rethink-v0.5.8-izzy-x86_64.apk",
+      "size": 32279577,
+      "browser_download_url": "https://github.com/celzero/rethink-app/releases/download/v0.5.8/rethink-v0.5.8-izzy-x86_64.apk",
+      "digest": "sha256:0c9bff47822747bf932e86e968053310256b7e8eacf6babb98b21c72a7119618"
+    }
+  ]
+}

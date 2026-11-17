@@ -1,0 +1,34 @@
+{
+  "offline": true,
+  "extracted_display_dependencies": [
+    {
+      "path": "/lib64/libsdmcore.so",
+      "bytes": 656040,
+      "sha256": "cb9154c7e9e1e65755aa59fc77739cbc624846789f88ac7dac99747c77dc8bc3"
+    },
+    {
+      "path": "/lib64/libdrm.so",
+      "bytes": 83032,
+      "sha256": "b42de2f541cbfad6c01b587953c8c326d8749a11e980071bdd8c8d40c5429ae1"
+    },
+    {
+      "path": "/lib64/libsdmutils.so",
+      "bytes": 59376,
+      "sha256": "d1645664f9d98509d43c07ab2c0fe928835501eb81a44079532b319aaf41db50"
+    },
+    {
+      "path": "/lib64/libhistogram.so",
+      "bytes": 46400,
+      "sha256": "528c1bbc8779ad8a7524a35aeff0448f3263a90f65bac3c5c89752d07999c52d"
+    }
+  ],
+  "vendor_waveform_related_files": [],
+  "vendor_entries_visited": 2830,
+  "kernel_waveform_path_strings": [
+    "/%s/waveform/",
+    "eink_waveform.wbf",
+    "/vendor/waveform",
+    "waveform/eink_waveform.wbf"
+  ],
+  "hardware_waveform_backup_qualified": false
+}

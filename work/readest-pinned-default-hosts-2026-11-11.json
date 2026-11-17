@@ -1,0 +1,8 @@
+{
+  ".env": {
+    "NEXT_PUBLIC_DEFAULT_POSTHOG_URL_BASE64": "us.i.posthog.com",
+    "NEXT_PUBLIC_DEFAULT_SUPABASE_URL_BASE64": "vbsyxfusjjqdxkjqlysc.supabase.co"
+  },
+  ".env.tauri": {},
+  ".env.web": {}
+}

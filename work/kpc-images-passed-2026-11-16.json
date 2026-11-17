@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-11-16T21:40:00+00:00",
+  "host": "KPC",
+  "workspace": "/home/kjseg/booxos-lineage21-20261115",
+  "container": "booxos-lineage21-20261115 (c72c3407), exit 0",
+  "started": "2026-11-16T19:28:02+00:00",
+  "finished": "2026-11-16T21:37:35+00:00",
+  "lineage_version": "21.0-20261116-UNOFFICIAL-GoColor7_2",
+  "build_id": "AP2A.240905.003",
+  "variant": "userdebug",
+  "boox_access": false,
+  "fixes_applied": [
+    "kpc_build.sh/build_color_target.py: target system_extimage -> systemextimage (Nov 15 run failed after configure)",
+    "WSL Ubuntu stopped when last wsl.exe client exited, killing dockerd and the build (exit 143); held open with a WMI-launched 'wsl.exe -d Ubuntu --exec sleep infinity' (Windows pid 15204, not persistent across reboot)"
+  ],
+  "outputs_sha256": {
+    "system.img": "91929763f3003c38747ce4c65dd17850a42d85ef562b2345117dfac53591fa30",
+    "product.img": "b6b72a17e6293cce83b8f0c910df22f2e96977eaf5e6021bbe97fef4d61dd54e",
+    "system_ext.img": "9a256d82a6681add0380a015dcaa642e504efeda0d112757c0747ee7be13fad6",
+    "vbmeta.img": "c687bbe4ef4d9b36aa184fc304c89ab9d8552ef8718d8bad0c82c264947e4fcb",
+    "vbmeta_system.img": "7701680b83164935dd8574b971f22134bd30493d7e67f63fe9cb8a21648f1f2d"
+  },
+  "output_bytes": {"system.img": 836050944, "product.img": 458084352, "system_ext.img": 426582016},
+  "super_fit": "system+product+system_ext+prebuilt vendor(594817024)+odm(1056768) = 2316591104 bytes vs BOARD_QTI_DYNAMIC_PARTITIONS_SIZE 6438256640",
+  "not_established": "No hardware boot, no flashing, no VINTF/SELinux runtime check, display/frontlight/input untested. Prior notes record fastbootd/native writes being rejected on this device; flashing route still unresolved."
+}

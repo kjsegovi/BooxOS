@@ -1,0 +1,9 @@
+{
+  "test": "non-allowed Android shell attempts direct public-IP TCP connection",
+  "destination": "1.1.1.1:443",
+  "exit_code": 0,
+  "elapsed_seconds": 0.04,
+  "stdout": "",
+  "stderr": "",
+  "expected": "connection rejected under default block; confirm attribution in firewall logs"
+}

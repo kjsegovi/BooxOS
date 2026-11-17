@@ -1,0 +1,9 @@
+{
+  "test": "Readest built-in browser online content",
+  "url": "https://example.com",
+  "rendered_title": "Example Domain",
+  "resumed_activity_package": "com.bilingify.readest",
+  "page_rendered": true,
+  "account_used": false,
+  "books_imported": false
+}

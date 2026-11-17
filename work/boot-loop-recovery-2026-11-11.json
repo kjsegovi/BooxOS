@@ -1,0 +1,52 @@
+{
+  "result": "original_android_restored",
+  "original_slot": "a",
+  "original_build": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+  "pre_failure_slot_a_bootable": true,
+  "observed_fault": {
+    "current_slot": "b",
+    "slot_a_unbootable": true,
+    "slot_b_unbootable": false,
+    "snapshot_update_status": "none",
+    "recovery_b_build": "2025-11-10_16-08_4.1.1-rel_1110_d8cf44fd7/6191"
+  },
+  "user_approved_operation": "Yes, switch to A and restart once",
+  "operation": "fastboot set_active a; verify bootable; one fastboot reboot",
+  "boot_metadata_changed": true,
+  "firmware_images_flashed": false,
+  "data_erased": false,
+  "original_android_verified": true,
+  "user_confirmed_home_screen": true,
+  "stability": {
+    "same_original_android_all_checks": true,
+    "uptime_increasing": true,
+    "boot_verifier_success_marker_present": false,
+    "observed_at_utc": "2026-11-11T18:03:30.445614+00:00"
+  },
+  "current_boot_success_flag_independently_requeried": true,
+  "root_cause_of_initial_slot_change": "Unknown; selecting A resolved this boot loop but does not explain the earlier failed read or changed bootability.",
+  "backup_complete": false,
+  "firmware_restore_tested": false,
+  "boot_selection_recovery_tested": true,
+  "edl_backup_operational_hold": true,
+  "recovery_kit": {
+    "directory": "/Users/kjsegovi/Projects/BooxOS/.private/recovery-kit-GoColor7_2-20261111",
+    "files": 58,
+    "bytes": 8226837641,
+    "captured_device_partitions": 31,
+    "copy_hashes_verified": true,
+    "complete_device_backup": false,
+    "restore_tested": false
+  },
+  "completed_at_utc": "2026-11-11T18:09:58.951999+00:00",
+  "initial_reason_for_not_requerying_boot_success": "Avoid another mode change or reboot of the now-working reader. No failure is inferred from the absence of a boot-verifier log marker.",
+  "later_boot_status_check": {
+    "result": "passed",
+    "slot_a_successful": true,
+    "slot_a_bootable": true,
+    "snapshot_update_status": "none",
+    "normal_restart_to_original_android_passed": true,
+    "slot_or_success_flags_explicitly_changed": false,
+    "report": "work/boot-status-check-2026-11-11.json"
+  }
+}

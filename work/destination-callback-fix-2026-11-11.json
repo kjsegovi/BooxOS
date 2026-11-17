@@ -1,0 +1,10 @@
+{
+  "probe_host": "readest.supabase.co",
+  "probe_path": "/auth/v1/health",
+  "before": "ERR_CONNECTION_REFUSED; reproduced on the BOOX",
+  "change": "NeoBrowser exact app-specific trusted host readest.supabase.co added",
+  "after_has_refused": false,
+  "after_public_401_visible": true,
+  "account_login": "still requires real Apple callback retry",
+  "result": "Same unauthenticated /auth/v1/health request went from ERR_CONNECTION_REFUSED to the server JSON response: No API key found in request. This proves public-host reachability; not full Apple login success."
+}

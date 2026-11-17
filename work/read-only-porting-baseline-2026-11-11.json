@@ -1,0 +1,59 @@
+{
+  "checked_at_utc": "2026-11-11T18:59:25.230236+00:00",
+  "scope": "Read-only model/startup, BPF sysctl, storage health and frontlight sysfs values; no root/write/reboot/EDL",
+  "model": {
+    "rc": 0,
+    "value": "GoColor7_2",
+    "error": ""
+  },
+  "slot": {
+    "rc": 0,
+    "value": "_a",
+    "error": ""
+  },
+  "boot_completed": {
+    "rc": 0,
+    "value": "1",
+    "error": ""
+  },
+  "bpf_jit_enable": {
+    "rc": 0,
+    "value": "1",
+    "error": ""
+  },
+  "unprivileged_bpf_disabled": {
+    "rc": 0,
+    "value": "0",
+    "error": ""
+  },
+  "mmc_life_time": {
+    "rc": 0,
+    "value": "0x01 0x01",
+    "error": ""
+  },
+  "mmc_pre_eol": {
+    "rc": 0,
+    "value": "0x01",
+    "error": ""
+  },
+  "brightness_max": {
+    "rc": 0,
+    "value": "32",
+    "error": ""
+  },
+  "warmth_max": {
+    "rc": 0,
+    "value": "32",
+    "error": ""
+  },
+  "brightness_driver_path": {
+    "rc": 0,
+    "value": "/sys/devices/platform/soc/soc:onyx_bl/backlight/onyx_bl_br",
+    "error": ""
+  },
+  "warmth_driver_path": {
+    "rc": 0,
+    "value": "/sys/devices/platform/soc/soc:onyx_bl/backlight/onyx_bl_ct",
+    "error": ""
+  }
+}

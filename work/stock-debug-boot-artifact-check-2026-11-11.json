@@ -1,0 +1,7 @@
+{
+  "artifact_sha256_matches": true,
+  "only_boot_header_ramdisk_size_and_id_changed": true,
+  "exact_added_property_and_policy_bytes_checked": true,
+  "candidate_not_sent_to_reader": true,
+  "flash_approval_received": false
+}

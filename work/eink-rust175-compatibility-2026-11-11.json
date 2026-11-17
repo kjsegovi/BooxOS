@@ -1,0 +1,41 @@
+{
+  "compiler": "Lineage21 Android Rust 1.75.0",
+  "exit_code": 0,
+  "passed": true,
+  "elapsed_seconds": 30.31,
+  "output": "\nrunning 69 tests\ntest abi::tests::epdc_upd_is_40_bytes ... ok\ntest abi::tests::dma_buf_sync_matches_its_argument_layout ... ok\ntest abi::tests::drm_ioctls_match_their_argument_layouts ... ok\ntest burst::tests::long_bursts_are_never_big ... ok\ntest burst::tests::one_big_frame_is_big ... ok\ntest burst::tests::new_burst_starts_empty ... ok\ntest burst::tests::off_doesnt_count_frames ... ok\ntest burst::tests::reset_forgets_rows_and_frames ... ok\ntest burst::tests::small_frames_add_up ... ok\ntest burst::tests::spans_in_a_row_are_merged ... ok\ntest cut::tests::one_digit_clamped ... ok\ntest diff::tests::invalidate_makes_everything_changed ... ok\ntest diff::tests::first_frame_is_changed_everywhere ... ok\ntest diff::tests::row_padding_is_ignored ... ok\ntest diff::tests::same_frame_is_unchanged ... ok\ntest diff::tests::box_covers_every_changed_row ... ok\ntest diff::tests::box_clamped_to_panel ... ok\ntest diff::tests::shadow_follows_frames ... ok\ntest diff::tests::span_union_and_width ... ok\ntest diff::tests::small_frames_are_unreadable ... ok\ntest diff::tests::one_pixel_gives_word_and_aligned_box ... ok\ntest dmabuf::tests::mapping_nothing_fails ... ok\ntest dmabuf::tests::maps_the_contents ... ok\ntest formats::tests::other_lines_untouched ... ok\ntest formats::tests::keeps_only_linear_32bpp ... ok\ntest formats::tests::list_without_lin_32bpp_is_left_and_counted ... ok\ntest formats::tests::separators_and_terminator_are_kept ... ok\ntest fence::tests::signalled_and_timed_out ... ok\ntest framebuffers::tests::re_adding_id_replaces_it ... ok\ntest framebuffers::tests::re_importing_handle_replaces_it ... ok\ntest framebuffers::tests::reads_added_framebuffer ... ok\ntest framebuffers::tests::framebuffers_outlive_their_gem_handle ... ok\ntest framebuffers::tests::removed_framebuffers_are_forgotten ... ok\ntest framebuffers::tests::tiled_and_unknown_buffers_not_tracked ... ok\ntest modes::tests::finds_modes_by_name ... ok\ntest modes::tests::unknown_or_empty_name_returns_default ... ok\ntest policy::tests::debounced_bursts_are_transient ... ok\ntest policy::tests::first_frame_sets_mode_without_gc ... ok\ntest policy::tests::frames_within_interaction_dont_count ... ok\ntest policy::tests::gc_interval_0_is_never ... ok\ntest policy::tests::mode_change_gcs_even_in_a_burst ... ok\ntest policy::tests::new_burst_after_big_quiet ... ok\ntest policy::tests::speed_is_never_transient ... ok\ntest request::tests::detached_plane_has_fb_0 ... ok\ntest request::tests::epdc_adds_are_swallowed_and_find_plane ... ok\ntest policy::tests::gc_every_interval_interactions ... ok\ntest request::tests::fb_of_other_planes_ignored_once_plane_is_known ... ok\ntest request::tests::later_requests_touch_plane_through_any_property ... ok\ntest request::tests::new_request_starts_clean ... ok\ntest request::tests::fences_are_waited_on ... ok\ntest request::tests::nothing_is_ours_before_ids_are_known ... ok\ntest request::tests::requests_not_touching_plane_are_not_ours ... ok\ntest request::tests::resetting_cursor_ends_request ... ok\ntest request::tests::test_only_commits_are_not_ours_and_keep_request ... ok\ntest framebuffers::tests::tables_are_capped ... ok\ntest settings::tests::cache_rereads_only_on_a_new_serial ... ok\ntest settings::tests::defaults ... ok\ntest settings::tests::bad_numbers_fall_back_to_defaults ... ok\ntest settings::tests::a2_cut_only_applies_to_speed ... ok\ntest settings::tests::reads_every_property ... ok\ntest settings::tests::a2_cut_is_clamped_or_left_alone ... ok\ntest settings::tests::parses_like_strtol_base_0 ... ok\ntest settle::tests::idle_without_pending_work ... ok\ntest settle::tests::passes_share_the_marker_sequence ... ok\ntest settle::tests::settle_pass_after_settle_quiet ... ok\ntest updates::tests::full_panel_covers_the_panel ... ok\ntest settle::tests::big_burst_gcs_after_big_quiet_and_wins ... ok\ntest updates::tests::markers_count_up_and_stay_positive ... ok\ntest updates::tests::partial_rect_is_top_left_width_height ... ok\n\ntest result: ok. 69 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s\n\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\nANDROID_SHARED_LIBRARY_LINKED\n   Compiling libc v0.2.161 (/dependency)\n   Compiling eink_shim v0.1.0 (/tmp/eink-shim)\n    Finished test [unoptimized + debuginfo] target(s) in 12.89s\n     Running unittests src/lib.rs (/tmp/eink-target/debug/deps/eink_shim-14f77e8a79af79a8)\n   Doc-tests eink_shim\n   Compiling libc v0.2.161 (/dependency)\n    Checking eink_shim v0.1.0 (/tmp/eink-shim)\n    Finished release [optimized] target(s) in 6.81s\n   Compiling libc v0.2.161 (/dependency)\n   Compiling eink_shim v0.1.0 (/tmp/eink-shim)\n    Finished release [optimized] target(s) in 8.67s\n",
+  "android_shared_library_linked": true,
+  "color_hardware_validated": false,
+  "device_access": false,
+  "source_sha256": {
+    "src/commit.rs": "3660c7b487a2ac9a1280a5bf04d3d7e5ec45a8c76d98e886fed56a34ab2b5e8b",
+    "src/request.rs": "412dcf31e3be20c2a155e868de1bd5706a742f7e9f3f101b8f85824925def7e6",
+    "src/policy.rs": "0c665f93bd93ecac9208d1d07c451e689719f885c366004349ac50cbe09ea3cc",
+    "src/modes.rs": "448958f16f6c0c2521b5a0aa728a2843f2e33ac7df044a771c8fe725f097e8de",
+    "src/updates.rs": "eb435602253e84b64f0e768a0f43ccbd2376ec7b7dd2246a60b1ad0775dfe075",
+    "src/dmabuf.rs": "9618be94f4f5eb51ebcf51d162fbd8cb626fc555d15f619a639196eae66e8b96",
+    "src/settle.rs": "b552a0d7fb971dab6aac5b838995e8473c1e558a7368a69065e799036ff5aca8",
+    "src/fence.rs": "4b097ed91dc0da77856bb3ecd49979085967771866954d53cb2a4b1210948068",
+    "src/cut.rs": "90b69037b52c00f81a486e623e150a293e6f28c6d216e9c2a7a99ce0ee2f7389",
+    "src/sysprop.rs": "ddca06d02d6252f80127eb4cb983da641e1baf6fd0845104d5e2946151e068b5",
+    "src/drm.rs": "e23d3f0181087d64277a7689e6427e70d0f7faadec60d8504644dfcd9e6efdd7",
+    "src/log.rs": "4a7ff02ba31643170ea882294c2bb7919d2f100d97996cbec26536320b181003",
+    "src/lib.rs": "aa4c3ccea37992b9311f9bbe87d3fc9974f0228cc7135a164dff03849265b2aa",
+    "src/exports.rs": "94e89691914ca71d9b2b72acd29a098ba04012559af4f4dd8a3ce7ca8c75cd5f",
+    "src/framebuffers.rs": "6ae5902a5e77bd7c0509f9fd08ee5e7eed07766d4e71492f581915749669ad3c",
+    "src/panel.rs": "8995d4397468c0bc0575c28991b2b618b01a2822b9c8db13fcfa4ce81acb8267",
+    "src/formats.rs": "8684805aae4eff98412d866f1475db3073480a313a7b29e69ccbc0df2a589918",
+    "src/diff.rs": "696621bccd57b2b191faf0559ef76afc19d82a59b0019cc30278597c314208bf",
+    "src/abi.rs": "71ea01a5162e659df9a26a181b62889cf26a468337f47598e6833603686379cd",
+    "src/settings.rs": "55268cc7a6949554175340f5155962408f41d23ff3627f3ce638b0f87ce72be9",
+    "src/burst.rs": "4fa90cafe4a0ddea7669501ec232cff9aba7afba6b9af4772597a0caa4a7fd6d"
+  },
+  "android_library": {
+    "path": "/Users/kjsegovi/Projects/BooxOS/.local/component-builds/lineage21/libeink_shim.so",
+    "bytes": 687024,
+    "sha256": "3f6d162fa0777f7da4ce2948b0e87b219350e0dde6cc4cea7c82cf30758fba07",
+    "target_api": 30,
+    "architecture": "aarch64",
+    "ndk_archive_sha256": "769ee342ea75f80619d985c2da990c48b3d8eaf45f48783a2d48870d04b46108"
+  }
+}

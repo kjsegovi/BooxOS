@@ -1,0 +1,90 @@
+{
+  "scope": "native bootloader queries and return only; owner present",
+  "firmware_images_loaded_or_written": false,
+  "slot_changed": false,
+  "edl_programmer_used": false,
+  "commands": [
+    {
+      "arguments": [
+        "getvar",
+        "product"
+      ],
+      "rc": 0,
+      "response": "product: lito\nFinished. Total time: 0.002s"
+    },
+    {
+      "arguments": [
+        "getvar",
+        "is-userspace"
+      ],
+      "rc": 0,
+      "response": "is-userspace: no\nFinished. Total time: 0.002s"
+    },
+    {
+      "arguments": [
+        "getvar",
+        "current-slot"
+      ],
+      "rc": 0,
+      "response": "current-slot: a\nFinished. Total time: 0.002s"
+    },
+    {
+      "arguments": [
+        "getvar",
+        "slot-successful:a"
+      ],
+      "rc": 0,
+      "response": "slot-successful:a: yes\nFinished. Total time: 0.002s"
+    },
+    {
+      "arguments": [
+        "getvar",
+        "slot-unbootable:a"
+      ],
+      "rc": 0,
+      "response": "slot-unbootable:a: no\nFinished. Total time: 0.002s"
+    },
+    {
+      "arguments": [
+        "getvar",
+        "max-download-size"
+      ],
+      "rc": 0,
+      "response": "max-download-size: 794718208\nFinished. Total time: 0.002s"
+    },
+    {
+      "arguments": [
+        "reboot"
+      ],
+      "rc": 0,
+      "response": "Rebooting                                          OKAY [  0.000s]\nFinished. Total time: 0.000s"
+    }
+  ],
+  "android_returned": true,
+  "before": {
+    "ro.product.model": "GoColor7_2",
+    "ro.build.display.id": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "ro.boot.slot_suffix": "_a",
+    "sys.boot_completed": "1"
+  },
+  "entry_at_utc": "2026-11-11T19:34:12.865746+00:00",
+  "variables": {
+    "product": "product: lito\nFinished. Total time: 0.002s",
+    "is-userspace": "is-userspace: no\nFinished. Total time: 0.002s",
+    "current-slot": "current-slot: a\nFinished. Total time: 0.002s",
+    "slot-successful:a": "slot-successful:a: yes\nFinished. Total time: 0.002s",
+    "slot-unbootable:a": "slot-unbootable:a: no\nFinished. Total time: 0.002s",
+    "max-download-size": "max-download-size: 794718208\nFinished. Total time: 0.002s"
+  },
+  "stopped": false,
+  "native_bootloader_reachable": true,
+  "identity_note": "Native bootloader uses Qualcomm board product lito, consistent with exact Android preflight and observed single-device transition; fastbootd uses GoColor7_2.",
+  "continuation": "Rechecked native product and A-slot flags; authorized normal restart only",
+  "after": {
+    "ro.product.model": "GoColor7_2",
+    "ro.build.display.id": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "ro.boot.slot_suffix": "_a",
+    "sys.boot_completed": "1"
+  },
+  "initial_stop_reason": "Fastboot model not verified; no restart command will be sent"
+}

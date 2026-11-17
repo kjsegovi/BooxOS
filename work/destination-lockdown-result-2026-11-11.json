@@ -1,0 +1,144 @@
+{
+  "status": "Destination restrictions configured; device-level decisions and functional book download verified. Independent wire audit not performed.",
+  "date": "2026-11-11",
+  "device": {
+    "model": "GoColor7_2",
+    "build": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "slot": "_a",
+    "boot_completed": "1",
+    "always_on_vpn_app": "com.celzero.bravedns",
+    "always_on_vpn_lockdown": "1",
+    "firewall_running": true,
+    "readest_running": true,
+    "wifi_on": "1",
+    "screen_timeout": "300000"
+  },
+  "global_domain_block": {
+    "pattern": "*.cn",
+    "scope": "All apps in Rethink",
+    "action": "BLOCK"
+  },
+  "default_app_policy": "Direct block on both unmetered and metered networks for the unfiltered app list; Rethink itself is excluded by the official bulk implementation. Only Readest was subsequently restored to ISOLATE/ALLOW.",
+  "readest": {
+    "package": "com.bilingify.readest",
+    "uid": 10114,
+    "policy": "ISOLATE: only app-specific trusted domains; no trusted IP rules",
+    "trusted_exact_hosts": [
+      "vbsyxfusjjqdxkjqlysc.supabase.co",
+      "web.readest.com",
+      "auth-cf.readest.com",
+      "readest.supabase.co",
+      "69a7e6e1c1cf4ecba13b6eb603210dfe.r2.cloudflarestorage.com"
+    ],
+    "explicit_block": [
+      "*.posthog.com"
+    ],
+    "unlisted_hosts": "Denied by Isolate",
+    "public_font_storage_exception": "storage.readest.com removed after source review; not needed for observed private book download"
+  },
+  "login_browser": {
+    "package": "org.chromium.chrome",
+    "uid": 10043,
+    "label": "NeoBrowser",
+    "current": "Directly BLOCKED on both network classes; temporary login access closed",
+    "verified_status": "This app is blocked 12 min. ago.",
+    "stored_inactive_login_hosts": [
+      "vbsyxfusjjqdxkjqlysc.supabase.co",
+      "appleid.apple.com",
+      "appleid.cdn-apple.com",
+      "readest.supabase.co"
+    ],
+    "future_login": "If a new Apple login is required, the existing exact login hosts can be temporarily enabled by changing NeoBrowser to Isolate, then restoring both network blocks afterward."
+  },
+  "vpn": {
+    "always_on": true,
+    "android_block_connections_without_vpn": true,
+    "home": {
+      "fhs_protection_level_txt": "PROTECTED",
+      "fhs_card_apps_bypassed_count": "1 BYPASSED",
+      "fhs_card_apps_excluded_count": "0 EXCLUDED",
+      "item_rules_page_count": "3",
+      "item_rules_page_label": "Universal firewall rules",
+      "fhs_card_dns_connected_dns": "RDNS Default"
+    },
+    "required_exception": "Rethink VPN service/DNS and bootstrap infrastructure; VPN owner traffic cannot be independently restricted by its own app tunnel."
+  },
+  "optional_firewall_network_features": {
+    "website_icons": "disabled; UI says requests went to nextdns.io and duckduckgo.com",
+    "automatic_app_update_checks": "disabled",
+    "provider_information_lookups": "already disabled",
+    "blocklist_update_checks": "already disabled",
+    "unknown_source_dns": "now blocked",
+    "encrypted_dns": "retained; required infrastructure exception",
+    "split_dns": "enabled",
+    "prevent_dns_leaks": "enabled",
+    "use_system_dns_for_undelegated_domains": "disabled",
+    "advanced_dns_alg": "disabled; unchanged"
+  },
+  "verified": {
+    "apple_signin": "User confirmed native Readest sign-in succeeded after the exact callback-host repair.",
+    "book_download": "User confirmed previously failed book downloads and opens after exact R2 host allowance.",
+    "download_connection": {
+      "bs_conn_track_app_name": "Readest",
+      "bs_conn_track_port_detail_chip": "allowed on TCP/443 8 min. ago",
+      "bs_conn_track_app_info_txt": "Trusted Domain (App)",
+      "bs_conn_dns_cache_text": "69a7e6e1c1cf4ecba13b6eb603210dfe.r2.cloudflarestorage.com",
+      "bs_conn_conn_upload": "960 B 🔺",
+      "bs_conn_conn_download": "1.1 MB 🔻",
+      "connection_message": "no error"
+    },
+    "global_cn_block": {
+      "probe": "DNS resolution for www.gov.cn",
+      "elapsed_seconds": 1.77,
+      "exit_code": 0,
+      "output": "PING www.gov.cn (127.0.0.1) 56(84) bytes of data.\n64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.083 ms\n\n--- www.gov.cn ping statistics ---\n1 packets transmitted, 1 received, 0% packet loss, time 0ms\nrtt min/avg/max/mdev = 0.083/0.083/0.083/0.000 ms\n",
+      "interpretation": "Confirmed global domain-rule block for www.gov.cn, using local blocking resolver 127.0.0.3:53; ping hit localhost, not the external server.",
+      "confirmed_firewall_decision": {
+        "dns_block_url": "www.gov.cn",
+        "dns_block_blocked_desc": "blocked 12 min. ago",
+        "dns_block_blocklist_info_txt": "Domain (Univ)",
+        "dns_block_ip_address": "ZZ (0.0.0.0)",
+        "dns_block_info_details": "127.0.0.3:53",
+        "dns_message": "54345126d530e057; tunnel; no error; {block(ip?false, tr?true, req?true)}"
+      }
+    },
+    "unrelated_crash_reporting_dns_block": {
+      "dns_block_url": "o4511086364131328.ingest.us.sentry.io",
+      "dns_block_blocked_desc": "blocked 9 min. ago",
+      "dns_block_blocklist_info_txt": "Isolate",
+      "dns_app_name": "Readest (10114)",
+      "dns_block_info_details": "127.0.0.3:53",
+      "dns_message": "9a391f0f19c67a4d; tunnel; no error; {block(ip?false, tr?true, req?true)}"
+    },
+    "browser_now_blocked": {
+      "aad_app_detail_name": "NeoBrowser",
+      "aad_pkg_name": "org.chromium.chrome (10043)",
+      "aad_firewall_status": "This app is blocked 12 min. ago."
+    },
+    "final_device_and_vpn_state": {
+      "model": "GoColor7_2",
+      "build": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+      "slot": "_a",
+      "boot_completed": "1",
+      "always_on_vpn_app": "com.celzero.bravedns",
+      "always_on_vpn_lockdown": "1",
+      "firewall_running": true,
+      "readest_running": true,
+      "wifi_on": "1",
+      "screen_timeout": "300000"
+    }
+  },
+  "history_note": "Historical allowed Example.com, updater, autofill, PostHog and Sentry entries from before restrictions remain in logs. They are not current allow rules. Repeated rows were not summed as separate transfers.",
+  "verification_limits": [
+    "No independent router/AP/gateway capture or exhaustive external packet audit.",
+    "No encrypted content inspection.",
+    "Hostname filtering uses Rethink DNS/domain and IP associations; it is not TLS-SNI enforcement or geographic IP blocking.",
+    "Rethink required DNS/bootstrap infrastructure remains permitted. Optional website icons, update checks and provider lookups are disabled.",
+    "Cross-device reading-position upload and restart after these destination-rule changes were not tested; previous always-on VPN startup verification predates these rules."
+  ],
+  "final_handoff": "BOOX returned to Readest. Wi-Fi remains on for requested Cloud usage. Stock firmware, slot A and recovery assets unchanged.",
+  "source_refs": {
+    "Readest": "v0.12.20 28aab23e039a23511bc478c23bf5278daa43cc68",
+    "Rethink": "v0.5.8 b750334a363065b94f83e818ac5dc38048713c1f"
+  }
+}

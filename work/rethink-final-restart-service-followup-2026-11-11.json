@@ -1,0 +1,22 @@
+{
+  "package": {
+    "exit_code": 0,
+    "output": "User 0: ceDataInode=26340 installed=true hidden=false suspended=false distractionFlags=0 stopped=false notLaunched=false enabled=1 instant=false virtual=false\n    User 0:"
+  },
+  "launcher": {
+    "exit_code": 0,
+    "output": "priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false\ncom.celzero.bravedns/.ui.activity.LauncherAliasAppLock"
+  },
+  "process": {
+    "exit_code": 0,
+    "output": "2655"
+  },
+  "service": {
+    "exit_code": 0,
+    "output": "* ServiceRecord{3de09e6 u0 com.celzero.bravedns/.service.BraveVPNService}\n    app=ProcessRecord{feb7ed4 2655:com.celzero.bravedns/u0a115}\n    isForeground=true foregroundId=1 foregroundNoti=Notification(channel=vpn shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x60 color=0xff4fc3f7 actions=2 vis=SECRET)\n    startRequested=true delayedStop=false stopIfKilled=false callStart=true lastStartId=1\n          ConnectionRecord{2038782 u0 CR FGS com.celzero.bravedns/.service.BraveVPNService:@e3272cd}\n      ConnectionRecord{2038782 u0 CR FGS com.celzero.bravedns/.service.BraveVPNService:@e3272cd}\n  * ConnectionRecord{2038782 u0 CR FGS com.celzero.bravedns/.service.BraveVPNService:@e3272cd}"
+  },
+  "settings": {
+    "exit_code": 0,
+    "output": "com.celzero.bravedns\n1\n0"
+  }
+}

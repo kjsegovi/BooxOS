@@ -1,0 +1,10 @@
+{
+  "test": "non-allowed Android shell attempts HTTP exchange with direct public IP",
+  "destination": "1.1.1.1:80",
+  "exit_code": 0,
+  "elapsed_seconds": 0.04,
+  "response_bytes": 0,
+  "response_status_line": [],
+  "stderr": "",
+  "firewall_decision_requires_log_confirmation": true
+}

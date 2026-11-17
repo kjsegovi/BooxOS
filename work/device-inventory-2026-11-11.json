@@ -1,0 +1,248 @@
+{
+  "checked_at_utc": "2026-11-11T15:25:29.588045+00:00",
+  "scope": "Read-only targeted device inventory. No reboot, root, unlock, app installation, setting changes, or partition writes. Serials and account data excluded.",
+  "adb_version": "Android Debug Bridge version 1.0.41\nVersion 37.0.1-15733141\nInstalled as /Users/kjsegovi/Projects/BooxOS/.local/platform-tools/adb\nRunning on Darwin 27.2.0 (arm64)",
+  "properties": {
+    "ro.product.manufacturer": "ONYX",
+    "ro.product.model": "GoColor7_2",
+    "ro.product.device": "GoColor7_2",
+    "ro.product.name": "GoColor7_2",
+    "ro.product.board": "lito",
+    "ro.board.platform": "lito",
+    "ro.soc.manufacturer": "QTI",
+    "ro.soc.model": "SM6350",
+    "ro.hardware": "qcom",
+    "ro.product.cpu.abi": "arm64-v8a",
+    "ro.product.cpu.abilist": "arm64-v8a,armeabi-v7a,armeabi",
+    "ro.build.version.release": "13",
+    "ro.build.version.sdk": "33",
+    "ro.build.version.security_patch": "2026-04-01",
+    "ro.build.version.incremental": "546",
+    "ro.build.display.id": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "ro.build.fingerprint": "ONYX/TabBoox/TabBoox:13/TKQ1.230615.001/GV2.027.SQ83A:user/release-keys",
+    "ro.vendor.build.fingerprint": "Onyx/GoColor7_2/GoColor7_2:11/2026-04-21_13-54_4.2-rel_0421_19324b3ea/8525:user/release-keys",
+    "ro.bootimage.build.fingerprint": "Onyx/GoColor7_2/GoColor7_2:11/2026-04-21_13-54_4.2-rel_0421_19324b3ea/8525:user/release-keys",
+    "ro.vendor.build.version.release": "11",
+    "ro.vendor.build.version.sdk": "30",
+    "ro.product.first_api_level": "30",
+    "ro.board.first_api_level": "30",
+    "ro.treble.enabled": "true",
+    "ro.vndk.version": "30",
+    "ro.vendor.vndk.version": "",
+    "ro.boot.slot_suffix": "_a",
+    "ro.build.ab_update": "true",
+    "ro.build.system_root_image": "false",
+    "ro.boot.dynamic_partitions": "true",
+    "ro.boot.dynamic_partitions_retrofit": "",
+    "ro.boot.super_partition": "",
+    "ro.boot.verifiedbootstate": "orange",
+    "ro.boot.vbmeta.device_state": "unlocked",
+    "ro.boot.flash.locked": "0",
+    "ro.boot.veritymode": "enforcing",
+    "ro.oem_unlock_supported": "",
+    "ro.virtual_ab.enabled": "true",
+    "ro.virtual_ab.compression.enabled": "",
+    "ro.virtual_ab.userspace.snapshots.enabled": "",
+    "ro.boot.snapshot_merge_status": "",
+    "ro.boot.avb_version": "1.1",
+    "ro.boot.warranty_bit": ""
+  },
+  "checks": {
+    "kernel_release": {
+      "exit_code": 0,
+      "stdout": "4.19.157-perf-g3d47a6619220-dirty",
+      "stderr": ""
+    },
+    "kernel_architecture": {
+      "exit_code": 0,
+      "stdout": "aarch64",
+      "stderr": ""
+    },
+    "memory_total": {
+      "exit_code": 0,
+      "stdout": "MemTotal:        3533784 kB\nMemFree:           39228 kB\nMemAvailable:    1475504 kB",
+      "stderr": ""
+    },
+    "screen_size": {
+      "exit_code": 0,
+      "stdout": "Physical size: 1264x1680",
+      "stderr": ""
+    },
+    "screen_density": {
+      "exit_code": 0,
+      "stdout": "Physical density: 300",
+      "stderr": ""
+    },
+    "block_partitions": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "cat: /proc/partitions: Permission denied"
+    },
+    "by_name_partitions": {
+      "exit_code": 0,
+      "stdout": "total 0\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 abl_a -> /dev/block/mmcblk0p33\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 abl_b -> /dev/block/mmcblk0p34\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 aop_a -> /dev/block/mmcblk0p9\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 aop_b -> /dev/block/mmcblk0p10\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 apdp -> /dev/block/mmcblk0p59\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 bluetooth_a -> /dev/block/mmcblk0p36\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 bluetooth_b -> /dev/block/mmcblk0p37\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 boot_a -> /dev/block/mmcblk0p13\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 boot_b -> /dev/block/mmcblk0p14\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 catecontentfv -> /dev/block/mmcblk0p73\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 catefv -> /dev/block/mmcblk0p72\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 cateloader -> /dev/block/mmcblk0p66\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 core_nhlos_a -> /dev/block/mmcblk0p29\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 core_nhlos_b -> /dev/block/mmcblk0p30\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 ddr -> /dev/block/mmcblk0p35\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 devcfg_a -> /dev/block/mmcblk0p48\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 devcfg_b -> /dev/block/mmcblk0p49\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 devinfo -> /dev/block/mmcblk0p57\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 dip -> /dev/block/mmcblk0p58\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 dsp_a -> /dev/block/mmcblk0p31\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 dsp_b -> /dev/block/mmcblk0p32\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 dtbo_a -> /dev/block/mmcblk0p39\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 dtbo_b -> /dev/block/mmcblk0p40\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 featenabler_a -> /dev/block/mmcblk0p50\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 featenabler_b -> /dev/block/mmcblk0p52\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 frp -> /dev/block/mmcblk0p55\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 fsc -> /dev/block/mmcblk0p78\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 fsg -> /dev/block/mmcblk0p77\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 hyp_a -> /dev/block/mmcblk0p11\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 hyp_b -> /dev/block/mmcblk0p12\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 imagefv_a -> /dev/block/mmcblk0p41\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 imagefv_b -> /dev/block/mmcblk0p42\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 keymaster_a -> /dev/block/mmcblk0p21\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 keymaster_b -> /dev/block/mmcblk0p22\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 keystore -> /dev/block/mmcblk0p47\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 limits -> /dev/block/mmcblk0p62\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 limits-cdsp -> /dev/block/mmcblk0p63\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 logdump -> /dev/block/mmcblk0p67\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 logfs -> /dev/block/mmcblk0p65\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 mdtp_a -> /dev/block/mmcblk0p25\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 mdtp_b -> /dev/block/mmcblk0p26\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 mdtpsecapp_a -> /dev/block/mmcblk0p23\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 mdtpsecapp_b -> /dev/block/mmcblk0p24\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 metadata -> /dev/block/mmcblk0p20\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 misc -> /dev/block/mmcblk0p46\nlrwxrwxrwx 1 root root 18 1971-02-06 19:48 mmcblk0 -> /dev/block/mmcblk0\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 modem_a -> /dev/block/mmcblk0p27\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 modem_b -> /dev/block/mmcblk0p28\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 modemst1 -> /dev/block/mmcblk0p75\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 modemst2 -> /dev/block/mmcblk0p76\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 multiimgoem_a -> /dev/block/mmcblk0p7\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 multiimgoem_b -> /dev/block/mmcblk0p8\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 onyxconfig -> /dev/block/mmcblk0p79\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 persist -> /dev/block/mmcblk0p45\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 questdatafv -> /dev/block/mmcblk0p51\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 qupfw_a -> /dev/block/mmcblk0p53\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 qupfw_b -> /dev/block/mmcblk0p54\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 rawdump -> /dev/block/mmcblk0p56\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 recovery_a -> /dev/block/mmcblk0p16\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 recovery_b -> /dev/block/mmcblk0p17\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 secdata -> /dev/block/mmcblk0p71\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 splash -> /dev/block/mmcblk0p61\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 spunvm -> /dev/block/mmcblk0p60\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 ssd -> /dev/block/mmcblk0p38\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 storsec -> /dev/block/mmcblk0p70\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 super -> /dev/block/mmcblk0p15\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 toolsfv -> /dev/block/mmcblk0p64\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 tz_a -> /dev/block/mmcblk0p5\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 tz_b -> /dev/block/mmcblk0p6\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 uefisecapp_a -> /dev/block/mmcblk0p43\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 uefisecapp_b -> /dev/block/mmcblk0p44\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 uefivarstore -> /dev/block/mmcblk0p74\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 userdata -> /dev/block/mmcblk0p80\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 vbmeta_a -> /dev/block/mmcblk0p68\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 vbmeta_b -> /dev/block/mmcblk0p69\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 vbmeta_system_a -> /dev/block/mmcblk0p18\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 vbmeta_system_b -> /dev/block/mmcblk0p19\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 xbl_a -> /dev/block/mmcblk0p1\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 xbl_b -> /dev/block/mmcblk0p2\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 xbl_config_a -> /dev/block/mmcblk0p3\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 xbl_config_b -> /dev/block/mmcblk0p4",
+      "stderr": ""
+    },
+    "bootdevice_partitions": {
+      "exit_code": 0,
+      "stdout": "total 0\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 abl_a -> /dev/block/mmcblk0p33\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 abl_b -> /dev/block/mmcblk0p34\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 aop_a -> /dev/block/mmcblk0p9\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 aop_b -> /dev/block/mmcblk0p10\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 apdp -> /dev/block/mmcblk0p59\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 bluetooth_a -> /dev/block/mmcblk0p36\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 bluetooth_b -> /dev/block/mmcblk0p37\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 boot_a -> /dev/block/mmcblk0p13\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 boot_b -> /dev/block/mmcblk0p14\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 catecontentfv -> /dev/block/mmcblk0p73\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 catefv -> /dev/block/mmcblk0p72\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 cateloader -> /dev/block/mmcblk0p66\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 core_nhlos_a -> /dev/block/mmcblk0p29\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 core_nhlos_b -> /dev/block/mmcblk0p30\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 ddr -> /dev/block/mmcblk0p35\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 devcfg_a -> /dev/block/mmcblk0p48\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 devcfg_b -> /dev/block/mmcblk0p49\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 devinfo -> /dev/block/mmcblk0p57\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 dip -> /dev/block/mmcblk0p58\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 dsp_a -> /dev/block/mmcblk0p31\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 dsp_b -> /dev/block/mmcblk0p32\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 dtbo_a -> /dev/block/mmcblk0p39\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 dtbo_b -> /dev/block/mmcblk0p40\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 featenabler_a -> /dev/block/mmcblk0p50\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 featenabler_b -> /dev/block/mmcblk0p52\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 frp -> /dev/block/mmcblk0p55\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 fsc -> /dev/block/mmcblk0p78\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 fsg -> /dev/block/mmcblk0p77\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 hyp_a -> /dev/block/mmcblk0p11\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 hyp_b -> /dev/block/mmcblk0p12\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 imagefv_a -> /dev/block/mmcblk0p41\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 imagefv_b -> /dev/block/mmcblk0p42\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 keymaster_a -> /dev/block/mmcblk0p21\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 keymaster_b -> /dev/block/mmcblk0p22\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 keystore -> /dev/block/mmcblk0p47\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 limits -> /dev/block/mmcblk0p62\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 limits-cdsp -> /dev/block/mmcblk0p63\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 logdump -> /dev/block/mmcblk0p67\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 logfs -> /dev/block/mmcblk0p65\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 mdtp_a -> /dev/block/mmcblk0p25\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 mdtp_b -> /dev/block/mmcblk0p26\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 mdtpsecapp_a -> /dev/block/mmcblk0p23\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 mdtpsecapp_b -> /dev/block/mmcblk0p24\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 metadata -> /dev/block/mmcblk0p20\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 misc -> /dev/block/mmcblk0p46\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 modem_a -> /dev/block/mmcblk0p27\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 modem_b -> /dev/block/mmcblk0p28\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 modemst1 -> /dev/block/mmcblk0p75\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 modemst2 -> /dev/block/mmcblk0p76\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 multiimgoem_a -> /dev/block/mmcblk0p7\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 multiimgoem_b -> /dev/block/mmcblk0p8\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 onyxconfig -> /dev/block/mmcblk0p79\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 persist -> /dev/block/mmcblk0p45\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 questdatafv -> /dev/block/mmcblk0p51\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 qupfw_a -> /dev/block/mmcblk0p53\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 qupfw_b -> /dev/block/mmcblk0p54\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 rawdump -> /dev/block/mmcblk0p56\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 recovery_a -> /dev/block/mmcblk0p16\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 recovery_b -> /dev/block/mmcblk0p17\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 secdata -> /dev/block/mmcblk0p71\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 splash -> /dev/block/mmcblk0p61\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 spunvm -> /dev/block/mmcblk0p60\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 ssd -> /dev/block/mmcblk0p38\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 storsec -> /dev/block/mmcblk0p70\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 super -> /dev/block/mmcblk0p15\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 toolsfv -> /dev/block/mmcblk0p64\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 tz_a -> /dev/block/mmcblk0p5\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 tz_b -> /dev/block/mmcblk0p6\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 uefisecapp_a -> /dev/block/mmcblk0p43\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 uefisecapp_b -> /dev/block/mmcblk0p44\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 uefivarstore -> /dev/block/mmcblk0p74\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 userdata -> /dev/block/mmcblk0p80\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 vbmeta_a -> /dev/block/mmcblk0p68\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 vbmeta_b -> /dev/block/mmcblk0p69\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 vbmeta_system_a -> /dev/block/mmcblk0p18\nlrwxrwxrwx 1 root root 21 1971-02-06 19:48 vbmeta_system_b -> /dev/block/mmcblk0p19\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 xbl_a -> /dev/block/mmcblk0p1\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 xbl_b -> /dev/block/mmcblk0p2\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 xbl_config_a -> /dev/block/mmcblk0p3\nlrwxrwxrwx 1 root root 20 1971-02-06 19:48 xbl_config_b -> /dev/block/mmcblk0p4",
+      "stderr": ""
+    },
+    "mapper_partitions": {
+      "exit_code": 0,
+      "stdout": "total 0\ndrwxr-xr-x 2 root root 320 1971-02-06 19:48 by-uuid\nlrwxrwxrwx 1 root root  16 1971-02-06 19:48 odm-verity -> /dev/block/dm-12\nlrwxrwxrwx 1 root root  15 1971-02-06 19:48 odm_a -> /dev/block/dm-0\nlrwxrwxrwx 1 root root  15 1971-02-06 19:48 odm_a-cow -> /dev/block/dm-5\nlrwxrwxrwx 1 root root  16 1971-02-06 19:48 product-verity -> /dev/block/dm-10\nlrwxrwxrwx 1 root root  15 1971-02-06 19:48 product_a -> /dev/block/dm-1\nlrwxrwxrwx 1 root root  15 1971-02-06 19:48 product_a-cow -> /dev/block/dm-6\nlrwxrwxrwx 1 root root  15 1971-02-06 19:48 system-verity -> /dev/block/dm-8\nlrwxrwxrwx 1 root root  15 1971-02-06 19:48 system_a -> /dev/block/dm-2\nlrwxrwxrwx 1 root root  15 1971-02-06 19:48 system_a-cow -> /dev/block/dm-7\nlrwxrwxrwx 1 root root  15 1971-02-06 19:48 system_ext-verity -> /dev/block/dm-9\nlrwxrwxrwx 1 root root  15 1971-02-06 19:48 system_ext_a -> /dev/block/dm-3\nlrwxrwxrwx 1 root root  16 1971-02-06 19:48 userdata -> /dev/block/dm-13\nlrwxrwxrwx 1 root root  16 1971-02-06 19:48 vendor-verity -> /dev/block/dm-11\nlrwxrwxrwx 1 root root  15 1971-02-06 19:48 vendor_a -> /dev/block/dm-4",
+      "stderr": ""
+    },
+    "display_devices": {
+      "exit_code": 1,
+      "stdout": "drwxr-xr-x 2 root   root        80 1971-02-06 19:48 /dev/dri\ncrw------- 1 root   root   10,  51 1971-02-06 19:48 /dev/ebc\ncrw-rw-r-- 1 system system 10,  62 1971-02-06 19:48 /dev/ion",
+      "stderr": "ls: /dev/graphics: No such file or directory\nls: /dev/dma_heap: No such file or directory"
+    },
+    "drm_connectors": {
+      "exit_code": 0,
+      "stdout": "card0\ncard0-DP-1\ncard0-DSI-1\ncard0-DSI-2\nrenderD128\nsde-crtc-0\nsde-crtc-1\nversion",
+      "stderr": ""
+    },
+    "frontlight_channels": {
+      "exit_code": 0,
+      "stdout": "onyx_bl_br\nonyx_bl_ct\npanel0-backlight\npanel1-backlight",
+      "stderr": ""
+    },
+    "battery_state": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "/system/bin/sh: syntax error: unexpected 'do'"
+    },
+    "disk_capacity": {
+      "exit_code": 0,
+      "stdout": "Filesystem       Size Used Avail Use% Mounted on\n/dev/block/dm-13  49G 4.4G   45G   9% /data/user/0\n/dev/block/dm-8  2.8G 2.8G     0 100% /apex/com.android.wifi\n/dev/block/dm-11 557M 556M     0 100% /vendor",
+      "stderr": ""
+    },
+    "device_tree_model": {
+      "exit_code": 0,
+      "stdout": "Qualcomm Technologies, Inc. Lagoon MTP  Go7 V20 for Color\u0000",
+      "stderr": ""
+    },
+    "device_tree_compatible": {
+      "exit_code": 0,
+      "stdout": "qcom,lagoon-mtp\u0000qcom,lagoon\u0000qcom,mtp\u0000",
+      "stderr": ""
+    },
+    "battery_capacity": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "cat: /sys/class/power_supply/battery/capacity: Permission denied"
+    },
+    "battery_status": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "cat: /sys/class/power_supply/battery/status: Permission denied"
+    },
+    "update_engine_status": {
+      "exit_code": 64,
+      "stdout": "ERROR: unknown command line flag 'status'",
+      "stderr": ""
+    },
+    "snapshot_status": {
+      "exit_code": 127,
+      "stdout": "",
+      "stderr": "/system/bin/sh: snapshotctl: inaccessible or not found"
+    },
+    "boot_partition_access": {
+      "exit_code": 0,
+      "stdout": "brw------- 1 root root 179,  13 1971-02-06 19:48 /dev/block/mmcblk0p13\nbrw------- 1 root root 179,  14 1971-02-06 19:48 /dev/block/mmcblk0p14\nbrw------- 1 root root 179,  15 1971-02-06 19:48 /dev/block/mmcblk0p15",
+      "stderr": ""
+    },
+    "boot_partition_size_sectors": {
+      "exit_code": 0,
+      "stdout": "196608",
+      "stderr": ""
+    },
+    "dtbo_partition_size_sectors": {
+      "exit_code": 0,
+      "stdout": "49152",
+      "stderr": ""
+    },
+    "recovery_partition_size_sectors": {
+      "exit_code": 0,
+      "stdout": "196608",
+      "stderr": ""
+    },
+    "super_partition_size_sectors": {
+      "exit_code": 0,
+      "stdout": "12582912",
+      "stderr": ""
+    },
+    "vintf_configuration_files": {
+      "exit_code": 0,
+      "stdout": "compatibility_matrix.xml\nmanifest\nmanifest.xml",
+      "stderr": ""
+    },
+    "display_vendor_libraries": {
+      "exit_code": 1,
+      "stdout": "-rw-r--r-- 1 root root 59944 2008-12-31 17:00 /vendor/lib64/hw/gralloc.lito.so",
+      "stderr": "ls: /vendor/lib64/hw/hwcomposer.lito.so: No such file or directory"
+    },
+    "sysfs_panel_modes": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "cat: /sys/class/drm/card0-DSI-1/modes: Permission denied"
+    },
+    "battery_dumpsys": {
+      "exit_code": 0,
+      "stdout": "Current Battery Service state:\n  AC powered: true\n  USB powered: false\n  Wireless powered: false\n  Max charging current: 2300000\n  Max charging voltage: 5000000\n  Charge counter: 1941370\n  status: 2\n  health: 2\n  present: true\n  level: 84\n  scale: 100\n  voltage: 4413\n  temperature: 275\n  technology: Li-ion",
+      "stderr": ""
+    },
+    "update_engine_client_help": {
+      "exit_code": 0,
+      "stdout": "Android Update Engine Client\n\n  --allocate  (Given payload metadata, allocate space.)  type: bool  default: false\n  --cancel  (Cancel the ongoing update and exit.)  type: bool  default: false\n  --follow  (Follow status update changes until a final state is reached. Exit status is 0 if the update succeeded, and 1 otherwise.)  type: bool  default: false\n  --headers  (A list of key-value pairs, one element of the list per line. Used when --update or --allocate is passed.)  type: string  default: \"\"\n  --help  (Show this help message)  type: bool  default: false\n  --merge  (Wait for previous update to merge. Only available after rebooting to new slot.)  type: bool  default: false\n  --metadata  (The path to the update payload metadata. Used when --verify or --allocate is passed.)  type: string  default: \"/data/ota_package/metadata\"\n  --offset  (The offset in the payload where the CrAU update starts. Used when --update is passed.)  type: int64  default: 0\n  --payload  (The URI to the update payload to use.)  type: string  default: \"http://127.0.0.1:8080/payload\"\n  --reset_status  (Reset an already applied update and exit.)  type: bool  default: false\n  --resume  (Resume a suspended update.)  type: bool  default: false\n  --size  (The size of the CrAU part of the payload. If 0 is passed, it will be autodetected. Used when --update is passed.)  type: int64  default: 0\n  --suspend  (Suspend an ongoing update and exit.)  type: bool  default: false\n  --switch_slot  (Perform just the slow switching part of OTA. Used to revert a slot switch or re-do slot switch. Valid values are 'true' and 'false')  type: string  default: UNSPECIFIED_FLAG\n  --update  (Start a new update, if no update in progress.)  type: bool  default: false\n  --verify  (Given payload metadata, verify if the payload is applicable.)  type: bool  default: false",
+      "stderr": ""
+    },
+    "bootctl_current_slot": {
+      "exit_code": 127,
+      "stdout": "",
+      "stderr": "/system/bin/sh: bootctl: inaccessible or not found"
+    },
+    "bootctl_snapshot_merge_status": {
+      "exit_code": 127,
+      "stdout": "",
+      "stderr": "/system/bin/sh: bootctl: inaccessible or not found"
+    },
+    "adb_shell_identity": {
+      "exit_code": 0,
+      "stdout": "uid=2000(shell) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:shell:s0",
+      "stderr": ""
+    },
+    "stock_update_package_candidates": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "ls: /sdcard/update.upx: No such file or directory\nls: /sdcard/Download/update.upx: No such file or directory\nls: /data/ota_package/update.upx: Permission denied"
+    },
+    "update_engine_status_observer": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "[ERROR:update_engine_client_android.cc(212)] Failed to bind() the UpdateEngine daemon."
+    }
+  },
+  "required_app_presence": {
+    "Kindle": {
+      "package_detected": true,
+      "query_exit_code": 0
+    },
+    "Libby": {
+      "package_detected": false,
+      "query_exit_code": 1
+    },
+    "Audible": {
+      "package_detected": false,
+      "query_exit_code": 1
+    },
+    "KOReader": {
+      "package_detected": false,
+      "query_exit_code": 1
+    }
+  },
+  "followup_checked_at_utc": "2026-11-11T15:30:13.155139+00:00",
+  "user_reported_prior_modifications": "None; user confirmed in chat on 2026-11-11.",
+  "required_app_presence_scope": "Queries of expected package names only; other profiles, alternative builds, accounts and content were not inspected."
+}

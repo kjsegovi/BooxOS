@@ -1,0 +1,44 @@
+{
+  "model": "GoColor7_2",
+  "stock_build": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+  "magisk_version": "31.1",
+  "image": ".private/magisk-root-20261111/boot.img",
+  "stock_sha256": "ede53420966b3af1a3a7b02cae3fef8583a0e01d19271006287dc14b4457ba63",
+  "patched_sha256": "c6a74118e66df486f4b8b073a7048767d9423737a02195c167fd63e78e390dab",
+  "image_bytes": 100663296,
+  "partition_capacity_bytes": 100663296,
+  "unchanged_components": {
+    "kernel": true,
+    "dtb": true,
+    "stable_header": true,
+    "os_version": true,
+    "dtb_address": true
+  },
+  "original_ramdisk_changed": [
+    "init"
+  ],
+  "added_ramdisk_entries": [
+    ".backup",
+    ".backup/.magisk",
+    ".backup/.rmlist",
+    ".backup/init.xz",
+    "overlay.d",
+    "overlay.d/sbin",
+    "overlay.d/sbin/init-ld.xz",
+    "overlay.d/sbin/magisk.xz"
+  ],
+  "original_init_backup_matches": true,
+  "original_init_backup_compression": "xz",
+  "embedded_magisk_components_match_official_apk": true,
+  "magisk_config": {
+    "KEEPVERITY": "true",
+    "KEEPFORCEENCRYPT": "true",
+    "RECOVERYMODE": "false",
+    "VENDORBOOT": "false",
+    "PREINITDEVICE": "metadata",
+    "SHA1": "67cf570782b19d8c38ae2c9e087b34255afee7b2"
+  },
+  "manufacturer_parent_boot_hash_will_differ": true,
+  "firmware_written": false,
+  "passed": true
+}

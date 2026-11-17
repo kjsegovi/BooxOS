@@ -1,0 +1,117 @@
+{
+  "documented": {
+    "exit_code": 2,
+    "result": {
+      "schema_version": 1,
+      "checked_at_utc": "2026-11-11T18:29:50.807171+00:00",
+      "scope": "read_only_offline_host_screen",
+      "mode": "documented",
+      "system": "Darwin",
+      "architecture": "arm64",
+      "glibc": null,
+      "wsl_detected": false,
+      "memory": {},
+      "workspace_free_bytes": 369049600000,
+      "workspace_filesystem": null,
+      "workspace_case_sensitive": false,
+      "commands_present": {
+        "git": true,
+        "git-lfs": true,
+        "python3": true,
+        "curl": true,
+        "gcc": true,
+        "g++": true,
+        "make": true,
+        "bison": true,
+        "flex": true,
+        "bc": true,
+        "gperf": true,
+        "zip": true,
+        "unzip": true,
+        "rsync": true,
+        "ccache": false,
+        "protoc": false,
+        "repo": false
+      },
+      "checks": {
+        "linux": false,
+        "documented_x86_64_host_architecture": false,
+        "glibc_at_least_2_17": false,
+        "ram_at_least_64_decimal_gb": false,
+        "free_space_at_least_400_decimal_gb": false,
+        "case_sensitive_workspace": false,
+        "screened_commands_present": false
+      },
+      "documented_baseline_screen_passed": false,
+      "platform_allows_experimental_toolchain_probe": false,
+      "selected_screen_passed": false,
+      "warnings": [
+        "Command presence does not verify all required distribution development packages or versions.",
+        "A passing host screen does not validate the BOOX device tree, blobs, kernel, signing, or installability.",
+        "Swap is reported but does not replace the documented RAM baseline."
+      ],
+      "requirements_sources": [
+        "https://source.android.com/docs/setup/start/requirements",
+        "https://github.com/LineageOS/lineage_wiki/blob/main/_includes/templates/device_build_before_init.md"
+      ]
+    }
+  },
+  "experimental": {
+    "exit_code": 2,
+    "result": {
+      "schema_version": 1,
+      "checked_at_utc": "2026-11-11T18:29:50.847250+00:00",
+      "scope": "read_only_offline_host_screen",
+      "mode": "experimental",
+      "system": "Darwin",
+      "architecture": "arm64",
+      "glibc": null,
+      "wsl_detected": false,
+      "memory": {},
+      "workspace_free_bytes": 369049600000,
+      "workspace_filesystem": null,
+      "workspace_case_sensitive": false,
+      "commands_present": {
+        "git": true,
+        "git-lfs": true,
+        "python3": true,
+        "curl": true,
+        "gcc": true,
+        "g++": true,
+        "make": true,
+        "bison": true,
+        "flex": true,
+        "bc": true,
+        "gperf": true,
+        "zip": true,
+        "unzip": true,
+        "rsync": true,
+        "ccache": false,
+        "protoc": false,
+        "repo": false
+      },
+      "checks": {
+        "linux": false,
+        "documented_x86_64_host_architecture": false,
+        "glibc_at_least_2_17": false,
+        "ram_at_least_64_decimal_gb": false,
+        "free_space_at_least_400_decimal_gb": false,
+        "case_sensitive_workspace": false,
+        "screened_commands_present": false
+      },
+      "documented_baseline_screen_passed": false,
+      "platform_allows_experimental_toolchain_probe": false,
+      "selected_screen_passed": false,
+      "warnings": [
+        "Command presence does not verify all required distribution development packages or versions.",
+        "A passing host screen does not validate the BOOX device tree, blobs, kernel, signing, or installability.",
+        "Swap is reported but does not replace the documented RAM baseline.",
+        "Experimental mode permits only bounded toolchain investigation; resource shortfalls remain visible and no full build is certified."
+      ],
+      "requirements_sources": [
+        "https://source.android.com/docs/setup/start/requirements",
+        "https://github.com/LineageOS/lineage_wiki/blob/main/_includes/templates/device_build_before_init.md"
+      ]
+    }
+  }
+}

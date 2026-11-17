@@ -1,0 +1,50 @@
+{
+  "status": "original_android_verified",
+  "purpose": "One controlled boot attempt using the original slot A",
+  "current_device_evidence": {
+    "product": "GoColor7_2",
+    "mode": "fastbootd",
+    "current_slot": "b",
+    "slot_a_successful": true,
+    "slot_a_unbootable": true,
+    "slot_b_unbootable": false,
+    "snapshot_update_status": "none",
+    "recovery_b_build": "2025-11-10_16-08_4.1.1-rel_1110_d8cf44fd7/6191"
+  },
+  "pre_failure_evidence": {
+    "working_slot": "a",
+    "build": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "slot_a_successful": true,
+    "slot_a_unbootable": false,
+    "saved_boot_a_matches_full_ota": true,
+    "saved_recovery_a_matches_full_ota": true
+  },
+  "proposed_operations": [
+    "Recheck one connected GoColor7_2, fastbootd, current B, no pending snapshot merge.",
+    "Set original slot A active (fastboot set_active a). This writes boot-control metadata, clearing its unbootable state and resetting retry/success flags as implemented by BOOX boot HAL.",
+    "Re-query current slot and A bootability. Stop on failure or unexpected values.",
+    "Request one normal reboot.",
+    "Observe Android connection and original model/build/slot/startup completion for up to 180 seconds; stop rather than repeating if it loops."
+  ],
+  "excluded_operations": [
+    "firmware or partition image flashing",
+    "erase or factory reset",
+    "unlock/relock",
+    "OTA install",
+    "new EDL/programmer session"
+  ],
+  "limits": [
+    "Root cause of A becoming unbootable is unknown.",
+    "Current contents of A are not yet independently reread after the failure.",
+    "Switching slots can fail if its firmware has a separate fault; normal boot is not guaranteed."
+  ],
+  "why_approval_needed": "The user authorized read-only backup. This recovery action changes persistent boot selection metadata.",
+  "sources": [
+    "https://source.android.com/docs/core/architecture/bootloader/updating",
+    "https://android.googlesource.com/platform/system/core/+/refs/heads/android11-release/fastboot/device/commands.cpp"
+  ],
+  "prepared_at_utc": "2026-11-11T17:59:05.952168+00:00",
+  "user_approved": true,
+  "execution_result": "/Users/kjsegovi/Projects/BooxOS/.private/original-slot-recovery-20261111T180034Z/result.json",
+  "original_android_verified": true
+}

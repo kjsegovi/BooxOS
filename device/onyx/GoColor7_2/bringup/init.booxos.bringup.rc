@@ -1,0 +1,12 @@
+# BOOXOS_BRINGUP only (debug builds). Never ship.
+# Brings up USB adb from post-fs-data, independent of later init stages that
+# can block (zygote-start waits), and keeps rolling log snapshots.
+service booxos_earlyadb /system/bin/sh /product/etc/booxos-earlyadb.sh
+    user root
+    group root shell system
+    seclabel u:r:su:s0
+    oneshot
+    disabled
+
+on post-fs-data
+    start booxos_earlyadb

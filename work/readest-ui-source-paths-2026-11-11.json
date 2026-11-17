@@ -1,0 +1,12 @@
+[
+  "apps/readest-app/src/app/library/components/FailedImportsDialog.tsx",
+  "apps/readest-app/src/app/library/components/ImportFromFolderDialog.tsx",
+  "apps/readest-app/src/app/library/components/ImportMenu.tsx",
+  "apps/readest-app/src/app/library/components/ImportMenuPopup.tsx",
+  "apps/readest-app/src/app/library/components/ImportNovelDialog.tsx",
+  "apps/readest-app/src/app/library/components/ImportPastedTextDialog.tsx",
+  "apps/readest-app/src/app/library/components/LibraryHeader.tsx",
+  "apps/readest-app/src/app/library/components/LibraryImportButton.tsx",
+  "apps/readest-app/src/app/reader/components/annotator/ImportAnnotationsDialog.tsx",
+  "apps/readest-app/src/components/vocabulary/AnkiImportPanel.tsx"
+]

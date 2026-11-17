@@ -1,0 +1,60 @@
+{
+  "status": "completed_readest_only_app_firewall_on_stock_boox",
+  "verified_at_utc": "2026-11-11T22:47:55.166148+00:00",
+  "model": "GoColor7_2",
+  "stock_build": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+  "slot": "a",
+  "root_installed": false,
+  "firmware_writes_completed": false,
+  "lineage_workflow_active": false,
+  "edl_hold_retained": true,
+  "apps": {
+    "readest": "0.12.20",
+    "firewall": "Rethink 0.5.8",
+    "magisk_and_afwall": "installed for root preparation; inactive and BOOX-frozen, root installation rejected"
+  },
+  "policy": {
+    "default": "block all except bypassed apps and IPs",
+    "ordinary_app_exception": "com.bilingify.readest (10114)",
+    "firewall_transport_exception": "com.celzero.bravedns",
+    "other_app_or_ip_exceptions": false,
+    "block_new_apps": true,
+    "block_unidentified_connections": true,
+    "android_always_on_vpn": "com.celzero.bravedns",
+    "android_block_connections_without_vpn": true,
+    "readest_domain_block": "*.posthog.com",
+    "rethink_doze_exempt": true,
+    "readest_unfrozen_in_boox_settings": true
+  },
+  "verification": {
+    "readest_public_online_page_rendered": true,
+    "blocked_direct_ip_request": "actual log: Shell -> 1.1.1.1:80, blocked by Lockdown, tcp: firewalled, zero bytes",
+    "normal_restart_settings_and_foreground_firewall_startup": "passed; initial early process probe false, follow-up without agent launch found foreground service",
+    "readest_remained_unfrozen_and_launched_after_restart": true,
+    "boox_store_ui": "network/server error; not treated alone as proof of firewall decision",
+    "all_device_traffic_packet_capture_or_complete_destination_audit": false,
+    "posthog_rule": "saved and confirmed in Readest-specific domain-rule list; no packet-level audit claimed",
+    "readest_final_library_rendered": true
+  },
+  "restored_temporary_settings": {
+    "wifi_on": false,
+    "screen_off_timeout_ms": 300000
+  },
+  "unchanged_or_incomplete": {
+    "stock_reader_refresh_controls": "retained; Readest page-refresh tuning still to be selected/tested with books",
+    "root_candidate": "prepared and inspected, not installed; native and stock fastbootd flash commands rejected",
+    "restore_testing": "not performed"
+  },
+  "evidence": [
+    "work/rethink-confirmed-block-decision-2026-11-11.json",
+    "work/rethink-readest-online-test-2026-11-11.json",
+    "work/rethink-readest-analytics-rule-2026-11-11.json",
+    "work/rethink-final-restart-verification-2026-11-11.json",
+    "work/boox-readest-freeze-exemption-2026-11-11.json"
+  ],
+  "undo": {
+    "another_app_online": "Rethink > Apps > app name > Bypass Universal; keep Exclude and Bypass DNS & Firewall off unless specifically needed",
+    "analytics_rule": "Rethink > Apps > Readest > Domain Rules > *.posthog.com > remove/reset rule",
+    "remove_network_gate": "Android VPN settings > Rethink > turn off Block connections without VPN and Always-on before disabling/uninstalling Rethink"
+  }
+}

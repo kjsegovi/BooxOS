@@ -1,0 +1,14 @@
+{
+  "image": "sha256:b4ece63d16da55dab0405cd8a691454e30dfac308602ee2797e88f35d53cadb2",
+  "platform": "linux/amd64",
+  "kind": "C++ host compile+link+execution under Mac Linux emulation",
+  "boox_access": false,
+  "docker_settings_changed": false,
+  "exit_code": 0,
+  "stdout": "x86_64\ngit version 2.34.1\nPython 3.10.12\n[1/1] g++ -std=c++17 -O2 -Wall -Wextra -Werror /probe/host-probe.cpp -o host-probe\nHOST_COMPILE=5050\n./host-probe: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=e6d5ad689db409929c7fa5b5289f5ccea98d1d60, for GNU/Linux 3.2.0, not stripped\nCONTAINER_USER=1000\nFilesystem        1B-blocks        Used    Available Use% Mounted on\n/dev/vda1      977896124416 26086031360 902060249088   3% /work",
+  "stderr": "",
+  "elapsed_seconds": 5.43,
+  "passed": true,
+  "temporary_volume_removed": true,
+  "checked_at_utc": "2026-11-11T18:53:45.967164+00:00"
+}

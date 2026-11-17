@@ -1,0 +1,44 @@
+{
+  "recorded_at_utc": "2026-11-11T17:47:55.566740+00:00",
+  "reported_screen": "First BOOX logo / blank repeats; no moving startup dots",
+  "reported_loop_seconds": 15,
+  "indicator_light": "Unknown: user cannot identify it; previous stays-off answer is not reliable evidence.",
+  "alternate_cable_and_mac_port_tried": true,
+  "usb_after_alternate_cable": [],
+  "adb_after_alternate_cable": [],
+  "fastboot_after_alternate_cable": [],
+  "physical_recovery_attempt": "User asked to make one bounded power8s + up to5quickpresses attempt; awaiting outcome; sequence exact-model-labelled but not verified for this firmware.",
+  "backup_retry_disabled": true,
+  "firmware_writes_authorized": false,
+  "root_cause": "Unknown",
+  "closed_programmer_internal_side_effects": "Not established by host XML audit",
+  "reported_recovery_attempt_result": "Initially same loop; user subsequently reports being in bootloader menu. Exact heading/options and connected host pending.",
+  "bootloader_menu_reported_at_utc": "2026-11-11T17:53:50.089366+00:00",
+  "latest_mac_connection": {
+    "usb_ids": [],
+    "adb_states": [],
+    "fastboot_count": 0,
+    "host_connection_uncertain": true
+  },
+  "current_status": "Original Android restored; user confirms home screen",
+  "observed_fault": {
+    "current_slot": "b",
+    "slot_a_unbootable": true,
+    "slot_b_unbootable": false,
+    "snapshot_update_status": "none",
+    "recovery_b_build": "2025-11-10_16-08_4.1.1-rel_1110_d8cf44fd7/6191"
+  },
+  "approved_recovery": "fastboot set_active a; verify bootable; one fastboot reboot",
+  "firmware_images_flashed": false,
+  "data_erased": false,
+  "original_android_verified": true,
+  "user_confirmed_home_screen": true,
+  "edl_hold": true,
+  "followup_boot_status": {
+    "passed": true,
+    "slot_a_successful": true,
+    "slot_a_bootable": true,
+    "normal_restart_passed": true,
+    "report": "work/boot-status-check-2026-11-11.json"
+  }
+}

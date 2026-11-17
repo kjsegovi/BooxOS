@@ -1,0 +1,12 @@
+{
+  "user_description": "Strix Halo AMD custom NPU with 64 GB unified memory",
+  "processor_family": "AMD Strix Halo / Ryzen AI Max family per user; exact SKU unconfirmed",
+  "ram_gb_user_reported": 64,
+  "free_storage_user_reported": "under 300 GB",
+  "ssd_type_not_confirmed": true,
+  "pc_access_not_configured": true,
+  "mac_build_continues": true,
+  "rough_compile_estimate_if_ssd_and_adequate_linux_memory": "2\u20136 hours; inference, not a measured benchmark for this PC",
+  "google_reference": "https://source.android.com/docs/setup/start/requirements",
+  "amd_family_reference": "https://www.amd.com/en/products/software/ryzen-ai-software.html"
+}

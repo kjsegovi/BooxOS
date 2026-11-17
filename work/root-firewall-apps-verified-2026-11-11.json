@@ -1,0 +1,26 @@
+[
+  {
+    "app": "magisk",
+    "version": "v31.1",
+    "file": ".local/android-apps/2026-11-11/Magisk-v31.1.apk",
+    "size": 10679283,
+    "sha256": "89cefac0a318afa39fb3880c45c87b036c05bc1ebf02a7a715b7f8d7c26ac6e7",
+    "matched_official_github_digest": true
+  },
+  {
+    "app": "afwall",
+    "version": "v5.0.0",
+    "file": ".local/android-apps/2026-11-11/AFWall_5.0.0_Free.apk",
+    "size": 13093640,
+    "sha256": "7b787581171a727269e7d5ab11c43001b8136511d6972d78842d6dbd211d6be9",
+    "matched_official_github_digest": true
+  },
+  {
+    "app": "readest",
+    "version": "v0.12.20",
+    "file": ".local/android-apps/2026-11-11/Readest_0.12.20_arm64.apk",
+    "size": 57688416,
+    "sha256": "0f8278610ba9fc5e9852b5f5a382a6f928e0c1607e957d8c34a8447f1be6ed1a",
+    "matched_official_github_digest": true
+  }
+]

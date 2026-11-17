@@ -1,0 +1,22 @@
+{
+  "stock_android_A_returned": true,
+  "settings": {
+    "always_on_vpn": "com.celzero.bravedns",
+    "block_without_vpn": "1",
+    "wifi_on": "0",
+    "screen_off_timeout": "300000"
+  },
+  "firewall_process_present": true,
+  "readest_launcher_available": true,
+  "readest_package_state": "User 0: ceDataInode=25382 installed=true hidden=false suspended=false distractionFlags=0 stopped=false notLaunched=false enabled=0 instant=false virtual=false\n    User 0:",
+  "root_binaries_present": false,
+  "firmware_writes_completed": false,
+  "slot_changed": false,
+  "initial_firewall_process_probe": false,
+  "foreground_vpn_service_confirmed_on_followup": true,
+  "agent_manually_started_firewall_after_this_restart": false,
+  "startup_note": "Initial probe immediately at Android boot-complete was too early; read-only follow-up confirmed the automatically started foreground VPN service.",
+  "readest_launch_after_restart": "passed",
+  "passed": true,
+  "verified_at_utc": "2026-11-11T22:46:44.802372+00:00"
+}

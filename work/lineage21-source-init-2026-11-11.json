@@ -1,0 +1,21 @@
+{
+  "image": "sha256:b4ece63d16da55dab0405cd8a691454e30dfac308602ee2797e88f35d53cadb2",
+  "volume": "booxos-lineage21-source-20261111",
+  "manifest_commit": "121f4ec5f11dc98ff2c427bc9d23165e914c54bb",
+  "manifest_branch": "lineage-21.0",
+  "full_source_synced": false,
+  "boox_access": false,
+  "docker_settings_changed": false,
+  "started_at_utc": "2026-11-11T19:09:45.972360+00:00",
+  "repo_signature_verified": true,
+  "exit_code": 0,
+  "elapsed_seconds": 10.02,
+  "result_lines": [
+    "",
+    "repo has been initialized in /work",
+    "Saved manifest to /work/preparation-manifest.xml",
+    "MANIFEST_COMMIT=121f4ec5f11dc98ff2c427bc9d23165e914c54bb",
+    "PROJECT_COUNT=1430"
+  ],
+  "passed": true
+}

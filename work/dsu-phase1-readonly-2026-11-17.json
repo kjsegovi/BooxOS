@@ -1,0 +1,30 @@
+{
+  "phase": "1 - read-only checks (FIRST_BOOT_TEST_PLAN.md)",
+  "checked_at_local": "2026-11-17 ~11:06 PST",
+  "host": "KPC (Windows), Google platform-tools adb 37.0.1 at C:\\Users\\kjseg\\booxos-tools\\platform-tools (Authenticode: Google LLC, zip sha256 45F4D631...1A99)",
+  "kpc_adb_key_authorized_always": true,
+  "device_writes": false,
+  "device": {
+    "ro.product.device": "GoColor7_2",
+    "ro.build.display.id": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "slot": "_a",
+    "verifiedbootstate": "orange",
+    "vbmeta.device_state": "unlocked",
+    "boot_completed": "1",
+    "virtual_ab": "true",
+    "crypto": "FBE + metadata encryption",
+    "build_type": "user"
+  },
+  "battery": {"level": 100, "usb_powered": true},
+  "storage_free": "44G of 49G on /data",
+  "dsu": {
+    "package": "com.android.dynsystem at /system/priv-app/DynamicSystemInstallationService, versionName 13, installed, not disabled",
+    "start_install_handler": "com.android.dynsystem/.VerificationActivity; schemes content, file, http, https",
+    "shell_INSTALL_DYNAMIC_SYSTEM": "granted",
+    "dynamic_system_service": "present (android.os.image.IDynamicSystemService)",
+    "gsi_tool_status": "normal (no DSU installed)",
+    "/metadata/gsi": "not readable from shell (expected)"
+  },
+  "result": "PASS - all Phase 1 prerequisites met",
+  "not_established": "That the installer accepts this multi-image zip and that the guest boots; that is Phase 2."
+}

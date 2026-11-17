@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "task_date": "2026-11-11",
+  "checked_at_utc": "2026-11-11T18:29:50.753490+00:00",
+  "scope": "read_only_local_host_inventory_no_credentials_or_remote_endpoints",
+  "user_preference": "Try Mac first; evaluate PC only after a concrete Mac hiccup.",
+  "mac": {
+    "model": "MacBook Pro",
+    "model_identifier": "Mac15,6",
+    "chip": "Apple M3 Pro",
+    "cpu_cores": 12,
+    "architecture": "arm64",
+    "system": "Darwin",
+    "macos_version": "27.2",
+    "memory_reported": "18 GB",
+    "memory_bytes": null,
+    "memory_bytes_note": "Direct sysctl unavailable; reported memory supplied by sanitized System Information fields."
+  },
+  "workspace": {
+    "free_bytes": 369049600000,
+    "free_decimal_gb": 369.05,
+    "free_gib": 343.7,
+    "case_sensitive": false,
+    "case_probe": "Existing .gitignore and .GITIGNORE are the same file; no file created.",
+    "initial_free_bytes": 253542400000,
+    "after_cleanup_free_bytes_observed": 369049600000,
+    "user_reported_available_gb": 390
+  },
+  "tools": {
+    "brew": {
+      "available_on_path": true
+    },
+    "docker": {
+      "available_on_path": true,
+      "version": "Docker version 29.9.3, build 5457199"
+    },
+    "podman": {
+      "available_on_path": false
+    },
+    "lima": {
+      "available_on_path": false
+    },
+    "limactl": {
+      "available_on_path": false
+    },
+    "colima": {
+      "available_on_path": false
+    },
+    "nerdctl": {
+      "available_on_path": false
+    },
+    "qemu-system-x86_64": {
+      "available_on_path": false
+    },
+    "qemu-system-aarch64": {
+      "available_on_path": false
+    },
+    "utmctl": {
+      "available_on_path": false
+    },
+    "prlctl": {
+      "available_on_path": false
+    },
+    "multipass": {
+      "available_on_path": false
+    },
+    "ssh": {
+      "available_on_path": true
+    },
+    "git": {
+      "available_on_path": true,
+      "version": "git version 2.56.1"
+    },
+    "python3": {
+      "available_on_path": true,
+      "version": "Python 3.15.2"
+    },
+    "repo": {
+      "available_on_path": false
+    },
+    "ninja": {
+      "available_on_path": false
+    },
+    "javac": {
+      "available_on_path": true
+    },
+    "make": {
+      "available_on_path": true
+    }
+  },
+  "docker": {
+    "desktop_application_installed": true,
+    "client_version": "Docker version 29.9.3, build 5457199",
+    "contexts": [
+      {
+        "name": "default",
+        "current": false,
+        "endpoint_kind": "local_unix"
+      },
+      {
+        "name": "desktop-linux",
+        "current": true,
+        "endpoint_kind": "local_unix"
+      }
+    ],
+    "initial_restricted_api_read": "Permission denied; did not establish daemon status.",
+    "authorized_read_only_api_result": {
+      "reachable": true,
+      "server_version": "29.9.3",
+      "architecture": "aarch64",
+      "os_type": "linux",
+      "memory_bytes": 8319172608,
+      "cpus": 12,
+      "operating_system": "Docker Desktop"
+    },
+    "resource_settings_modified": false,
+    "daemon_started_or_stopped": false,
+    "containers_created": false,
+    "images_pulled": false
+  },
+  "pc": {
+    "source": "User report relayed by parent task",
+    "memory_reported_gb": 64,
+    "free_storage_reported": "under 300 GB",
+    "cpu_architecture": null,
+    "linux_or_wsl_setup": null,
+    "availability_and_access": null,
+    "ready_fallback_established": false
+  },
+  "not_performed": [
+    "No software installed",
+    "No full or partial Android source sync",
+    "No VM created",
+    "No Docker or system configuration changed",
+    "No device/USB actions",
+    "No SSH configuration or credential inspection",
+    "No remote connections or paid services"
+  ],
+  "requirements_sources": [
+    "https://source.android.com/docs/setup/start/requirements",
+    "https://github.com/LineageOS/lineage_wiki/blob/main/_includes/templates/device_build_before_init.md"
+  ],
+  "limitations": [
+    "Direct sysctl denied by execution environment",
+    "diskutil framework unavailable",
+    "Docker guest disk capacity and translation capability require later probes",
+    "Native ARM host prebuilts in the BOOX fork are not certified by this inventory"
+  ]
+}

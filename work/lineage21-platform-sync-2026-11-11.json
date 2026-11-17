@@ -1,0 +1,12 @@
+{
+  "started_at_utc": "2026-11-11T20:27:45.537336+00:00",
+  "source_volume": "booxos-lineage21-source-20261111",
+  "image": "sha256:b4ece63d16da55dab0405cd8a691454e30dfac308602ee2797e88f35d53cadb2",
+  "passed": true,
+  "boox_access": false,
+  "other_containers_modified": false,
+  "minimum_physical_host_free_bytes": 85899345920,
+  "exit_code": 0,
+  "elapsed_seconds": 2961.08,
+  "physical_host_free_bytes_after": 247174983680
+}

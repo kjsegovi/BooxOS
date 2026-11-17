@@ -1,0 +1,7 @@
+{
+  "always_on_vpn_app": "com.celzero.bravedns",
+  "always_on_vpn_lockdown": "1",
+  "firewall_service_running": true,
+  "wifi_on": "1",
+  "screen_timeout": "300000"
+}

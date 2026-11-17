@@ -1,0 +1,21 @@
+{
+  "kind": "Experimental Mac amd64 Linux / Android Ninja probe",
+  "image": "docker.io/library/ubuntu@sha256:78d4744ead1f5b19b04d0df558ab182a5300903900755e515b2ca4d10eb2044d",
+  "platform": "linux/amd64",
+  "boox_access": false,
+  "docker_settings_changed": false,
+  "attempt_history": [
+    {
+      "started_at_utc": "2026-11-11T18:40:06.989745+00:00",
+      "passed": false,
+      "stderr": "/probe/ninja: error while loading shared libraries: libc++.so: cannot open shared object file: No such file or directory"
+    }
+  ],
+  "started_at_utc": "2026-11-11T18:42:46.144960+00:00",
+  "exit_code": 0,
+  "stdout": "ARCH=x86_64\nNINJA=1.9.0.git\nFS=ext2/ext3\nVM_MEMORY_KIB=8124192\nVM_SWAP_KIB=0\nCONTAINER_MEMORY_LIMIT=2147483648\nWORKSPACE_DF=977896124416 903988555776\nCASE_SENSITIVE=yes\n[1/1] printf linux-x86-build-tool-ok > host-tool-result.txt\nTINY_BUILD=linux-x86-build-tool-ok",
+  "stderr": "ninja: Entering directory `/workspace'",
+  "elapsed_seconds": 0.5,
+  "passed": true,
+  "temporary_probe_volume_removed": true
+}

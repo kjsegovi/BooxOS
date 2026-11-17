@@ -1,0 +1,116 @@
+{
+  "started_at_utc": "2026-11-11T22:03:02.645407+00:00",
+  "scope": "Owner-authorized Magisk root and Readest-only firewall; owner nearby",
+  "image_sha256": "c6a74118e66df486f4b8b073a7048767d9423737a02195c167fd63e78e390dab",
+  "target_partition": "boot_a",
+  "slot_changed": false,
+  "data_erased": false,
+  "edl_used": false,
+  "other_partitions_written": false,
+  "write_attempted": true,
+  "write_completed": false,
+  "android_returned": false,
+  "commands": [
+    {
+      "arguments": [
+        "getvar",
+        "product"
+      ],
+      "exit_code": 0,
+      "response": "product: GoColor7_2\nFinished. Total time: 0.001s"
+    },
+    {
+      "arguments": [
+        "getvar",
+        "is-userspace"
+      ],
+      "exit_code": 0,
+      "response": "is-userspace: yes\nFinished. Total time: 0.000s"
+    },
+    {
+      "arguments": [
+        "getvar",
+        "current-slot"
+      ],
+      "exit_code": 0,
+      "response": "current-slot: a\nFinished. Total time: 0.001s"
+    },
+    {
+      "arguments": [
+        "getvar",
+        "slot-successful:a"
+      ],
+      "exit_code": 0,
+      "response": "slot-successful:a: yes\nFinished. Total time: 0.008s"
+    },
+    {
+      "arguments": [
+        "getvar",
+        "slot-unbootable:a"
+      ],
+      "exit_code": 0,
+      "response": "slot-unbootable:a: no\nFinished. Total time: 0.003s"
+    },
+    {
+      "arguments": [
+        "getvar",
+        "snapshot-update-status"
+      ],
+      "exit_code": 0,
+      "response": "snapshot-update-status: none\nFinished. Total time: 0.001s"
+    },
+    {
+      "arguments": [
+        "getvar",
+        "unlocked"
+      ],
+      "exit_code": 0,
+      "response": "unlocked: yes\nFinished. Total time: 0.000s"
+    },
+    {
+      "arguments": [
+        "getvar",
+        "partition-size:boot_a"
+      ],
+      "exit_code": 0,
+      "response": "partition-size:boot_a: 0x6000000\nFinished. Total time: 0.003s"
+    },
+    {
+      "arguments": [
+        "getvar",
+        "max-download-size"
+      ],
+      "exit_code": 0,
+      "response": "max-download-size: 0x10000000\nFinished. Total time: 0.000s"
+    },
+    {
+      "arguments": [
+        "flash",
+        "boot_a",
+        "/Users/kjsegovi/Projects/BooxOS/.private/magisk-root-20261111/boot.img"
+      ],
+      "exit_code": 1,
+      "response": "Sending 'boot_a' (98304 KB)                        OKAY [  2.370s]\nWriting 'boot_a'                                   FAILED (remote: 'Unrecognized command flash')\nfastboot: error: Command failed"
+    }
+  ],
+  "flashing_mode": "stock fastbootd",
+  "before_android": [
+    "GoColor7_2",
+    "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "_a",
+    "1",
+    "0"
+  ],
+  "battery_percent": 100,
+  "before_native": {
+    "product": "GoColor7_2",
+    "is-userspace": "yes",
+    "current-slot": "a",
+    "slot-successful:a": "yes",
+    "slot-unbootable:a": "no"
+  },
+  "snapshot_update_status": "none",
+  "unlocked": "yes",
+  "stopped": true,
+  "reason": "Boot-image write did not report success; inspect before any retry"
+}

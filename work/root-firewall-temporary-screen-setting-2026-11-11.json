@@ -1,0 +1,5 @@
+{
+  "original_screen_off_timeout": "300000",
+  "temporary_screen_off_timeout": "600000",
+  "restore_after_setup": true
+}

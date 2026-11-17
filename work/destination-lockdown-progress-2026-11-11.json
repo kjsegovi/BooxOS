@@ -1,0 +1,93 @@
+{
+  "stage": "Configured and tested at device-firewall level; BOOX returned to Readest",
+  "global_block": [
+    "*.cn"
+  ],
+  "readest_uid": 10114,
+  "readest_policy": "ISOLATE",
+  "analytics_block": [
+    "*.posthog.com"
+  ],
+  "browser_package_for_apple": "org.chromium.chrome",
+  "browser_exception": {
+    "policy": "ISOLATE",
+    "temporary": false,
+    "trusted_exact_hosts": [
+      "vbsyxfusjjqdxkjqlysc.supabase.co",
+      "appleid.apple.com",
+      "appleid.cdn-apple.com",
+      "readest.supabase.co"
+    ],
+    "no_general_browser_access": true,
+    "status": "Closed and UI verified: NeoBrowser directly blocked on both network classes; stored login host rules inactive."
+  },
+  "wifi_initial": 0,
+  "wifi_testing": 1,
+  "verification": {
+    "Apple_login_page": "User confirmed successful sign-in after exact readest.supabase.co exception was added.",
+    "cn_probe": "Confirmed Rethink detail: www.gov.cn blocked by Domain (Univ), local blocking resolver 127.0.0.3:53, response 0.0.0.0. See destination-cn-probe-2026-11-11.json.",
+    "ipv6": "VPN has ::/0 unreachable",
+    "Readest_cloud_sync": "User confirms a previously failed cloud book now downloads and opens after the exact R2 host exception. Reading-position upload to a second device remains untested.",
+    "independent_wire_capture": "not established; Mac is not BOOX gateway",
+    "book_transfer_record": {
+      "app": "Readest",
+      "host": "69a7e6e1c1cf4ecba13b6eb603210dfe.r2.cloudflarestorage.com",
+      "ip": "172.64.66.1",
+      "sample_time_local": "16:32:09",
+      "sample_upload": "960 B",
+      "sample_download": "1.1 MB",
+      "note": "UI shows repeated rows; do not sum duplicates as separate transfers."
+    },
+    "unrelated_server": "Recent Readest Sentry lookup at 16:35:31 blocked by Isolate via local blocking resolver. Historic permitted Sentry transfers from before restrictions are retained in logs and explicitly not counted as current permissions."
+  },
+  "source_refs": {
+    "Readest": "v0.12.20 28aab23e039a23511bc478c23bf5278daa43cc68",
+    "Rethink": "v0.5.8 b750334a363065b94f83e818ac5dc38048713c1f"
+  },
+  "readest_trust_confirmed": [
+    "vbsyxfusjjqdxkjqlysc.supabase.co",
+    "web.readest.com",
+    "auth-cf.readest.com",
+    "readest.supabase.co",
+    "69a7e6e1c1cf4ecba13b6eb603210dfe.r2.cloudflarestorage.com"
+  ],
+  "browser_uid": 10043,
+  "browser_label": "NeoBrowser",
+  "ipv6": "VPN route ::/0 unreachable; no usable external IPv6 default route",
+  "independent_capture": "not established; Mac is not the BOOX gateway",
+  "pending": [],
+  "infrastructure_note": "DNS resolution necessarily uses a resolver beyond Readest/Apple hosts. Current selected RDNSDefault transport not yet inspected in UI. Rethink VPN owner UID is excluded from its own tunnel, so app logs alone do not independently prove all device egress.",
+  "hostname_scope_limit": "Exact hostname allowlists do not restrict URL paths on a permitted host and are not country-based IP geoblocking.",
+  "removed_unnecessary_allow_rule": "storage.readest.com: deleted and verified absent in Readest list. Private cloud signed-transfer host remains to be observed after login.",
+  "additional_verification_needed": "Check that apps without exceptions are blocked before DNS queries, including non-A/AAAA record types; global connection lockdown alone may resolve some names before rejecting traffic.",
+  "observed_private_book_storage_host": "69a7e6e1c1cf4ecba13b6eb603210dfe.r2.cloudflarestorage.com",
+  "observed_storage_failure": "Readest UID10114 app-specific Most Blocked Domains: 20 requests to the same R2 account hostname. Source v0.12.20 uses R2 presigned URLs for private book files.",
+  "blocked_analytics_observed": [
+    "us.i.posthog.com",
+    "o4511086364131328.ingest.us.sentry.io"
+  ],
+  "direct_background_blocks": "Applied unmetered and metered blocks to the unfiltered all-app list using Rethink bulk controls. Official source excludes Rethink own UID. Readest being restored to ISOLATE/ALLOW with existing host rules.",
+  "wifi_final_decision": "Wi-Fi left ON for the now-working requested Readest Cloud usage.",
+  "readest_final_policy": "ISOLATE: only app-specific trusted domains; no trusted IP rules",
+  "measurement_limit": "Firewall decisions, connection metadata, Android VPN state, and user-confirmed book opening. No independent network-gateway capture or encrypted payload inspection. DNS resolver/bootstrap infrastructure is separately required.",
+  "optional_firewall_network_features": {
+    "website_icons": "disabled; UI says requests went to nextdns.io and duckduckgo.com",
+    "automatic_app_update_checks": "disabled",
+    "provider_information_lookups": "already disabled",
+    "blocklist_update_checks": "already disabled",
+    "unknown_source_dns": "now blocked",
+    "encrypted_dns": "retained; required infrastructure exception",
+    "split_dns": "enabled",
+    "prevent_dns_leaks": "enabled",
+    "use_system_dns_for_undelegated_domains": "disabled",
+    "advanced_dns_alg": "disabled; unchanged"
+  },
+  "result_file": "work/destination-lockdown-result-2026-11-11.json",
+  "verification_limits": [
+    "No independent router/AP/gateway capture or exhaustive external packet audit.",
+    "No encrypted content inspection.",
+    "Hostname filtering uses Rethink DNS/domain and IP associations; it is not TLS-SNI enforcement or geographic IP blocking.",
+    "Rethink required DNS/bootstrap infrastructure remains permitted. Optional website icons, update checks and provider lookups are disabled.",
+    "Cross-device reading-position upload and restart after these destination-rule changes were not tested; previous always-on VPN startup verification predates these rules."
+  ]
+}

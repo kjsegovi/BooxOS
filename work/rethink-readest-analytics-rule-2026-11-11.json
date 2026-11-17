@@ -1,0 +1,9 @@
+{
+  "package": "com.bilingify.readest",
+  "uid": 10114,
+  "wildcard": "*.posthog.com",
+  "action": "block",
+  "confirmed_in_app_rule_list": true,
+  "reason": "observed Readest optional analytics connection; installed v0.12.20 does not have current-docs menu opt-out",
+  "general_readest_internet_exception_retained": true
+}

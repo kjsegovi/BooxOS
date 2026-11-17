@@ -1,0 +1,20 @@
+{
+  "device_writes": false,
+  "reboots": false,
+  "properties": {
+    "ro.product.model": "GoColor7_2",
+    "ro.build.display.id": "2026-04-21_13-54_4.2-rel_0421_19324b3ea",
+    "ro.boot.slot_suffix": "_a",
+    "sys.boot_completed": "1",
+    "ro.boot.flash.locked": "0"
+  },
+  "battery": {
+    "USB powered": "false",
+    "status": "5",
+    "level": "100",
+    "scale": "100",
+    "temperature": "294"
+  },
+  "lineage_flashed": false,
+  "original_android_observed": true
+}

@@ -1,0 +1,17 @@
+{
+  "read_only": true,
+  "device_model": "GoColor7_2",
+  "paths": {
+    "rc": 1,
+    "output": "drwxr-xr-x 5 root root u:object_r:configfs:s0  0 1971-02-07 00:28 /config\nls: /vendor/waveform: No such file or directory\nls: /vendor/waveform/eink_waveform.wbf: No such file or directory\nls: /config/waveform: Permission denied\nls: /system/etc/firmware/eink_waveform.wbf: No such file or directory"
+  },
+  "runtime_waveform_path": {
+    "rc": 0,
+    "output": "/vendor/waveform"
+  },
+  "relevant_mounts": [
+    "none /config configfs rw,nosuid,nodev,noexec,relatime 0 0",
+    "/dev/block/bootdevice/by-name/modem_a /vendor/firmware_mnt vfat ro,context=u:object_r:firmware_file:s0,relatime,uid=1000,gid=1000,fmask=0337,dmask=0227,codepage=437,iocharset=iso8859-1,shortname=lower,errors=remount-ro 0 0",
+    "/dev/block/bootdevice/by-name/onyxconfig /onyxconfig ext4 rw,seclabel,relatime 0 0"
+  ]
+}

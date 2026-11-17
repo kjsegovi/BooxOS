@@ -1,0 +1,5626 @@
+{
+  "manifests": [
+    {
+      "partition": "system",
+      "path": "/system/etc/vintf/compatibility_matrix.3.xml",
+      "root": "compatibility-matrix",
+      "attributes": {
+        "version": "5.0",
+        "type": "framework",
+        "level": "3"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.audio",
+          "format": "hidl",
+          "versions": [
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.audio.effect",
+          "format": "hidl",
+          "versions": [
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.authsecret",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.audiocontrol",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.evs",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.vehicle",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.biometrics.fingerprint",
+          "format": "hidl",
+          "versions": [
+            "2.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.bluetooth",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.bluetooth.a2dp",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.boot",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.broadcastradio",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.broadcastradio",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.camera.provider",
+          "format": "hidl",
+          "versions": [
+            "2.4"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.cas",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.configstore",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.confirmationui",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.contexthub",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.drm",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.drm",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.dumpstate",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.gatekeeper",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.gnss",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.allocator",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.composer",
+          "format": "hidl",
+          "versions": [
+            "2.1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.mapper",
+          "format": "hidl",
+          "versions": [
+            "2.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.health",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.ir",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.keymaster",
+          "format": "hidl",
+          "versions": [
+            "3.0",
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.keymaster",
+          "format": "hidl",
+          "versions": [
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.light",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.media.omx",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.memtrack",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.neuralnetworks",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.nfc",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.oemlock",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.power",
+          "format": "hidl",
+          "versions": [
+            "1.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio",
+          "format": "hidl",
+          "versions": [
+            "1.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio.config",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.renderscript",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.secure_element",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.sensors",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.soundtrigger",
+          "format": "hidl",
+          "versions": [
+            "2.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tetheroffload.config",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tetheroffload.control",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.thermal",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tv.cec",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tv.input",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.usb",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.usb.gadget",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.vibrator",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.vr",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.weaver",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi.hostapd",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi.offload",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi.supplicant",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "c2c59829411c1d59c6b1e6f7ae81b81d55aa3137a359a1be02188832e642122d"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/vintf/compatibility_matrix.4.xml",
+      "root": "compatibility-matrix",
+      "attributes": {
+        "version": "5.0",
+        "type": "framework",
+        "level": "4"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.atrace",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.audio",
+          "format": "hidl",
+          "versions": [
+            "5.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.audio.effect",
+          "format": "hidl",
+          "versions": [
+            "5.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.authsecret",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.audiocontrol",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.evs",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.vehicle",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.biometrics.face",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.biometrics.fingerprint",
+          "format": "hidl",
+          "versions": [
+            "2.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.bluetooth",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.bluetooth.audio",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.boot",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.broadcastradio",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.broadcastradio",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.camera.provider",
+          "format": "hidl",
+          "versions": [
+            "2.4-5"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.cas",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.configstore",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.confirmationui",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.contexthub",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.drm",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.dumpstate",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.gatekeeper",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.gnss",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.allocator",
+          "format": "hidl",
+          "versions": [
+            "2.0",
+            "3.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.composer",
+          "format": "hidl",
+          "versions": [
+            "2.1-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.mapper",
+          "format": "hidl",
+          "versions": [
+            "2.1",
+            "3.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.health",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.health.storage",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.input.classifier",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.ir",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.keymaster",
+          "format": "hidl",
+          "versions": [
+            "3.0",
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.keymaster",
+          "format": "hidl",
+          "versions": [
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.light",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.media.c2",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.media.omx",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.memtrack",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.neuralnetworks",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.nfc",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.oemlock",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.power",
+          "format": "hidl",
+          "versions": [
+            "1.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.power.stats",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio",
+          "format": "hidl",
+          "versions": [
+            "1.4"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio.config",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.renderscript",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.secure_element",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.sensors",
+          "format": "hidl",
+          "versions": [
+            "1.0",
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.soundtrigger",
+          "format": "hidl",
+          "versions": [
+            "2.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tetheroffload.config",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tetheroffload.control",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.thermal",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tv.cec",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tv.input",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.usb",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.usb.gadget",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.vibrator",
+          "format": "hidl",
+          "versions": [
+            "1.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.vr",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.weaver",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi",
+          "format": "hidl",
+          "versions": [
+            "1.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi.hostapd",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi.supplicant",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "ab6a1d2a87d4b51c5842f01c9d9ea586b1f2264ae21514837b348d497a1565dd"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/vintf/compatibility_matrix.5.xml",
+      "root": "compatibility-matrix",
+      "attributes": {
+        "version": "5.0",
+        "type": "framework",
+        "level": "5"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.atrace",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.audio",
+          "format": "hidl",
+          "versions": [
+            "6.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.audio.effect",
+          "format": "hidl",
+          "versions": [
+            "6.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.authsecret",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.audiocontrol",
+          "format": "hidl",
+          "versions": [
+            "1.0",
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.can",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.evs",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.occupant_awareness",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.sv",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.vehicle",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.biometrics.face",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.biometrics.fingerprint",
+          "format": "hidl",
+          "versions": [
+            "2.1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.bluetooth",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.bluetooth.audio",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.boot",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.broadcastradio",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.broadcastradio",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.camera.provider",
+          "format": "hidl",
+          "versions": [
+            "2.4-6"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.cas",
+          "format": "hidl",
+          "versions": [
+            "1.1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.confirmationui",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.contexthub",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.drm",
+          "format": "hidl",
+          "versions": [
+            "1.3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.dumpstate",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.gatekeeper",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.gnss",
+          "format": "hidl",
+          "versions": [
+            "2.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.allocator",
+          "format": "hidl",
+          "versions": [
+            "2.0",
+            "3.0",
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.composer",
+          "format": "hidl",
+          "versions": [
+            "2.1-4"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.mapper",
+          "format": "hidl",
+          "versions": [
+            "2.1",
+            "3.0",
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.health",
+          "format": "hidl",
+          "versions": [
+            "2.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.health.storage",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.identity",
+          "format": "aidl",
+          "versions": [
+            "1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.input.classifier",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.ir",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.keymaster",
+          "format": "hidl",
+          "versions": [
+            "3.0",
+            "4.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.keymaster",
+          "format": "hidl",
+          "versions": [
+            "4.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.light",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.media.c2",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.media.omx",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.memtrack",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.neuralnetworks",
+          "format": "hidl",
+          "versions": [
+            "1.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.nfc",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.oemlock",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.power",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.power.stats",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio",
+          "format": "hidl",
+          "versions": [
+            "1.4",
+            "1.5"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio.config",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.rebootescrow",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.renderscript",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.secure_element",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.sensors",
+          "format": "hidl",
+          "versions": [
+            "1.0",
+            "2.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.soundtrigger",
+          "format": "hidl",
+          "versions": [
+            "2.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tetheroffload.config",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tetheroffload.control",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.thermal",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tv.cec",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tv.input",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tv.tuner",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.usb",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.usb.gadget",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.vibrator",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.vr",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.weaver",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi",
+          "format": "hidl",
+          "versions": [
+            "1.0-4"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi.hostapd",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi.supplicant",
+          "format": "hidl",
+          "versions": [
+            "1.0-3"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "ceb9e3d2e46c8e38709ac7f98aa1f0981507570ebaff693205f445775079d95e"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/vintf/compatibility_matrix.6.xml",
+      "root": "compatibility-matrix",
+      "attributes": {
+        "version": "5.0",
+        "type": "framework",
+        "level": "6"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.atrace",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.audio",
+          "format": "hidl",
+          "versions": [
+            "6.0",
+            "7.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.audio.effect",
+          "format": "hidl",
+          "versions": [
+            "6.0",
+            "7.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.authsecret",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.authsecret",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.audiocontrol",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.can",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.evs",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.occupant_awareness",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.sv",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.vehicle",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.biometrics.face",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.biometrics.face",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.biometrics.fingerprint",
+          "format": "hidl",
+          "versions": [
+            "2.1-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.biometrics.fingerprint",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.bluetooth",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.bluetooth.audio",
+          "format": "hidl",
+          "versions": [
+            "2.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.boot",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.broadcastradio",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.broadcastradio",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.camera.provider",
+          "format": "hidl",
+          "versions": [
+            "2.4-7"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.cas",
+          "format": "hidl",
+          "versions": [
+            "1.1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.confirmationui",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.contexthub",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.drm",
+          "format": "hidl",
+          "versions": [
+            "1.3-4"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.dumpstate",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.gatekeeper",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.gnss",
+          "format": "hidl",
+          "versions": [
+            "2.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.gnss",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.allocator",
+          "format": "hidl",
+          "versions": [
+            "2.0",
+            "3.0",
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.composer",
+          "format": "hidl",
+          "versions": [
+            "2.1-4"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.mapper",
+          "format": "hidl",
+          "versions": [
+            "2.1",
+            "3.0",
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.health",
+          "format": "hidl",
+          "versions": [
+            "2.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.health.storage",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.identity",
+          "format": "aidl",
+          "versions": [
+            "1-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.input.classifier",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.ir",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.keymaster",
+          "format": "hidl",
+          "versions": [
+            "3.0",
+            "4.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.keymaster",
+          "format": "hidl",
+          "versions": [
+            "4.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.light",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.media.c2",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.media.omx",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.memtrack",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.neuralnetworks",
+          "format": "hidl",
+          "versions": [
+            "1.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.neuralnetworks",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.nfc",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.oemlock",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.oemlock",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.power",
+          "format": "aidl",
+          "versions": [
+            "1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.power.stats",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio",
+          "format": "hidl",
+          "versions": [
+            "1.6"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio.config",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio.config",
+          "format": "hidl",
+          "versions": [
+            "1.3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.rebootescrow",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.renderscript",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.secure_element",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.security.keymint",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.security.keymint",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.security.secureclock",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.security.sharedsecret",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.sensors",
+          "format": "hidl",
+          "versions": [
+            "1.0",
+            "2.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.soundtrigger",
+          "format": "hidl",
+          "versions": [
+            "2.3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tetheroffload.config",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tetheroffload.control",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.thermal",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tv.cec",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tv.input",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tv.tuner",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.usb",
+          "format": "hidl",
+          "versions": [
+            "1.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.usb.gadget",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.vibrator",
+          "format": "aidl",
+          "versions": [
+            "1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.vibrator",
+          "format": "aidl",
+          "versions": [
+            "1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.weaver",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.weaver",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi",
+          "format": "hidl",
+          "versions": [
+            "1.3-5"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi.hostapd",
+          "format": "hidl",
+          "versions": [
+            "1.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi.supplicant",
+          "format": "hidl",
+          "versions": [
+            "1.2-4"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "9c50ce4bac977e0282a22e87bc94dbbda756fede927ac6cdab85b8c6508d2e76"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/vintf/compatibility_matrix.7.xml",
+      "root": "compatibility-matrix",
+      "attributes": {
+        "version": "5.0",
+        "type": "framework",
+        "level": "7"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.atrace",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.audio",
+          "format": "hidl",
+          "versions": [
+            "6.0",
+            "7.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.audio.effect",
+          "format": "hidl",
+          "versions": [
+            "6.0",
+            "7.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.authsecret",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.authsecret",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.audiocontrol",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.can",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.evs",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.evs",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.occupant_awareness",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.vehicle",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.automotive.vehicle",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.biometrics.face",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.biometrics.face",
+          "format": "aidl",
+          "versions": [
+            "2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.biometrics.fingerprint",
+          "format": "hidl",
+          "versions": [
+            "2.1-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.biometrics.fingerprint",
+          "format": "aidl",
+          "versions": [
+            "2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.bluetooth",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.bluetooth.audio",
+          "format": "aidl",
+          "versions": [
+            "2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.boot",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.broadcastradio",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.broadcastradio",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.camera.provider",
+          "format": "hidl",
+          "versions": [
+            "2.4-7"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.camera.provider",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.cas",
+          "format": "hidl",
+          "versions": [
+            "1.1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.confirmationui",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.contexthub",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.drm",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.drm",
+          "format": "hidl",
+          "versions": [
+            "1.3-4"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.dumpstate",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.gatekeeper",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.gnss",
+          "format": "hidl",
+          "versions": [
+            "2.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.gnss",
+          "format": "aidl",
+          "versions": [
+            "2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.gnss.measurement_corrections",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.gnss.visibility_control",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.allocator",
+          "format": "hidl",
+          "versions": [
+            "2.0",
+            "3.0",
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.allocator",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.composer",
+          "format": "hidl",
+          "versions": [
+            "2.1-4"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.composer3",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.mapper",
+          "format": "hidl",
+          "versions": [
+            "2.1",
+            "3.0",
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.health",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.health.storage",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.identity",
+          "format": "aidl",
+          "versions": [
+            "1-4"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.input.processor",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.ir",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.keymaster",
+          "format": "hidl",
+          "versions": [
+            "3.0",
+            "4.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.keymaster",
+          "format": "hidl",
+          "versions": [
+            "4.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.light",
+          "format": "aidl",
+          "versions": [
+            "2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.media.c2",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.media.omx",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.memtrack",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.net.nlinterceptor",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.neuralnetworks",
+          "format": "hidl",
+          "versions": [
+            "1.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.neuralnetworks",
+          "format": "aidl",
+          "versions": [
+            "1-4"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.nfc",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.nfc",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.oemlock",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.oemlock",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.power",
+          "format": "aidl",
+          "versions": [
+            "2-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.power.stats",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio.config",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio.data",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio.messaging",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio.modem",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio.network",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio.sim",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio.voice",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.rebootescrow",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.renderscript",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.secure_element",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.security.dice",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.security.keymint",
+          "format": "aidl",
+          "versions": [
+            "1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.security.keymint",
+          "format": "aidl",
+          "versions": [
+            "1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.security.secureclock",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.security.sharedsecret",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.sensors",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.sensors",
+          "format": "hidl",
+          "versions": [
+            "1.0",
+            "2.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.soundtrigger",
+          "format": "hidl",
+          "versions": [
+            "2.3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.soundtrigger3",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tetheroffload.config",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tetheroffload.control",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.thermal",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tv.cec",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tv.input",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tv.tuner",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.tv.tuner",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.usb",
+          "format": "hidl",
+          "versions": [
+            "1.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.usb",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.usb.gadget",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.uwb",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.vibrator",
+          "format": "aidl",
+          "versions": [
+            "1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.vibrator",
+          "format": "aidl",
+          "versions": [
+            "1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.weaver",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.weaver",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi",
+          "format": "hidl",
+          "versions": [
+            "1.3-6"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi.hostapd",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi.supplicant",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        }
+      ],
+      "sha256": "bedf1009b20e26e8ee66ae8bd1b0d89c0c183edfaab21d9f892d9a56d054d6f8"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/vintf/compatibility_matrix.device.xml",
+      "root": "compatibility-matrix",
+      "attributes": {
+        "version": "5.0",
+        "type": "framework"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.automotive.evs",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.gnss",
+          "format": "hidl",
+          "versions": [
+            "1.0-1",
+            "2.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.media.c2",
+          "format": "hidl",
+          "versions": [
+            "1.0",
+            "1.2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.nfc",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio",
+          "format": "hidl",
+          "versions": [
+            "1.0-4"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.radio.config",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.wifi.supplicant",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.se.omapi",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "com.dsi.ant",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "com.qualcomm.qti.dpm.api",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "com.qualcomm.qti.imscmservice",
+          "format": "hidl",
+          "versions": [
+            "2.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "com.qualcomm.qti.uceservice",
+          "format": "hidl",
+          "versions": [
+            "2.0-1",
+            "2.2",
+            "2.3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "com.qualcomm.qti.wifidisplayhal",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "com.quicinc.cne.api",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "com.quicinc.cne.server",
+          "format": "hidl",
+          "versions": [
+            "2.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.aks.gamepad",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.display.color",
+          "format": "hidl",
+          "versions": [
+            "1.0-7"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.display.config",
+          "format": "hidl",
+          "versions": [
+            "1.0-22",
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.display.postproc",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.fptool.fingerprint",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.nxp.hardware.nfc",
+          "format": "hidl",
+          "versions": [
+            "1.0-1",
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.nxp.nxpnfclegacy",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.automotive.qcarcam",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.data.factory",
+          "format": "hidl",
+          "versions": [
+            "1.0",
+            "2.0-7"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.data.txpwrservice",
+          "format": "aidl",
+          "versions": [
+            "1-6"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.diaghal",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.esepowermanager",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.gnss",
+          "format": "hidl",
+          "versions": [
+            "1.0-2",
+            "2.0-1",
+            "3.0",
+            "4.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.gnss",
+          "format": "aidl",
+          "versions": [
+            "1-5"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.AGMIPC",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.ListenSoundModel",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.alarm",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.audiohalext",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.bluetooth_audio",
+          "format": "hidl",
+          "versions": [
+            "2.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.bluetooth_sar",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.btconfigstore",
+          "format": "hidl",
+          "versions": [
+            "1.0",
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.bttpi",
+          "format": "aidl",
+          "versions": [
+            "1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.cacert",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.camera.aon",
+          "format": "hidl",
+          "versions": [
+            "1.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.camera.postproc",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.capabilityconfigstore",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.cryptfshw",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.cvp",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.data.connection",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.data.connectionfactory",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.data.iwlan",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.data.latency",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.debugutils",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.display.allocator",
+          "format": "hidl",
+          "versions": [
+            "1.0",
+            "3.0",
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.display.composer",
+          "format": "hidl",
+          "versions": [
+            "2.0-1",
+            "3.0",
+            "3.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.display.config",
+          "format": "aidl",
+          "versions": [
+            "1-5"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.display.demura",
+          "format": "hidl",
+          "versions": [
+            "1.0",
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.display.mapper",
+          "format": "hidl",
+          "versions": [
+            "2.0",
+            "3.0",
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.dpmservice",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.dsp",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.eid",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.embmssl",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.factory",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.fingerprint",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.fm",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.fstman",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.improvetouch.blobmanager",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.improvetouch.gesturemanager",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.improvetouch.touchcompanion",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.iop",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.limits",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.mwqemadapter",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.pal",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.perf",
+          "format": "hidl",
+          "versions": [
+            "2.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.power.powermodule",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.qccvndhal",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.qconfig",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.qdutils_disp",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.qseecom",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.qspa",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.qteeconnector",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.qxr",
+          "format": "aidl",
+          "versions": [
+            "1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.am",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.am",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.atcmdfwd",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.ims",
+          "format": "hidl",
+          "versions": [
+            "1.0-9"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.ims",
+          "format": "aidl",
+          "versions": [
+            "1-12"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.internal.deviceinfo",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.internal.deviceinfo",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.lpa",
+          "format": "hidl",
+          "versions": [
+            "1.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.qcrilhook",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.qcrilhook",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.qtiradio",
+          "format": "hidl",
+          "versions": [
+            "1.0",
+            "2.0-7"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.qtiradio",
+          "format": "aidl",
+          "versions": [
+            "1-9"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.qtiradioconfig",
+          "format": "aidl",
+          "versions": [
+            "1-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.uim",
+          "format": "hidl",
+          "versions": [
+            "1.1-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.uim_remote_client",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.radio.uim_remote_server",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.scve.objecttracker",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.scve.panorama",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.seccam",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.secureprocessor.device",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.sensorscalibrate",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.servicetracker",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.slmadapter",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.soter",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.sxrhal",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.systemhelper",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.trustedui",
+          "format": "hidl",
+          "versions": [
+            "1.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.tui_comm",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.umd",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.vpp",
+          "format": "hidl",
+          "versions": [
+            "1.1-3",
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.wifi.hostapd",
+          "format": "hidl",
+          "versions": [
+            "1.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.wifi.supplicant",
+          "format": "hidl",
+          "versions": [
+            "2.0-3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.wifi.supplicant",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.wifi.wificfr",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.wifi.wifilearner",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.wifi.wifimyftm",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.wifidisplaysession",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.wigig.netperftuner",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.wigig.supptunnel",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.wipower",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.ims.callinfo",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.ims.datachannelservice",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.ims.factory",
+          "format": "hidl",
+          "versions": [
+            "1.0-1",
+            "2.0-2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.imsrtpservice",
+          "format": "hidl",
+          "versions": [
+            "3.0",
+            "3.1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.memory.pasrmanager",
+          "format": "hidl",
+          "versions": [
+            "1.0-1"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.mstatservice",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.power.pasrmanager",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.qesdhal",
+          "format": "hidl",
+          "versions": [
+            "1.0-4"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.qspmhal",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.spu",
+          "format": "hidl",
+          "versions": [
+            "1.0-1",
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.voiceprint",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "a63c264e1dd2e87d3615baebaaa9c439deabc08d02ba5b9dff0c9a150051e699"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/vintf/manifest/android.frameworks.stats@1.0-service.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "framework"
+      },
+      "hals": [
+        {
+          "name": "android.frameworks.stats",
+          "format": null,
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.frameworks.stats",
+          "format": "aidl",
+          "versions": [
+            "1"
+          ],
+          "fqnames": [
+            "IStats/default"
+          ]
+        }
+      ],
+      "sha256": "4332e97c3e286bbe7e17da03a1e7eb28ae0f111b65cf901fcf297dd16c00656a"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/vintf/manifest/android.hidl.allocator@1.0-service.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "framework"
+      },
+      "hals": [
+        {
+          "name": "android.hidl.allocator",
+          "format": null,
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "9e6fee7d22163cfdb0392e10b1dee1f0d7efb24d4f5c3b50adddc3368dc4f11e"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/vintf/manifest/android.system.keystore2-service.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "framework"
+      },
+      "hals": [
+        {
+          "name": "android.system.keystore2",
+          "format": "aidl",
+          "versions": [
+            "2"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "b3cb1a7223789628da6e70c12d822e4facb41abefa90461790284c8761fe172b"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/vintf/manifest/android.system.suspend@1.0-service.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "framework"
+      },
+      "hals": [
+        {
+          "name": "android.system.suspend",
+          "format": null,
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.system.suspend",
+          "format": "aidl",
+          "versions": [
+            "1"
+          ],
+          "fqnames": [
+            "ISystemSuspend/default"
+          ]
+        }
+      ],
+      "sha256": "fb203c213eb5e54a41fd00b83971e6f90cf913311f8a107c4c8cde4a0db1705e"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/vintf/manifest/manifest_android.frameworks.cameraservice.service@2.2.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "framework"
+      },
+      "hals": [
+        {
+          "name": "android.frameworks.cameraservice.service",
+          "format": null,
+          "versions": [
+            "2.2"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "f50997a1c6a0b320c96c811f0a11560b85d1540c311fa3ba9994ac1b84f1d8fd"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/vintf/manifest/manifest_media_c2_software.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "framework"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.media.c2",
+          "format": null,
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "f0f1200643774e9d3e5cadd78a9266c26a48612f1688bf157dfbd9b57af6e9ca"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/vintf/manifest.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "5.0",
+        "type": "framework"
+      },
+      "hals": [
+        {
+          "name": "android.frameworks.displayservice",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IDisplayService/default"
+          ]
+        },
+        {
+          "name": "android.frameworks.schedulerservice",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::ISchedulingPolicyService/default"
+          ]
+        },
+        {
+          "name": "android.frameworks.sensorservice",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::ISensorManager/default"
+          ]
+        },
+        {
+          "name": "android.hidl.manager",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": [
+            "@1.2::IServiceManager/default"
+          ]
+        },
+        {
+          "name": "android.hidl.memory",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IMapper/ashmem"
+          ]
+        },
+        {
+          "name": "android.hidl.token",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::ITokenManager/default"
+          ]
+        },
+        {
+          "name": "android.system.net.netd",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": [
+            "@1.1::INetd/default"
+          ]
+        },
+        {
+          "name": "android.system.wifi.keystore",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IKeystore/default"
+          ]
+        },
+        {
+          "name": "netutils-wrapper",
+          "format": "native",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.qccsyshal",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": [
+            "@1.2::IQccsyshal/qccsyshal"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.radio.atcmdfwd",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IAtCmdFwd/AtCmdFwdService"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.systemhelper",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::ISystemEvent/default",
+            "@1.0::ISystemResource/default"
+          ]
+        }
+      ],
+      "sha256": "320858ec6af8f821442aab6352c0cbaa0ddc946c8b2ee65e98c40d4bd2082c5a"
+    },
+    {
+      "partition": "system_ext",
+      "path": "/etc/vintf/manifest/vendor.qti.hardware.sigma_miracast.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "framework"
+      },
+      "hals": [
+        {
+          "name": "vendor.qti.hardware.sigma_miracast",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "8c9d7f81e905a2d511e1d97b36717ff5ff3193e3b16dbc20aa3f97de8ae388cf"
+    },
+    {
+      "partition": "system_ext",
+      "path": "/etc/vintf/manifest.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "5.0",
+        "type": "framework"
+      },
+      "hals": [],
+      "sha256": "755e580a5e45bc46bd147610225905f142fedb5c4f707e895c54d015e69351fe"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/compatibility_matrix.xml",
+      "root": "compatibility-matrix",
+      "attributes": {
+        "version": "2.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.frameworks.schedulerservice",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.frameworks.sensorservice",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hidl.allocator",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hidl.manager",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hidl.memory",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hidl.token",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.system.wifi.keystore",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.qccsyshal",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.sigma_miracast",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "5aa869415b923d1668b80845bfb3b821ff82c113a2b61a9063bc9c3d19629dfd"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/android.hardware.atrace@1.0-service.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.atrace",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "49e4a804e77b653064e7cb8fc5dc6c6b4aeea2ae4a2a62dab0ff52e0c463ee01"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/android.hardware.boot@1.1.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.boot",
+          "format": "hidl",
+          "versions": [],
+          "fqnames": [
+            "@1.1::IBootControl/default"
+          ]
+        }
+      ],
+      "sha256": "d42cd4d5e3448ebe865ca20824031d411c7ea9a0600949454959894444c74a90"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/android.hardware.cas@1.2-service.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.cas",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "9357fb5a7b17fe81638ec82f79d06007bb35c19016e676104fa55449b5f0f0d2"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.gnss",
+          "format": "hidl",
+          "versions": [],
+          "fqnames": [
+            "@1.1::IGnss/default",
+            "@2.1::IGnss/default"
+          ]
+        }
+      ],
+      "sha256": "b12c00daff67f15983eaf9952d0ded199b2868ad1b9fb512fcab5f6bf813773d"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "vendor.qti.hardware.display.mapper",
+          "format": "hidl",
+          "versions": [
+            "3.0",
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.mapper",
+          "format": "hidl",
+          "versions": [
+            "3.0",
+            "4.0"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "00105bbff83fa177fff8c10776678fddcf99179464d866bd688a1bf61ee563b4"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/android.hardware.health@2.1.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.health",
+          "format": "hidl",
+          "versions": [],
+          "fqnames": [
+            "@2.1::IHealth/default"
+          ]
+        }
+      ],
+      "sha256": "d79a8058bf0dd9d4cf7bf65f6ef2f47c3fd9452e641ebc746465d619aabb509c"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/android.hardware.lights-qti.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.light",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": [
+            "ILights/default"
+          ]
+        }
+      ],
+      "sha256": "570ac710477a2e70c8c983e4eea18ddd398907af0502ac95557f4293e9f85cc9"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.neuralnetworks",
+          "format": "hidl",
+          "versions": [],
+          "fqnames": [
+            "@1.3::IDevice/qti-default",
+            "@1.3::IDevice/qti-dsp",
+            "@1.3::IDevice/qti-gpu"
+          ]
+        }
+      ],
+      "sha256": "1fe231b6b3fd8ec56d0d4063ec9e547be4248da930b9c471212ff9cc9f4afc99"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/android.hardware.sensors@2.0-multihal.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.sensors",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "5915f6e142726b3b608379a2e03c2b23478c393b310b024ac7687f73458a630e"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.thermal",
+          "format": "hidl",
+          "versions": [
+            "1.0",
+            "2.0"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "963119de0310765a376a61ec01854f70c6daa91bff75f0d6eaedc6e4b7f2a8b3"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/android.hardware.usb@1.2-service.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.usb",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": [
+            "@1.2::IUsb/default"
+          ]
+        }
+      ],
+      "sha256": "7f0bd8f15ad0f216869ae1de9c86893c67cd2ebbb6f8392bf0619afd755c5755"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/android.hardware.wifi.hostapd.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.wifi.hostapd",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.wifi.hostapd",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "641f8d2f6a26b570b7ab7322d9e6cd5f3d51e0ea9ba829fda16569f90cfa3900"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.wifi",
+          "format": "hidl",
+          "versions": [
+            "1.4"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "5b785b5e6f63baab071ca757ec3e5bf0ee7a877186c17e2b36ce5bc63112756e"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/c2_manifest_vendor.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.media.c2",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "f91b889f1dee3d7740862fae4632df0e9e553fea8ba11b23d6ae86f97e088f29"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/manifest.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.wifi.supplicant",
+          "format": "hidl",
+          "versions": [
+            "1.3"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.wifi.supplicant",
+          "format": "hidl",
+          "versions": [
+            "2.2"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "44eb838887d1bb904a0270bb80592691e0dcb01cea920012e681eb62bfb55b47"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.clearkey.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.drm",
+          "format": "hidl",
+          "versions": [],
+          "fqnames": [
+            "@1.3::ICryptoFactory/clearkey",
+            "@1.3::IDrmFactory/clearkey"
+          ]
+        }
+      ],
+      "sha256": "4b9a9214df27df7f546dcd7b27efac3803f8d172548671c8d94903ef1d804aef"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.drm",
+          "format": "hidl",
+          "versions": [],
+          "fqnames": [
+            "@1.3::ICryptoFactory/widevine",
+            "@1.3::IDrmFactory/widevine"
+          ]
+        }
+      ],
+      "sha256": "61cee1f6a061cf5348ca82f5326bd09cedda6bf2eea016c9ad3374f2cd03df7a"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/power.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.power",
+          "format": "aidl",
+          "versions": [],
+          "fqnames": [
+            "IPower/default"
+          ]
+        }
+      ],
+      "sha256": "541769636e0fe848700a472da66eddaffdfd00de06aab236827edbb334ca8bc3"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/vendor.qti.gnss@4.3-service.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "vendor.qti.gnss",
+          "format": "hidl",
+          "versions": [],
+          "fqnames": [
+            "@1.2::ILocHidlGnss/gnss_vendor",
+            "@2.1::ILocHidlGnss/gnss_vendor",
+            "@3.0::ILocHidlGnss/gnss_vendor",
+            "@4.0::ILocHidlGnss/gnss_vendor",
+            "@4.2::ILocHidlGnss/gnss_vendor",
+            "@4.3::ILocHidlGnss/gnss_vendor"
+          ]
+        },
+        {
+          "name": "android.hardware.gnss",
+          "format": "hidl",
+          "versions": [],
+          "fqnames": [
+            "@1.0::IGnss/gnss_vendor"
+          ]
+        }
+      ],
+      "sha256": "ca4ae5d0aacd0248ae8b2ac664f79a082ea959a5dbee78d7fefa389ae5522e5f"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.graphics.allocator",
+          "format": "hidl",
+          "versions": [
+            "3.0",
+            "4.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.qti.hardware.display.allocator",
+          "format": "hidl",
+          "versions": [
+            "3.0",
+            "4.0"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "7a916b6ca645ff92e2f1df462ae44e8e7316ffe339d384cbfc352a8e395ae3f5"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "vendor.qti.hardware.display.composer",
+          "format": "hidl",
+          "versions": [
+            "3.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "android.hardware.graphics.composer",
+          "format": "hidl",
+          "versions": [
+            "2.4"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.display.config",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.display.color",
+          "format": "hidl",
+          "versions": [
+            "1.5"
+          ],
+          "fqnames": []
+        },
+        {
+          "name": "vendor.display.postproc",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "944b74f6eba32f03cf63d5e3b956dc3f270bce4244b6babf441816c7e3b286b9"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/vendor.qti.hardware.limits@1.0-service.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "vendor.qti.hardware.limits",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "b7a7ec9cd9064450d650372f5c9a8f58ffe658190a613621c93fadbd69d63c70"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "1.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "vendor.qti.hardware.servicetracker",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": []
+        }
+      ],
+      "sha256": "f57b12f5747dc5ba00186e1254dabebd071561c72ce3ae866cf8f9ce0ef901e0"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/vintf/manifest.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "2.0",
+        "type": "device",
+        "target-level": "5"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.audio",
+          "format": "hidl",
+          "versions": [
+            "6.0"
+          ],
+          "fqnames": [
+            "@6.0::IDevicesFactory/default"
+          ]
+        },
+        {
+          "name": "android.hardware.audio.effect",
+          "format": "hidl",
+          "versions": [
+            "6.0"
+          ],
+          "fqnames": [
+            "@6.0::IEffectsFactory/default"
+          ]
+        },
+        {
+          "name": "android.hardware.bluetooth",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IBluetoothHci/default"
+          ]
+        },
+        {
+          "name": "android.hardware.camera.provider",
+          "format": "hidl",
+          "versions": [
+            "2.4"
+          ],
+          "fqnames": [
+            "@2.4::ICameraProvider/legacy/0"
+          ]
+        },
+        {
+          "name": "android.hardware.gatekeeper",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IGatekeeper/default"
+          ]
+        },
+        {
+          "name": "android.hardware.keymaster",
+          "format": "hidl",
+          "versions": [
+            "4.1"
+          ],
+          "fqnames": [
+            "@4.1::IKeymasterDevice/default"
+          ]
+        },
+        {
+          "name": "android.hardware.media.omx",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IOmx/default",
+            "@1.0::IOmxStore/default"
+          ]
+        },
+        {
+          "name": "android.hardware.memtrack",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IMemtrack/default"
+          ]
+        },
+        {
+          "name": "android.hardware.nfc",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": [
+            "@1.2::INfc/default"
+          ]
+        },
+        {
+          "name": "android.hardware.radio",
+          "format": "hidl",
+          "versions": [],
+          "fqnames": [
+            "@1.2::ISap/slot1",
+            "@1.2::ISap/slot2",
+            "@1.5::IRadio/slot1",
+            "@1.5::IRadio/slot2"
+          ]
+        },
+        {
+          "name": "android.hardware.radio.config",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": [
+            "@1.1::IRadioConfig/default"
+          ]
+        },
+        {
+          "name": "android.hardware.renderscript",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IDevice/default"
+          ]
+        },
+        {
+          "name": "android.hardware.soundtrigger",
+          "format": "hidl",
+          "versions": [
+            "2.3"
+          ],
+          "fqnames": [
+            "@2.3::ISoundTriggerHw/default"
+          ]
+        },
+        {
+          "name": "android.hardware.tetheroffload.config",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IOffloadConfig/default"
+          ]
+        },
+        {
+          "name": "android.hardware.tetheroffload.control",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IOffloadControl/default"
+          ]
+        },
+        {
+          "name": "com.qualcomm.qti.imscmservice",
+          "format": "hidl",
+          "versions": [
+            "2.2"
+          ],
+          "fqnames": [
+            "@2.2::IImsCmService/qti.ims.connectionmanagerservice"
+          ]
+        },
+        {
+          "name": "com.qualcomm.qti.uceservice",
+          "format": "hidl",
+          "versions": [
+            "2.3"
+          ],
+          "fqnames": [
+            "@2.3::IUceService/com.qualcomm.qti.uceservice"
+          ]
+        },
+        {
+          "name": "vendor.nxp.hardware.nfc",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": [
+            "@2.0::INqNfc/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.data.factory",
+          "format": "hidl",
+          "versions": [
+            "2.2"
+          ],
+          "fqnames": [
+            "@2.2::IFactory/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.esepowermanager",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": [
+            "@1.1::IEsePowerManager/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.alarm",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IAlarm/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.bluetooth_sar",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": [
+            "@1.1::IBluetoothSar/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.cacert",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IService/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.camera.postproc",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IPostProcService/camerapostprocservice"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.capabilityconfigstore",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::ICapabilityConfigStore/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.data.connection",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": [
+            "@1.1::IDataConnection/slot1",
+            "@1.1::IDataConnection/slot2"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.data.iwlan",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IIWlan/slot1",
+            "@1.0::IIWlan/slot2"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.dsp",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IDspService/dspservice"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.embmssl",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": [
+            "@1.1::IEmbms/embmsslServer0"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.factory",
+          "format": "hidl",
+          "versions": [
+            "1.1"
+          ],
+          "fqnames": [
+            "@1.1::IFactory/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.fstman",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IFstManager/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.iop",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": [
+            "@2.0::IIop/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.perf",
+          "format": "hidl",
+          "versions": [
+            "2.2"
+          ],
+          "fqnames": [
+            "@2.2::IPerf/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.qccvndhal",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IQccvndhal/qccvndhal"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.qseecom",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IQSEECom/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.qteeconnector",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IAppConnector/default",
+            "@1.0::IGPAppConnector/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.radio.am",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IQcRilAudio/slot1",
+            "@1.0::IQcRilAudio/slot2"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.radio.ims",
+          "format": "hidl",
+          "versions": [
+            "1.7"
+          ],
+          "fqnames": [
+            "@1.7::IImsRadio/imsradio0",
+            "@1.7::IImsRadio/imsradio1"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.radio.internal.deviceinfo",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IDeviceInfo/deviceinfo"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.radio.lpa",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IUimLpa/UimLpa0",
+            "@1.0::IUimLpa/UimLpa1"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.radio.qcrilhook",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IQtiOemHook/oemhook0",
+            "@1.0::IQtiOemHook/oemhook1"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.radio.qtiradio",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IQtiRadio/slot1",
+            "@1.0::IQtiRadio/slot2"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.radio.qtiradio",
+          "format": "hidl",
+          "versions": [
+            "2.4"
+          ],
+          "fqnames": [
+            "@2.4::IQtiRadio/slot1",
+            "@2.4::IQtiRadio/slot2"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.radio.uim",
+          "format": "hidl",
+          "versions": [
+            "1.2"
+          ],
+          "fqnames": [
+            "@1.2::IUim/Uim0",
+            "@1.2::IUim/Uim1"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.radio.uim_remote_client",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IUimRemoteServiceClient/uimRemoteClient0",
+            "@1.0::IUimRemoteServiceClient/uimRemoteClient1"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.radio.uim_remote_server",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IUimRemoteServiceServer/uimRemoteServer0",
+            "@1.0::IUimRemoteServiceServer/uimRemoteServer1"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.sensorscalibrate",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::ISensorsCalibrate/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.soter",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::ISoter/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.tui_comm",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::ITuiComm/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.vpp",
+          "format": "hidl",
+          "versions": [
+            "1.3"
+          ],
+          "fqnames": [
+            "@1.3::IHidlVppService/vppService"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.wifi.wifilearner",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IWifiStats/wifiStats"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.wigig.netperftuner",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::INetPerfTuner/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.wigig.supptunnel",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::ISuppTunnelProvider/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.ims.callinfo",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IService/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.ims.factory",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IImsFactory/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.imsrtpservice",
+          "format": "hidl",
+          "versions": [
+            "3.0"
+          ],
+          "fqnames": [
+            "@3.0::IRTPService/imsrtpservice"
+          ]
+        },
+        {
+          "name": "vendor.qti.power.pasrmanager",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IPasrManager/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.qspmhal",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IQspmhal/default"
+          ]
+        }
+      ],
+      "sha256": "942c95f1592a57401a27740a536ff4400ee0057e87a97fae42e7c9b6c516e808"
+    },
+    {
+      "partition": "odm",
+      "path": "/etc/vintf/manifest.xml",
+      "root": "manifest",
+      "attributes": {
+        "version": "2.0",
+        "type": "device"
+      },
+      "hals": [
+        {
+          "name": "android.hardware.drm",
+          "format": "hidl",
+          "versions": [],
+          "fqnames": [
+            "@1.3::ICryptoFactory/wfdhdcp",
+            "@1.3::IDrmFactory/wfdhdcp"
+          ]
+        },
+        {
+          "name": "com.dsi.ant",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IAnt/default"
+          ]
+        },
+        {
+          "name": "com.qualcomm.qti.dpm.api",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IdpmQmi/dpmQmiService"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.bluetooth_audio",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": [
+            "@2.0::IBluetoothAudioProvidersFactory/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.btconfigstore",
+          "format": "hidl",
+          "versions": [
+            "2.0"
+          ],
+          "fqnames": [
+            "@2.0::IBTConfigStore/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.data.latency",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::ILinkLatency/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.fm",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IFmHci/default"
+          ]
+        },
+        {
+          "name": "vendor.qti.hardware.wifidisplaysession",
+          "format": "hidl",
+          "versions": [
+            "1.0"
+          ],
+          "fqnames": [
+            "@1.0::IWifiDisplaySession/wifidisplaysession",
+            "@1.0::IWifiDisplaySessionAudioTrack/wifidisplaysessionaudiotrack",
+            "@1.0::IWifiDisplaySessionImageTrack/wifidisplaysessionimagetrack",
+            "@1.0::IWifiDisplaySessionVideoTrack/wifidisplaysessionvideotrack"
+          ]
+        }
+      ],
+      "sha256": "fb06ef005bf5854f9bcb3efba83ecf0dc61767eb10b7c9a1b6c911ca527dacb6"
+    }
+  ],
+  "critical_services": [
+    {
+      "partition": "system",
+      "path": "/system/bin/hw/android.system.suspend@1.0-service"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/init/android.system.suspend@1.0-service.rc"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/init/audioserver.rc"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/init/bootanim.rc"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/init/bootstat.rc"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/init/wifi.rc"
+    },
+    {
+      "partition": "system",
+      "path": "/system/etc/init/wificond.rc"
+    },
+    {
+      "partition": "vendor",
+      "path": "/bin/hw/android.hardware.audio.service"
+    },
+    {
+      "partition": "vendor",
+      "path": "/bin/hw/android.hardware.boot@1.1-service"
+    },
+    {
+      "partition": "vendor",
+      "path": "/bin/hw/android.hardware.lights-service.qti"
+    },
+    {
+      "partition": "vendor",
+      "path": "/bin/hw/android.hardware.power-service"
+    },
+    {
+      "partition": "vendor",
+      "path": "/bin/hw/android.hardware.wifi@1.0-service"
+    },
+    {
+      "partition": "vendor",
+      "path": "/bin/hw/vendor.qti.esepowermanager@1.1-service"
+    },
+    {
+      "partition": "vendor",
+      "path": "/bin/hw/vendor.qti.power.pasrmanager@1.0-service"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/init/android.hardware.audio.service.rc"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/init/android.hardware.boot@1.1-service.rc"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/init/android.hardware.lights-qti.rc"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/init/android.hardware.power-service.rc"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/init/android.hardware.wifi.supplicant-service.rc"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/init/android.hardware.wifi@1.0-service.rc"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/init/init.qti.display_boot.rc"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/init/poweropt-service.rc"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/init/vendor.qti.esepowermanager@1.1-service.rc"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc"
+    },
+    {
+      "partition": "vendor",
+      "path": "/etc/init/vendor.qti.power.pasrmanager@1.0-service.rc"
+    }
+  ],
+  "offline": true
+}

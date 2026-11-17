@@ -1,0 +1,37 @@
+{
+  "reference_downloaded": true,
+  "source_url": "https://raw.githubusercontent.com/go7-lineage/android_vendor_onyx_Go7/e054b36fe78dc734b7a88442b33774387028526d/proprietary/vendor/bin/hw/vendor.qti.hardware.display.composer-service",
+  "reference_sha256": "d2d87b3b06263e429c338de8b48531c9358284353b3184fc12f2310544269429",
+  "stock_sha256": "c13c43af3f9258e7faed8bfd11fef88b10d303a8d5966a9e316e085c04623d17",
+  "sections": {
+    ".text": {
+      "same_bytes": true,
+      "stock_bytes": 412680,
+      "reference_bytes": 412680,
+      "stock_sha256": "9b1ba48edaa45f04ffba0c516e1b2bc105a94666de02a1442dfcb09f7406443d",
+      "reference_sha256": "9b1ba48edaa45f04ffba0c516e1b2bc105a94666de02a1442dfcb09f7406443d"
+    },
+    ".rodata": {
+      "same_bytes": true,
+      "stock_bytes": 38002,
+      "reference_bytes": 38002,
+      "stock_sha256": "6eb92853b5e60dc5f68c42e8f8c8549291486466b5d24bbe77068cdd24a0aaac",
+      "reference_sha256": "6eb92853b5e60dc5f68c42e8f8c8549291486466b5d24bbe77068cdd24a0aaac"
+    },
+    ".dynsym": {
+      "same_bytes": false,
+      "stock_bytes": 14184,
+      "reference_bytes": 14184,
+      "stock_sha256": "95374bd7bd927a3625494e84ea0f0538dea14b610f32900f5afa8ac93ac5d981",
+      "reference_sha256": "c9c024e4cda9ae3f4ac3078328ac6034cd833597e1b8e37943413b28dfa663ff"
+    },
+    ".dynstr": {
+      "same_bytes": false,
+      "stock_bytes": 32633,
+      "reference_bytes": 32650,
+      "stock_sha256": "4a08972a8e59e57ffb7c1da8e108c9d73878e048e739bf402a687fcfd6957f37",
+      "reference_sha256": "3e710b1947a12c5be53e53ea7e41bf4c9de8ac07373fc83756d0514d88dc2016"
+    }
+  },
+  "interpretation": "Equal code/constant sections would support common composer implementation only; does not validate the color kernel path or refresh settings."
+}
