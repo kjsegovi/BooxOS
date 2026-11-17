@@ -47,3 +47,18 @@ Zip `81870257…`. Guest rebooted itself back to stock after ~150 s (no Power-ho
 - Probe bug: `d0`/`s1` are artifacts. The probe starts before APEX activation, so it lives in init's bootstrap mount namespace and can't see `/data` (service.cpp:796). The stage chain depends on `d`, and snapshots only run when `d=1`, so none were taken. Raw fields are valid.
 
 The readout channel is confirmed end-to-end.
+
+## Result: bring-up 7 (probe v2) test boot (2026-11-17 14:13)
+
+Zip `5c9abb17…`. Guest rebooted itself after ~150 s. Stock `sys.boot.reason.last`:
+
+`reboot,bx,c,s1,zx,ax,u2,mfailed_to_open_database.:failed_to_attach_database_persisten,stall`
+
+- Crash text is **keystore2**: `database.rs:1035` "Failed to attach database persistent" → `/data/misc/keystore/persistent.sqlite` unusable.
+- `d0` again with the corrected check (`/proc/1/mounts`) → **guest `/data` is not mounted**.
+- `ax`: `init.svc.adbd` empty, so init never registered adbd (APEX service definitions load during post-fs-data setup). That's why there's no USB.
+- `zx`: no zygote death lines; zygote restarting is likely downstream of missing `/data`.
+
+Stock `fstab.emmc` (`ro.boot.fstab_suffix=emmc`) `/data`: f2fs, `inlinecrypt`, `fileencryption=aes-256-xts:aes-256-cts:v2+emmc_optimized+wrappedkey_v0`, `metadata_encryption=aes-256-xts:wrappedkey_v0`, `keydirectory=/metadata/vold/metadata_encryption`, `formattable`, `checkpoint=fs`. **Hardware-wrapped keys.** keystore2 is `class early_hal` with db root `/data/misc/keystore`; vold's metadata path uses keystore2 + `exportWrappedStorageKey` (`MetadataCrypt.cpp:164`).
+
+Working conclusion: guest `/data` (DSU userdata) fails to mount; keystore2's crash and missing adbd follow from that. Suspects: (1) wrapped-key metadata encryption through A14 vold/keystore2 → stock KM 4.0; (2) formatting the fresh DSU userdata (f2fs/inlinecrypt/emmc_optimized on 4.19); (3) DSU /data remapping. Next readout should capture the vold/fs_mgr error for `/data`.
