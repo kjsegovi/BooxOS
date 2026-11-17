@@ -147,7 +147,7 @@ data_report() {
     VL=$(echo "$VL" | sed '1{/generateKey returned/d;}')
   fi
   echo "$VL" | grep . | head -8 | sed 's/^.* [VDIWEF] [^:]*: //' | clean | sed 's/^/,/' | tr -d '\n'
-  dmesg 2>/dev/null | grep -E "fs_mgr|mount_all|vdc|/data|userdata|metadata|fscrypt|default-key|f2fs" \
+  dmesg 2>/dev/null | grep -i -E "fs_mgr|mount_all|vdc|/data|userdata|metadata|fscrypt|default-key|f2fs" \
     | grep -i -E "fail|error|invalid|unable|cannot|not |denied|unsupported|unknown|bad |corrupt|wrong|mismatch" | head -6 \
     | sed 's/^\[[^]]*\] *//; s/^init: *//' | clean | sed 's/^/,dm:/' | tr -d '\n'
 }
