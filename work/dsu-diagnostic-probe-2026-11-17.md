@@ -82,3 +82,31 @@ Zip `c063f8b3…`. Stock `sys.boot.reason.last`:
 - Keymaster again healthy. **No `generateKey` code**: apart from the expected rollback-resistance attempt, key generation didn't fail.
 - 4 non-benign vold errors; last = `Failed to prepare /data/misc/vold/user_keys: No such file or directory` → FBE user-key setup in post-fs-data runs on an **unmounted `/data`**. The failure is earlier, in the userdata mount (`mount_all --late` → metadata-encryption mount), and its text is in the earlier vold errors / init `fs_mgr` kmsg.
 - Next: probe v4 with paging (full report across boots via a page counter on /metadata).
+
+## Result: build 11 (probe v4, paged) — full report over 13 boots (2026-11-17 15:37–16:13)
+
+Zip `bf529bb2…`. Joined report:
+
+```
+s1,krunx,r1,f-,
+[libfs_mgr] cannot mount filesystem on /dev/block/mapper/userdata at /data with fstype f2fs: invalid argument,
+[libfs_mgr] cannot mount filesystem on /dev/block/mapper/userdata at /data: invalid argument,
+fs_mgr_do_mount failed with rc -1,
+failed to prepare /data/misc/vold/user_keys: no such file or directory,
+dm: [libfs_mgr] ReadFstabFromDt(): failed to read fstab from dt,
+dm: selinux: context u:object_r:sepolicy_metadata_file:s0 is not valid (left unmapped).,
+dm: fsck.f2fs: info: not exist /proc/version!,
+dm: vold: (same three mount errors)
+```
+
+- `/dev/block/mapper/userdata` is vold's dm-default-key (metadata-encryption) device on top of the DSU userdata, so key generation and the encrypted block device work. **The f2fs mount on it fails with EINVAL.**
+- Paging (`gsi_tool enable --single-boot` + reboot) worked reliably: 13 consecutive guest boots, each back on stock by itself in ~3 min.
+
+### Offline follow-up (source)
+- `fs_mgr.cpp:1580-1640`: raw mount fails → `partition_wiped()`; blank + formattable → `vdc cryptfs encryptFstab … shouldFormat=true` (format then mount); else `vdc cryptfs mountFstab`. Both end in vold `mount_via_fs_mgr`, so the errors don't prove which path ran.
+- gsid zeroes the first 4 KiB of a new userdata image (`partition_installer.cpp:296-310`), so the format path is expected.
+- vold `F2fs.cpp` Format: `make_f2fs -f -d1 -g android [-O compression,extra_attr if vold.has_compress] [-O casefold -C utf8 if external_storage.casefold.enabled] -b 4096`; output to kmsg (LOG_KLOG).
+- f2fs-tools 1.16.0 `-g android` → `encrypt, project_quota, extra_attr, verity` (+`quota_ino` only on kernels < 4.14).
+- Kernel 4.19.157: `CONFIG_UNICODE` off (no casefold), `CONFIG_F2FS_FS_COMPRESSION` off, `CONFIG_F2FS_FS_ENCRYPTION` off (FBE via generic `FS_ENCRYPTION`, works on stock), `CONFIG_FS_VERITY=y`, `CONFIG_QUOTA=y`.
+- `external_storage.casefold/projid.enabled` come from `emulated_storage.mk` as **vendor** props → absent in the guest (stock vendor) → no casefold requested.
+- The probe's 6-line dmesg cap was used up by noise and vold copies; the kernel's own `F2FS-fs (dm-N): …` reason, `make_f2fs` and `fsck.f2fs` output were not captured.
