@@ -135,21 +135,37 @@ vold_msg() {
 # guest and rebooting; no rebuild needed.
 PAGEFILE=/metadata/booxos-probe-page
 clean() {
-  tr -d "'\"" | sed 's/keystore2 Keystore //; s/ returned service specific error: */=sse/; s/Failed to /f:/g; s/failed to /f:/g; s/: */:/g' \
+  tr -d "'\"" | sed 's/keystore2 Keystore //; s/ returned service specific error: */=sse/; s/Failed to /f:/g; s/failed to /f:/g; s#/dev/block/mapper/#mapper/#g; s/[Cc]annot mount filesystem on/nomount/; s/: */:/g' \
     | tr 'A-Z' 'a-z' | tr -c 'a-z0-9._:/=\n-' '_' | tr -s '_'
 }
+# probe v5: ordered so the first pages hold the decisive lines
+#   k: kernel F2FS-fs lines (the reason for the mount EINVAL)
+#   m: vold's metadata-mount decision (debug line: encrypt/format flags)
+#   o: Format of ... succeeded/failed
+#   mk: make_f2fs errors/notable lines (logged to kmsg via logwrap)
+#   fk: fsck.f2fs lines
+#   v: remaining vold errors
 data_report() {
   printf 's%s,k%s%s,r%s,f%s' "$S" "$(short "$(p init.svc.$KM_SVC)" 3)" "$(svc_exit $KM_SVC)" "$(km_registered)" "$(km_flag)"
-  VL=$(logcat -d -b main,system 2>/dev/null | grep -E " [EF] (vold|Vold|fscrypt|MetadataCrypt|KeyStorage|vdc) *:" \
+  DM=$(dmesg 2>/dev/null | sed 's/^\[[^]]*\] *//')
+  LC=$(logcat -d -b main,system 2>/dev/null)
+  echo "$DM" | grep -i "F2FS-fs" | grep -v -i -E "mounted with checkpoint|reduce reserved|discard" | head -6 \
+    | clean | sed 's/^/,k:/' | tr -d '\n'
+  echo "$LC" | grep "fscrypt_mount_metadata_encrypted:" | grep -o "encrypt:.*with [a-z0-9]*" | head -2 \
+    | clean | sed 's/^/,m:/' | tr -d '\n'
+  echo "$LC" | grep -E "Format of .* (succeeded|failed)|encrypt_inplace" | head -2 | sed 's/^.* [VDIWEF] [^:]*: //' \
+    | clean | sed 's/^/,o:/' | tr -d '\n'
+  echo "$DM" | grep -i "make_f2fs" | grep -i -E "error|fail|can.t|unsupported|wrong|invalid|not |format successful|overprovision ratio" | head -4 \
+    | sed 's/^[^:]*make_f2fs[^:]*: *//' | clean | sed 's/^/,mk:/' | tr -d '\n'
+  echo "$DM" | grep -i "fsck.f2fs" | grep -v -i "/proc/version" | grep -i -E "error|fail|invalid|magic|can.t|wrong|not |mismatch|superblock" | head -3 \
+    | sed 's/^[^:]*fsck.f2fs[^:]*: *//' | clean | sed 's/^/,fk:/' | tr -d '\n'
+  VL=$(echo "$LC" | grep -E " [EF] (vold|Vold|fscrypt|MetadataCrypt|KeyStorage|vdc) *:" \
     | grep -v -i -E "earlybootended|strongbox|getting keymint device")
   # drop vold's deliberate rollback-resistant attempt (KeyStorage.cpp:129)
-  if logcat -d -b main,system 2>/dev/null | grep -q "Failed to generate rollback-resistant key"; then
+  if echo "$LC" | grep -q "Failed to generate rollback-resistant key"; then
     VL=$(echo "$VL" | sed '1{/generateKey returned/d;}')
   fi
-  echo "$VL" | grep . | head -8 | sed 's/^.* [VDIWEF] [^:]*: //' | clean | sed 's/^/,/' | tr -d '\n'
-  dmesg 2>/dev/null | grep -i -E "fs_mgr|mount_all|vdc|/data|userdata|metadata|fscrypt|default-key|f2fs" \
-    | grep -i -E "fail|error|invalid|unable|cannot|not |denied|unsupported|unknown|bad |corrupt|wrong|mismatch" | head -6 \
-    | sed 's/^\[[^]]*\] *//; s/^init: *//' | clean | sed 's/^/,dm:/' | tr -d '\n'
+  echo "$VL" | grep . | head -4 | sed 's/^.* [VDIWEF] [^:]*: //' | clean | sed 's/^/,v:/' | tr -d '\n'
 }
 
 # --- adb: mirrors stock vendor init.qcom.usb.rc (adb-only config) ---
@@ -221,6 +237,9 @@ if [ -z "$BOOXOS_PROBE_ONCE" ]; then
   echo $((PAGEIDX + 1)) > $PAGEFILE 2>/dev/null && sync
 fi
 klog "start uptime=$(uptime_s) page=$PAGEIDX"
+# probe v5: let vold's LOG(DEBUG) lines (e.g. "fscrypt_mount_metadata_encrypted:
+# /data encrypt: X format: Y") reach logcat. Set before vold starts.
+[ -z "$BOOXOS_PROBE_ONCE" ] && setprop log.tag.vold V
 START=$(uptime_s)
 LAST_STATE=""
 LAST_CHANGE=$START
