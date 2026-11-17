@@ -1,0 +1,35 @@
+# DSU diagnostic probe — 2026-11-17
+
+Why: attempts 2–5 hung with no USB and no logs, so each fix was a guess. This step adds a readout that works even when the guest hangs. Plan: `~/.claude/plans/we-need-to-plan-buzzing-pebble.md`.
+
+## Observability findings
+
+| Channel | Result |
+|---|---|
+| `/metadata/bootstat/persist.sys.boot.reason` → stock `sys.boot.reason.last` | **Main readout.** Shared /metadata; survives forced power-off (after power-holds stock showed the file's `reboot,shell`). ≤ 91 bytes; stock bootstat lowercases. |
+| Guest self-reboot via `sys.powerctl` | Works even while init's action queue is stalled (init.cpp:364-373, 1116-1124). Kernel gets `bx,…` via RESTART2: no Qualcomm reboot-mode prefix match. |
+| pstore / last kmsg on stock | **Not readable.** Pre-check (warm `adb reboot`): kernel registers ramoops (`console [pstore-1] enabled`), but DropBox has no `SYSTEM_LAST_KMSG`, bugreport `LAST LOGCAT` fails and `LAST KMSG` looks only at `/proc/last_kmsg` (absent). Stock is a user build, so pmsg isn't written either. Bugreport: `.local/captures/precheck-bugreport-20261117/`. |
+| Front light | `onyx_bl_br` / `onyx_bl_ct` (0–32) writable by a root su service before vendor's `on boot` chmod. |
+| UART | Not available (`SERIAL_MSM_GENI_CONSOLE` off). |
+| `gsi_tool wipe` | Destroys the DSU metadata encryption key (gsi_service.cpp:996), so leftover keys don't explain attempts 2–5. |
+
+Correction to an earlier inference: the leftover `reboot,shell` after attempts 2–5 doesn't prove they died before `/data`. The guest's bootstat runs from a property trigger queued behind `zygote-start`/`boot`.
+
+## Probe (`device/onyx/GoColor7_2/bringup/`, `BOOXOS_BRINGUP=1` only)
+
+`init.booxos.bringup.rc` starts `booxos-probe.sh` `on init` (root, `u:r:su:s0`, permissive on userdebug). Each ~7 s loop:
+
+- Stage 1–8: 1 probe up · 2 `/data` mounted · 3 apexd activated · 4 `odsign.key.done` · 5 `init.svc.bpfloader=stopped` · 6 `odsign.verification.done` · 7 zygote running · 8 `sys.boot_completed`.
+- Breadcrumb, e.g. `reboot,bx,s5,d1,aact,k1,bsto,v0,zx,u5not_,wodsign,t95`:
+  `s` stage · `d` /data · `a` apexd.status · `k` odsign key · `b` bpfloader state · `v` odsign verification · `z` zygote state · `u` adb step (0 none, 1 configfs, 2 functionfs, 3 adbd running, 4 ep1, 5 UDC bound) + UDC state · `w` running exec_start service or odrefresh/dex2oat/secilc/fsck · `t` seconds since probe start · suffix `stall`/`late`, `f` = forced sysrq.
+- Front light: N blinks = stage N; warm light toggles each loop (heartbeat). Blinking stops → kernel/userspace wedged.
+- Reboots to stock after 90 s with no state change or 200 s total, unless the UDC is `configured` (then it stays up for live adb).
+- Snapshots to `/data/local/tmp/booxos/` once /data is up; `booxos-probe:` lines to `/dev/kmsg`.
+- Print-once test mode: `BOOXOS_PROBE_ONCE=1 sh booxos-probe.sh` (checked on stock: `reboot,bx,s8,d1,ax,k1,bsto,v1,zrun,u0conf,wnone,t0`, 50 bytes).
+
+## Reading the result on stock
+
+```
+adb shell getprop sys.boot.reason.last
+adb shell getprop persist.sys.boot.reason.history
+```
