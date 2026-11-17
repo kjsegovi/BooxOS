@@ -62,3 +62,13 @@ Zip `5c9abb17…`. Guest rebooted itself after ~150 s. Stock `sys.boot.reason.la
 Stock `fstab.emmc` (`ro.boot.fstab_suffix=emmc`) `/data`: f2fs, `inlinecrypt`, `fileencryption=aes-256-xts:aes-256-cts:v2+emmc_optimized+wrappedkey_v0`, `metadata_encryption=aes-256-xts:wrappedkey_v0`, `keydirectory=/metadata/vold/metadata_encryption`, `formattable`, `checkpoint=fs`. **Hardware-wrapped keys.** keystore2 is `class early_hal` with db root `/data/misc/keystore`; vold's metadata path uses keystore2 + `exportWrappedStorageKey` (`MetadataCrypt.cpp:164`).
 
 Working conclusion: guest `/data` (DSU userdata) fails to mount; keystore2's crash and missing adbd follow from that. Suspects: (1) wrapped-key metadata encryption through A14 vold/keystore2 → stock KM 4.0; (2) formatting the fresh DSU userdata (f2fs/inlinecrypt/emmc_optimized on 4.19); (3) DSU /data remapping. Next readout should capture the vold/fs_mgr error for `/data`.
+
+## Result: bring-up 8 (probe v3) test boot (2026-11-17 14:45)
+
+Zip `e0903d45…`. Stock `sys.boot.reason.last`:
+
+`reboot,bx,d,s1,krunx,r1,f-,vkeystore2_keystore_generatekey_returned_service_specific_,stall`
+
+- Keymaster HAL `vendor.keymaster-4-1` **running, no deaths (`krunx`), 4.1 registered (`r1`), no configure/date/property abort (`f-`)**. The configure-failure hypothesis from the RE work is **ruled out**.
+- `/data` still not mounted. The vold error shown was the **first** one: probably vold's deliberate rollback-resistant `generateKey` attempt (`KeyStorage.cpp:129`), which is expected to fail and is retried without rollback resistance. The real failure is later; likely candidate `generateWrappedStorageKey` (`KeyStorage.cpp:138-154`: AES-256 + `TAG_STORAGE_KEY` + vendor `KM_TAG_FBE_ICE`).
+- Probe fix: report the **last** vold error after skipping known benign lines, with the error count and the last keystore2 call's error code (`v<n>:generatekey=<code>:<msg>`).

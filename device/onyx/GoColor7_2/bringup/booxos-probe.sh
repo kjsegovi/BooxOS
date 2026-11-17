@@ -103,15 +103,29 @@ km_registered() {
   lshal list -i 2>/dev/null | grep -q "android.hardware.keymaster@4.1::IKeymasterDevice/default" && echo 1 || echo 0
 }
 vold_msg() {
-  # vold first, then kernel/fs_mgr, then keystore2 (noisy even on stock)
-  m=$(logcat -d -b main,system 2>/dev/null | grep -E " [EF] (vold|Vold|fscrypt|MetadataCrypt|KeyStorage) *:" \
-      | grep -v -i earlybootended | head -1 | sed 's/^.* [VDIWEF] [^:]*: //')
+  # Last meaningful vold error, prefixed with the count of such errors.
+  # Benign lines skipped: vold's deliberate rollback-resistant generateKey
+  # attempt (KeyStorage.cpp:129, retried without), earlyBootEnded and
+  # StrongBox KeyMint lookups (seen on healthy stock too).
+  L=$(logcat -d -b main,system 2>/dev/null | grep -E " [EF] (vold|Vold|fscrypt|MetadataCrypt|KeyStorage) *:" \
+      | grep -v -i -E "earlybootended|strongbox|getting keymint device")
+  if logcat -d -b main,system 2>/dev/null | grep -q "Failed to generate rollback-resistant key"; then
+    L=$(echo "$L" | sed '1{/generateKey returned/d;}')
+  fi
+  n=$(echo "$L" | grep -c .)
+  # error code of the last failing keystore2 call (identifies what KM rejected)
+  g=$(echo "$L" | grep -o -E "(generateKey|exportKey|importKey|begin|update|finish|deleteKey) returned service specific error: *-?[0-9]+" \
+      | tail -1 | sed -E 's/ returned service specific error: */=/')
+  m=$(echo "$L" | tail -1 | sed 's/^.* [VDIWEF] [^:]*: //')
+  [ -n "$m" ] && m="$n:${g:+$g:}$m"
   [ -n "$m" ] || m=$(dmesg 2>/dev/null | grep -i -E "fs_mgr|userdata|metadata_encryption|default-key|f2fs" \
       | grep -i -E "fail|error|invalid|unable|cannot" | head -1 | sed 's/^\[[^]]*\] *//')
   [ -n "$m" ] || m=$(logcat -d -b main,system 2>/dev/null | grep -E " [EF] (keystore2|Keystore) *:" \
-      | grep -v -i earlybootended | head -1 | sed 's/^.* [VDIWEF] [^:]*: //')
+      | grep -v -i -E "earlybootended|strongbox|getting keymint devic" | tail -1 | sed 's/^.* [VDIWEF] [^:]*: //')
   [ -n "$m" ] || m=none
-  echo "$m" | tr -d "'\"" | sed 's/: */:/g' | tr 'A-Z' 'a-z' | tr -c 'a-z0-9._:/=\n-' '_' | tr -s '_' | sed 's/^_//' | head -1
+  echo "$m" | tr -d "'\"" \
+    | sed 's/keystore2 Keystore //; s/ returned service specific error: */=sse/; s/ returned status: */=st/; s/Failed to /f:/g; s/: */:/g' \
+    | tr 'A-Z' 'a-z' | tr -c 'a-z0-9._:/=\n-' '_' | tr -s '_' | sed 's/^_//' | head -1
 }
 
 # --- adb: mirrors stock vendor init.qcom.usb.rc (adb-only config) ---
