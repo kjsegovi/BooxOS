@@ -5,5 +5,15 @@
 # IRQ count stays at 1), so the kernel never reports touches. Stock's trigger
 # for re-enabling it is not known yet. A controller reset through the driver's
 # own sysfs node turns the IRQ back on (tested live 2026-11-18).
+# init itself may not write this node (generic sysfs label: avc denied), so a
+# oneshot runs in the su domain. su exists only in userdebug/eng builds.
+# TODO before any user build: label the node and allow it in sepolicy.
+service booxos_touch_reset /system/bin/sh -c "echo 1 > /sys/devices/platform/soc/988000.i2c/i2c-2/2-0055/reset"
+    user root
+    group root
+    seclabel u:r:su:s0
+    oneshot
+    disabled
+
 on property:sys.boot_completed=1
-    write /sys/devices/platform/soc/988000.i2c/i2c-2/2-0055/reset 1
+    start booxos_touch_reset
