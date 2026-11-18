@@ -34,7 +34,7 @@ PRODUCT_VIRTUAL_AB_USERSPACE_SNAPSHOTS := false
 TARGET_SCREEN_WIDTH := 1264
 TARGET_SCREEN_HEIGHT := 1680
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.sf.lcd_density=300 \
+    ro.sf.lcd_density=320 \
     persist.sys.sf.color_mode=7
 
 # E-ink: the kernel's SDE EPDC hook only accepts one full-screen plane, so
@@ -43,18 +43,25 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.surface_flinger.booxos_force_client_composition=true
 
-# E-ink panel updates (frameworks_native-0001-epdc-update-list.patch): one
-# full-screen EPDC item per present. Mode word low nibble = waveform selector
-# in the Onyx vendor composer (5 -> 0xff auto), bit 5 = full update.
-# Ghost cleanup: after epdc_idle_ms of no screen changes, if partial updates
-# since the last full refresh changed epdc_clean_pct % of the screen, redraw
-# once with epdc_full_mode (34 = GC16-style full, one flash).
+# E-ink refresh policy (frameworks_native-0001-epdc-update-list.patch; tuned
+# live with the user 2026-11-18, see work/eink-live-experiments-2026-11-18.md).
+# Mode word low nibble = Onyx composer waveform selector, bit 5 = full update,
+# bit 8 = dither.
+#   every update: 260 = A2 + dither (smooth scrolling and page turns)
+#   clean after an app switch (or lots of change), 300 ms after the screen
+#   goes quiet, covering only the area that changed since the last clean:
+#   gentle 35 (wf3 full) normally, hard 34 (GC16 full) every 4th clean
 # Live override of any of these: setprop debug.booxos.<name> <n>.
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.surface_flinger.booxos_epdc_mode=5 \
+    ro.surface_flinger.booxos_epdc_mode=260 \
+    ro.surface_flinger.booxos_epdc_settle_mode=35 \
     ro.surface_flinger.booxos_epdc_full_mode=34 \
-    ro.surface_flinger.booxos_epdc_clean_pct=500 \
-    ro.surface_flinger.booxos_epdc_idle_ms=1000
+    ro.surface_flinger.booxos_epdc_hard_every=4 \
+    ro.surface_flinger.booxos_epdc_regional=1 \
+    ro.surface_flinger.booxos_epdc_idle_ms=300 \
+    ro.surface_flinger.booxos_epdc_clean_on_switch=1 \
+    ro.surface_flinger.booxos_epdc_switch_pct=50 \
+    ro.surface_flinger.booxos_epdc_clean_pct=0
 
 # Device init (touch controller fix): init/init.booxos.rc.
 PRODUCT_COPY_FILES += \
