@@ -132,3 +132,18 @@ v: f: prepare /data/misc/vold/user_keys: no such file or directory
 
 ### Fix (next build)
 Add `{"dirsync", MS_DIRSYNC},` to `kMountFlagsList` in `system/core/fs_mgr/libfstab/fstab.cpp` (applied from `kpc_build.sh`, like the other source patches). That matches stock's behavior exactly, and vendor stays untouched.
+
+## Result: build 13 (dirsync fix) — LINEAGE 21 BOOTS AS DSU GUEST (2026-11-17 20:21)
+
+Zip `5b249e39…`, built with `kpc_build.sh` `58b3ae7` (`{"dirsync", MS_DIRSYNC}` in libfstab). One guest boot:
+
+- vold: `fscrypt_mount_metadata_encrypted: /data encrypt: 1 format: 1` → `[libfs_mgr] __mount(source=/dev/block/mapper/userdata,target=/data,type=f2fs)=0: Success`; kernel `F2FS-fs (dm-48): Mounted`. `/data` is `rw,dirsync,…,inlinecrypt` — same options as stock.
+- odsign `system_server artifacts on /system OK`; zygote preload; adb up ~10 s after zygote (`sys.usb.state=diag,adb`, later `adb`).
+- **`sys.boot_completed=1` at ~1 min.** Probe breadcrumb `reboot,bx,s3,d1,aact,kx,bx,vx,zx,u5not_,wodsign,t4` (last write before it exited at stage 8). Probe service `stopped`.
+- Foreground: `org.lineageos.setupwizard/.WelcomeActivity`. SurfaceFlinger display 0: 1264×1680, 40 Hz, 300 dpi. `/dev/ebc` and `/dev/dri/card0` present. Only HWC complaint: `getDisplayDecorationSupport … Unsupported (8)` (harmless).
+- `adb exec-out screencap` shows "Welcome to LineageOS" (`work/dsu-bringup13-setupwizard-screencap.png`). Whether the e-ink panel shows it depends on Onyx's EPD update path. Not verified yet.
+
+Captures: `.local/captures/guest-bringup13-20261117/` (`logcat.txt`, `logcat-booted.txt`, `getprop-booted.txt`, `screen-setupwizard.png`).
+
+### Diagnosis chain, closed
+BPF loader reboot → dexpreopt/odsign wait → zygote restart loop → `/data` not mounted → (keymaster ruled out) → f2fs EINVAL → **`dirsync` unknown to upstream fs_mgr**. Fix: one libfstab flag.
