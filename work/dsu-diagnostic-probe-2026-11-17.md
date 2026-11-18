@@ -110,3 +110,25 @@ dm: vold: (same three mount errors)
 - Kernel 4.19.157: `CONFIG_UNICODE` off (no casefold), `CONFIG_F2FS_FS_COMPRESSION` off, `CONFIG_F2FS_FS_ENCRYPTION` off (FBE via generic `FS_ENCRYPTION`, works on stock), `CONFIG_FS_VERITY=y`, `CONFIG_QUOTA=y`.
 - `external_storage.casefold/projid.enabled` come from `emulated_storage.mk` as **vendor** props → absent in the guest (stock vendor) → no casefold requested.
 - The probe's 6-line dmesg cap was used up by noise and vold copies; the kernel's own `F2FS-fs (dm-N): …` reason, `make_f2fs` and `fsck.f2fs` output were not captured.
+
+## Result: build 12 (probe v5) — ROOT CAUSE FOUND (2026-11-17 19:14–20:09)
+
+Zip `f10ef3b2…`, 18 guest boots, all self-returned to stock. Pages 2–9 of the 10-page report captured (pages 0–1 missed: report length varied 9/10/12 between boots, so `counter mod total` skipped them). Joined (pages 2–9):
+
+```
+…ption dirsync or missing value,                 <- kernel: F2FS-fs (dm-N): Unrecognized mount option "dirsync" or missing value
+m: encrypt:0 format:0 with null,                  <- vold fscrypt_mount_metadata_encrypted: mount path, fs already formatted
+fk: info: superblock features = 499 : encrypt extra_attr project_quota quota verity
+fk: info: superblock encrypt level = 0 salt = 000…0
+v: [libfs_mgr] cannot mount … mapper/userdata at /data with fstype f2fs: invalid argument
+v: fs_mgr_do_mount failed with rc -1
+v: f: prepare /data/misc/vold/user_keys: no such file or directory
+```
+
+### Cause
+- Stock vendor `/vendor/etc/fstab.emmc` `/data` line has mount options `noatime,nosuid,nodev,discard,**dirsync**,reserve_root=32768,…` (the copy under `.local/lineage-source-review/android_device_onyx_Go7` does not). Stock mounts `/data` with `rw,dirsync,…`, so Onyx's Android 13 fs_mgr maps `dirsync` → `MS_DIRSYNC`.
+- LineageOS 21 `system/core/fs_mgr/libfstab/fstab.cpp:61-78` `kMountFlagsList` has no `dirsync` → it falls through to fs-specific data → f2fs `parse_options()` rejects it → `mount(2)` EINVAL.
+- The DSU guest uses the stock vendor fstab with the guest's own fs_mgr (vold/init on `system`), so every /data mount fails. Not keymaster, not format features: the superblock is valid (features 0x499) and fsck is clean.
+
+### Fix (next build)
+Add `{"dirsync", MS_DIRSYNC},` to `kMountFlagsList` in `system/core/fs_mgr/libfstab/fstab.cpp` (applied from `kpc_build.sh`, like the other source patches). That matches stock's behavior exactly, and vendor stays untouched.
