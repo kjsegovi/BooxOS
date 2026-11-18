@@ -56,6 +56,13 @@ SF_CPP=services/surfaceflinger/SurfaceFlinger.cpp
 git -c safe.directory='*' -C frameworks/native checkout -- "$SF_CPP"
 sed -i 's/^\(\s*\)mDebugFlashDelay = base::GetUintProperty("debug.sf.showupdates"s, 0u);$/&\n\1\/\/ BOOXOS: e-ink, force client composition\n\1mDebugDisableHWC = base::GetBoolProperty("ro.surface_flinger.booxos_force_client_composition"s, false);/' frameworks/native/$SF_CPP
 grep -q 'ro.surface_flinger.booxos_force_client_composition' frameworks/native/$SF_CPP
+# All builds: e-ink panel updates. The Onyx vendor composer only refreshes the
+# panel for regions listed with each present (QTI command 0x802). Patch files
+# live in /work/booxos-patches (synced from tools/build-host/patches).
+HWC_FILES=(services/surfaceflinger/DisplayHardware/HidlComposerHal.h services/surfaceflinger/DisplayHardware/HidlComposerHal.cpp)
+git -c safe.directory='*' -C frameworks/native checkout -- "${HWC_FILES[@]}"
+git -c safe.directory='*' -C frameworks/native apply /work/booxos-patches/frameworks_native-0001-epdc-update-list.patch
+grep -q 'writeBooxosEpdc' frameworks/native/services/surfaceflinger/DisplayHardware/HidlComposerHal.cpp
 git -c safe.directory='*' -C frameworks/native diff > /logs/frameworks-native.diff
 
 P=out/target/product/GoColor7_2

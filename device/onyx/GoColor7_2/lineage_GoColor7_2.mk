@@ -43,6 +43,15 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.surface_flinger.booxos_force_client_composition=true
 
+# E-ink panel updates (frameworks_native-0001-epdc-update-list.patch): one
+# full-screen EPDC item per present. Mode word low nibble = waveform selector
+# in the Onyx vendor composer (5 -> 0xff auto), bit 5 = full update. Live
+# override: setprop debug.booxos.epdc_mode <n> (negative disables).
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.surface_flinger.booxos_epdc_mode=5 \
+    ro.surface_flinger.booxos_epdc_full_mode=34 \
+    ro.surface_flinger.booxos_epdc_full_every=0
+
 # Debug-only bring-up helpers (early USB adb + log snapshots). Never ship.
 ifeq ($(BOOXOS_BRINGUP),1)
 $(call inherit-product, device/onyx/GoColor7_2/bringup/bringup.mk)

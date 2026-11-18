@@ -1,0 +1,83 @@
+diff --git a/services/surfaceflinger/DisplayHardware/HidlComposerHal.cpp b/services/surfaceflinger/DisplayHardware/HidlComposerHal.cpp
+index 12ab2c2..d2c89e9 100644
+--- a/services/surfaceflinger/DisplayHardware/HidlComposerHal.cpp
++++ b/services/surfaceflinger/DisplayHardware/HidlComposerHal.cpp
+@@ -26,6 +26,7 @@
+ 
+ #include <SurfaceFlingerProperties.h>
+ #include <aidl/android/hardware/graphics/common/DisplayHotplugEvent.h>
++#include <android-base/properties.h>
+ #include <android/binder_manager.h>
+ #include <composer-command-buffer/2.2/ComposerCommandBuffer.h>
+ #include <hidl/HidlTransportSupport.h>
+@@ -587,9 +588,32 @@ Error HidlComposer::getReleaseFences(Display display, std::vector<Layer>* outLay
+     return Error::NONE;
+ }
+ 
++// BOOXOS: The Onyx e-ink controller only refreshes the panel for regions that
++// SurfaceFlinger lists with each present (stock: EpdcManager). Send one
++// full-screen item per frame. Mode word: debug.booxos.epdc_mode (live tuning),
++// else ro.surface_flinger.booxos_epdc_mode; negative disables. Every Nth update
++// (ro.surface_flinger.booxos_epdc_full_every, 0 = never) uses
++// ro.surface_flinger.booxos_epdc_full_mode to clear ghosting.
++void HidlComposer::writeBooxosEpdc() {
++    static const int32_t kDefaultMode =
++            base::GetIntProperty("ro.surface_flinger.booxos_epdc_mode", -1);
++    static const int32_t kFullMode =
++            base::GetIntProperty("ro.surface_flinger.booxos_epdc_full_mode", -1);
++    static const int32_t kFullEvery =
++            base::GetIntProperty("ro.surface_flinger.booxos_epdc_full_every", 0);
++    static uint32_t sCount = 0;
++    int32_t mode = base::GetIntProperty("debug.booxos.epdc_mode", kDefaultMode);
++    if (mode < 0) return;
++    if (kFullEvery > 0 && kFullMode >= 0 && (++sCount % static_cast<uint32_t>(kFullEvery)) == 0) {
++        mode = kFullMode;
++    }
++    mWriter.setDisplayEpdc({0, 0, 32767, 32767, mode});
++}
++
+ Error HidlComposer::presentDisplay(Display display, int* outPresentFence) {
+     ATRACE_NAME("HwcPresentDisplay");
+     mWriter.selectDisplay(display);
++    writeBooxosEpdc();
+     mWriter.presentDisplay();
+ 
+     Error error = execute();
+@@ -696,6 +720,7 @@ Error HidlComposer::presentOrValidateDisplay(Display display, nsecs_t /*expected
+                                              uint32_t* state) {
+     ATRACE_NAME("HwcPresentOrValidateDisplay");
+     mWriter.selectDisplay(display);
++    writeBooxosEpdc();
+     mWriter.presentOrvalidateDisplay();
+ 
+     Error error = execute();
+diff --git a/services/surfaceflinger/DisplayHardware/HidlComposerHal.h b/services/surfaceflinger/DisplayHardware/HidlComposerHal.h
+index d78bfb7..67c1a34 100644
+--- a/services/surfaceflinger/DisplayHardware/HidlComposerHal.h
++++ b/services/surfaceflinger/DisplayHardware/HidlComposerHal.h
+@@ -357,10 +357,25 @@ private:
+     public:
+         explicit CommandWriter(uint32_t initialMaxSize) : CommandWriterBase(initialMaxSize) {}
+         ~CommandWriter() override {}
++
++        // BOOXOS: Onyx EPDC update list for the stock (Onyx-modified) QTI
++        // composer: opcode 0x802, payload = item count, then 5 words per item
++        // {left, top, right, bottom, mode}. The composer clamps the rect to the
++        // display and turns each item into an e-ink panel update at present.
++        void setDisplayEpdc(const std::vector<int32_t>& items) {
++            beginCommand(static_cast<uint32_t>(0x802u << 16),
++                         static_cast<uint16_t>(1 + items.size()));
++            write(static_cast<uint32_t>(items.size() / 5));
++            for (int32_t v : items) writeSigned(v);
++            endCommand();
++        }
+     };
+ 
+     void registerCallback(const sp<IComposerCallback>& callback);
+ 
++    // BOOXOS: queue one full-screen e-ink update before each present.
++    void writeBooxosEpdc();
++
+     // Many public functions above simply write a command into the command
+     // queue to batch the calls.  validateDisplay and presentDisplay will call
+     // this function to execute the command queue.
