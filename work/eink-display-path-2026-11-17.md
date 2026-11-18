@@ -48,3 +48,6 @@ Result on device: EPDC frame counter advances with every screen change (87 stuck
 ### Other hardware in the guest
 Touch `onyx_ts_istaric` (raw 0–1263 × 0–1679, rotation 0, matches panel), pen `onyx_emp_istaric_pen`, keys (`gpio-keys` volume up/down = page buttons, `qpnp_pon` power, `onyx-hall` cover → KEY_POWER), battery OK, Wi-Fi `wlan0` scans, audio HAL up, WebView 156.
 **Not working:** brightness slider → front light (`onyx_bl_br` 0–32 stays at 16; Android reports display brightness unsupported).
+
+### Stock default mode confirmed
+Stock `NormalSchema::output` (surfaceflinger @0x65b37c): with no explicit update entry it calls `EpdcManager::createSingleUpdate(list, 5)` → mode word **5**, the same as bring-up 15's default. Stock also adds a full-screen item (`addEpdc(0,0,w,h,…)`) in `SurfaceFlinger::composite` when visible regions or geometry change, and optionally ORs flag `0x400000`.
