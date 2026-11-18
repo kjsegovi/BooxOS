@@ -45,12 +45,16 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # E-ink panel updates (frameworks_native-0001-epdc-update-list.patch): one
 # full-screen EPDC item per present. Mode word low nibble = waveform selector
-# in the Onyx vendor composer (5 -> 0xff auto), bit 5 = full update. Live
-# override: setprop debug.booxos.epdc_mode <n> (negative disables).
+# in the Onyx vendor composer (5 -> 0xff auto), bit 5 = full update.
+# Ghost cleanup: after epdc_idle_ms of no screen changes, if partial updates
+# since the last full refresh changed epdc_clean_pct % of the screen, redraw
+# once with epdc_full_mode (34 = GC16-style full, one flash).
+# Live override of any of these: setprop debug.booxos.<name> <n>.
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.surface_flinger.booxos_epdc_mode=5 \
     ro.surface_flinger.booxos_epdc_full_mode=34 \
-    ro.surface_flinger.booxos_epdc_full_every=0
+    ro.surface_flinger.booxos_epdc_clean_pct=500 \
+    ro.surface_flinger.booxos_epdc_idle_ms=1000
 
 # Debug-only bring-up helpers (early USB adb + log snapshots). Never ship.
 ifeq ($(BOOXOS_BRINGUP),1)
