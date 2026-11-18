@@ -13,6 +13,23 @@ policy that keeps the screen smooth and readable.
 > not affiliated with or endorsed by Onyx, and it is not an official LineageOS
 > build. Use it at your own risk.
 
+## Is this a fork of LineageOS?
+
+No. BooxOS is a **LineageOS device port plus customizations**. This repository
+doesn't contain LineageOS's or AOSP's source code. The build downloads the
+unmodified LineageOS 21 source separately, as every LineageOS device port does,
+and adds this repo on top. LineageOS and AOSP do the heavy lifting; credit for
+the operating system itself goes to them.
+
+What this repo adds:
+- **A device tree** for the Go Color 7 Gen II (`device/onyx/GoColor7_2`), plus
+  overlays, a small Quick Settings app, SELinux policy and init scripts for this
+  hardware. All written for this project.
+- **Patch files** with our changes to AOSP's SurfaceFlinger and fs_mgr
+  (`tools/build-host/patches/`). They are diffs against unmodified upstream
+  files, which remain under their original Apache-2.0 license.
+- **Build scripts, tools and research notes.**
+
 ## What works
 
 | Area | State |
@@ -131,7 +148,13 @@ apps again.
 
 ## Credits and licenses
 
-- [LineageOS](https://lineageos.org) and AOSP (Apache 2.0 and others).
+- [LineageOS](https://lineageos.org) and the
+  [Android Open Source Project](https://source.android.com): the operating
+  system (Apache-2.0 and others). The patches here modify AOSP files and stay
+  under their licenses.
+- [go7-lineage](https://github.com/go7-lineage) (the LineageOS port for the
+  monochrome BOOX Go 7) was studied as prior art for e-ink support on Onyx
+  devices. None of its code is included or used here.
 - Bundled apps, unmodified and with their original signatures:
   - [Aurora Store](https://gitlab.com/AuroraOSS/AuroraStore) (GPL-3.0)
   - [F-Droid](https://f-droid.org) (GPL-3.0)
