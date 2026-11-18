@@ -23,3 +23,16 @@ android_app_import {
         enabled: false,
     },
 }
+
+// Readest (AGPL-3.0), the developer's GitHub build: unlike the Play Store build,
+// it does not require Google Play. Preinstalled as the default reader.
+android_app_import {
+    name: "BooxosReadest",
+    apk: "com.bilingify.readest.apk",
+    presigned: true,
+    preprocessed: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}

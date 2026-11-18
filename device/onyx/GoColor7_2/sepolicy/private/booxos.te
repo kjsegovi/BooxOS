@@ -10,3 +10,7 @@ set_prop(system_app, booxos_display_prop)
 
 # SurfaceFlinger redraws cleanly when B&W/Color is switched.
 get_prop(surfaceflinger, booxos_display_prop)
+
+# Debugging over adb: read the BooxOS properties.
+get_prop(shell, booxos_light_prop)
+get_prop(shell, booxos_display_prop)

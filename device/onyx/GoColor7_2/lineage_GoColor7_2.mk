@@ -65,13 +65,15 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Resource overlays: home screen with only the app store, privacy and e-ink
 # first-boot defaults (animations, sounds, location off), Lineage stats off.
-DEVICE_PACKAGE_OVERLAYS += device/onyx/GoColor7_2/overlay
+PRODUCT_PACKAGE_OVERLAYS += device/onyx/GoColor7_2/overlay  # before Lineage's, so ours win
 
 # App stores instead of Google Play: Aurora Store (Play apps, no Google account)
-# and F-Droid (open-source apps). See prebuilt/apps/Android.bp.
+# and F-Droid (open-source apps); Readest (GitHub build) as the default reader.
+# See prebuilt/apps/Android.bp.
 PRODUCT_PACKAGES += \
     BooxosAuroraStore \
-    BooxosFDroid
+    BooxosFDroid \
+    BooxosReadest
 
 # Light (brightness + warmth) and B&W/Color Quick Settings tiles, first-boot text
 # defaults (bold + high contrast). apps/BooxosDisplay.
