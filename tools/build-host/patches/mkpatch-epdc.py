@@ -1,0 +1,276 @@
+#!/usr/bin/env python3
+# Applies the BooxOS e-ink EPDC edits to a pristine frameworks/native tree.
+# Run from frameworks/native. Output: edited files (then `git diff` them).
+import sys
+
+def edit(path, pairs):
+    s = open(path).read()
+    for old, new in pairs:
+        if s.count(old) != 1:
+            sys.exit(f"{path}: anchor found {s.count(old)}x: {old[:70]!r}")
+        s = s.replace(old, new)
+    open(path, 'w').write(s)
+
+SF = 'services/surfaceflinger/'
+
+# --- CompositionEngine: publish the dirty area of the frame being presented.
+edit(SF + 'CompositionEngine/src/Output.cpp', [
+("""#include "TracedOrdinal.h"
+""", """#include "TracedOrdinal.h"
+
+#include <atomic>
+
+namespace android::booxos {
+// BOOXOS: e-ink refresh policy inputs, read by HidlComposer before each present:
+// bounding-box area (px) of the region recomposed for the frame being presented,
+// and the area of the whole output.
+std::atomic<int64_t> gFrameDirtyArea{0};
+std::atomic<int64_t> gFrameScreenArea{0};
+} // namespace android::booxos
+"""),
+("""    auto& outputState = editState();
+    outputState.dirtyRegion.clear();
+
+    auto frame = presentFrame();
+""", """    auto& outputState = editState();
+    {
+        // BOOXOS: see gFrameDirtyArea.
+        const Rect dirty = getDirtyRegion().getBounds();
+        const Rect screen = outputState.layerStackSpace.getContent();
+        android::booxos::gFrameDirtyArea.store(int64_t{dirty.getWidth()} * dirty.getHeight());
+        android::booxos::gFrameScreenArea.store(int64_t{screen.getWidth()} * screen.getHeight());
+    }
+    outputState.dirtyRegion.clear();
+
+    auto frame = presentFrame();
+"""),
+])
+
+# --- HidlComposerHal.h: command writer + hooks.
+edit(SF + 'DisplayHardware/HidlComposerHal.h', [
+("""        explicit CommandWriter(uint32_t initialMaxSize) : CommandWriterBase(initialMaxSize) {}
+        ~CommandWriter() override {}
+""", """        explicit CommandWriter(uint32_t initialMaxSize) : CommandWriterBase(initialMaxSize) {}
+        ~CommandWriter() override {}
+
+        // BOOXOS: Onyx EPDC update list for the stock (Onyx-modified) QTI
+        // composer: opcode 0x802, payload = item count, then 5 words per item
+        // {left, top, right, bottom, mode}. The composer clamps the rect to the
+        // display and turns each item into an e-ink panel update at present.
+        void setDisplayEpdc(const std::vector<int32_t>& items) {
+            beginCommand(static_cast<uint32_t>(0x802u << 16),
+                         static_cast<uint16_t>(1 + items.size()));
+            write(static_cast<uint32_t>(items.size() / 5));
+            for (int32_t v : items) writeSigned(v);
+            endCommand();
+        }
+"""),
+("""    void registerCallback(const sp<IComposerCallback>& callback);
+""", """    void registerCallback(const sp<IComposerCallback>& callback);
+
+    // BOOXOS: queue one full-screen e-ink update before each present. Returns
+    // whether it is a full (ghost-clearing) update, or nullopt if none queued;
+    // pass that to commitBooxosEpdc() once the present has happened.
+    std::optional<bool> writeBooxosEpdc();
+    void commitBooxosEpdc(std::optional<bool> full);
+"""),
+])
+
+# --- HidlComposerHal.cpp: refresh policy.
+POLICY = r'''// BOOXOS: e-ink refresh policy for the Onyx EPDC (GoColor7_2).
+//
+// The Onyx vendor composer only refreshes the panel for regions SurfaceFlinger
+// lists with each present (stock: EpdcManager). We send one full-screen item per
+// frame. The panel only drives pixels that changed, so a full-screen partial
+// update costs nothing extra.
+//
+// Partial updates leave ghosting behind. Once the screen has been quiet for
+// epdc_idle_ms and the area changed by partial updates since the last full
+// refresh reaches epdc_clean_pct percent of the screen, we ask SurfaceFlinger
+// for one more frame and send it with epdc_full_mode, which redraws the whole
+// panel cleanly (one flash).
+//
+// Settings: debug.booxos.<name> (live tuning) overrides
+// ro.surface_flinger.booxos_<name>:
+//   epdc_mode       mode word for normal updates; negative disables all of this
+//   epdc_full_mode  mode word for ghost-clearing updates; negative = never
+//   epdc_clean_pct  changed area (percent of screen) before a clean; 0 = never
+//   epdc_idle_ms    quiet time before the clean
+namespace {
+
+int32_t booxosSetting(const char* name, int32_t fallback) {
+    const std::string n(name);
+    return base::GetIntProperty("debug.booxos." + n,
+                                base::GetIntProperty("ro.surface_flinger.booxos_" + n, fallback));
+}
+
+struct BooxosEpdcPolicy {
+    std::mutex mutex;
+    std::condition_variable cv;
+    std::chrono::steady_clock::time_point lastPresent;
+    int64_t ghostArea = 0;  // px changed by partial updates since the last full one
+    bool fullPending = false;
+    bool workerStarted = false;
+};
+
+BooxosEpdcPolicy& booxosPolicy() {
+    static auto* policy = new BooxosEpdcPolicy;
+    return *policy;
+}
+
+// Asks SurfaceFlinger (this process) to composite one more frame, like
+// `service call SurfaceFlinger 1004` (which also sends the interface token).
+// Called off the binder and main threads, so the calling uid is our own (system).
+void booxosRequestFrame() {
+    sp<IBinder> sf = defaultServiceManager()->checkService(String16("SurfaceFlinger"));
+    if (sf == nullptr) return;
+    Parcel data, reply;
+    data.writeInterfaceToken(sf->getInterfaceDescriptor());  // CHECK_INTERFACE
+    const status_t err = sf->transact(1004, data, &reply);
+    ALOGW_IF(err != NO_ERROR, "BOOXOS: e-ink clean frame request failed: %d", err);
+}
+
+void booxosEpdcWorker() {
+    pthread_setname_np(pthread_self(), "booxos_epdc");
+    auto& p = booxosPolicy();
+    std::unique_lock lock(p.mutex);
+    for (;;) {
+        p.cv.wait(lock, [&] { return p.ghostArea > 0 && !p.fullPending; });
+        const auto idle = std::chrono::milliseconds(std::max(booxosSetting("epdc_idle_ms", 1000), 50));
+        const auto quietAt = p.lastPresent + idle;
+        if (std::chrono::steady_clock::now() < quietAt) {
+            p.cv.wait_until(lock, quietAt);
+            continue;  // re-check: more frames may have arrived
+        }
+        const int64_t pct = booxosSetting("epdc_clean_pct", 0);
+        const int64_t screen = android::booxos::gFrameScreenArea.load();
+        if (pct > 0 && screen > 0 && booxosSetting("epdc_full_mode", -1) >= 0 &&
+            p.ghostArea * 100 >= pct * screen) {
+            p.fullPending = true;
+            lock.unlock();
+            booxosRequestFrame();
+            lock.lock();
+            continue;
+        }
+        // Not enough change yet: sleep until the next present.
+        const auto seen = p.lastPresent;
+        p.cv.wait(lock, [&] { return p.lastPresent != seen; });
+    }
+}
+
+} // namespace
+
+std::optional<bool> HidlComposer::writeBooxosEpdc() {
+    const int32_t mode = booxosSetting("epdc_mode", -1);
+    if (mode < 0) return std::nullopt;
+    const int32_t fullMode = booxosSetting("epdc_full_mode", -1);
+    bool full;
+    {
+        auto& p = booxosPolicy();
+        std::lock_guard lock(p.mutex);
+        full = p.fullPending && fullMode >= 0;
+        if (!p.workerStarted) {
+            p.workerStarted = true;
+            std::thread(booxosEpdcWorker).detach();
+        }
+    }
+    mWriter.setDisplayEpdc({0, 0, 32767, 32767, full ? fullMode : mode});
+    return full;
+}
+
+void HidlComposer::commitBooxosEpdc(std::optional<bool> full) {
+    if (!full) return;
+    auto& p = booxosPolicy();
+    {
+        std::lock_guard lock(p.mutex);
+        if (*full) {
+            p.fullPending = false;
+            p.ghostArea = 0;
+        } else {
+            p.ghostArea += android::booxos::gFrameDirtyArea.load();
+        }
+        p.lastPresent = std::chrono::steady_clock::now();
+    }
+    p.cv.notify_all();
+}
+
+Error HidlComposer::presentDisplay(Display display, int* outPresentFence) {
+    ATRACE_NAME("HwcPresentDisplay");
+    mWriter.selectDisplay(display);
+    const auto booxosEpdc = writeBooxosEpdc();
+    mWriter.presentDisplay();
+
+    Error error = execute();
+    if (error != Error::NONE) {
+        return error;
+    }
+    commitBooxosEpdc(booxosEpdc);
+'''
+
+edit(SF + 'DisplayHardware/HidlComposerHal.cpp', [
+("""#include <android/binder_manager.h>
+""", """#include <android-base/properties.h>
+#include <android/binder_manager.h>
+#include <binder/IServiceManager.h>
+#include <binder/Parcel.h>
+"""),
+("""#include <algorithm>
+#include <cinttypes>
+""", """#include <algorithm>
+#include <atomic>
+#include <chrono>
+#include <cinttypes>
+#include <condition_variable>
+#include <mutex>
+#include <optional>
+#include <thread>
+
+#include <pthread.h>
+
+namespace android::booxos {
+// BOOXOS: set by CompositionEngine Output::presentFrameAndReleaseLayers().
+extern std::atomic<int64_t> gFrameDirtyArea;
+extern std::atomic<int64_t> gFrameScreenArea;
+} // namespace android::booxos
+"""),
+("""Error HidlComposer::presentDisplay(Display display, int* outPresentFence) {
+    ATRACE_NAME("HwcPresentDisplay");
+    mWriter.selectDisplay(display);
+    mWriter.presentDisplay();
+
+    Error error = execute();
+    if (error != Error::NONE) {
+        return error;
+    }
+""", POLICY),
+("""    mWriter.selectDisplay(display);
+    mWriter.presentOrvalidateDisplay();
+
+    Error error = execute();
+    if (error != Error::NONE) {
+        return error;
+    }
+
+    mReader.takePresentOrValidateStage(display, state);
+
+    if (*state == 1) { // Present succeeded
+        mReader.takePresentFence(display, outPresentFence);
+    }
+""", """    mWriter.selectDisplay(display);
+    const auto booxosEpdc = writeBooxosEpdc();
+    mWriter.presentOrvalidateDisplay();
+
+    Error error = execute();
+    if (error != Error::NONE) {
+        return error;
+    }
+
+    mReader.takePresentOrValidateStage(display, state);
+
+    if (*state == 1) { // Present succeeded
+        mReader.takePresentFence(display, outPresentFence);
+        commitBooxosEpdc(booxosEpdc);
+    }
+"""),
+])
+print("ok")

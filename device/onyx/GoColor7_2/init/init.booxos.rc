@@ -1,0 +1,9 @@
+# BOOXOS: device init for all builds (installed to /product/etc/init).
+
+# Touch controller (istaric IS5662 on i2c 2-0055). After boot the Onyx driver
+# leaves the touch IRQ disabled ("onyx_tp_irq_set ... Off" at the end of probe;
+# IRQ count stays at 1), so the kernel never reports touches. Stock's trigger
+# for re-enabling it is not known yet. A controller reset through the driver's
+# own sysfs node turns the IRQ back on (tested live 2026-11-18).
+on property:sys.boot_completed=1
+    write /sys/devices/platform/soc/988000.i2c/i2c-2/2-0055/reset 1

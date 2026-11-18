@@ -34,7 +34,7 @@ index 44039b9..926c2a8 100644
  
      auto frame = presentFrame();
 diff --git a/services/surfaceflinger/DisplayHardware/HidlComposerHal.cpp b/services/surfaceflinger/DisplayHardware/HidlComposerHal.cpp
-index 12ab2c2..8009726 100644
+index 12ab2c2..19ff07a 100644
 --- a/services/surfaceflinger/DisplayHardware/HidlComposerHal.cpp
 +++ b/services/surfaceflinger/DisplayHardware/HidlComposerHal.cpp
 @@ -26,7 +26,10 @@
@@ -70,7 +70,7 @@ index 12ab2c2..8009726 100644
  
  using aidl::android::hardware::graphics::common::DisplayHotplugEvent;
  using aidl::android::hardware::graphics::common::HdrConversionCapability;
-@@ -587,15 +604,133 @@ Error HidlComposer::getReleaseFences(Display display, std::vector<Layer>* outLay
+@@ -587,15 +604,134 @@ Error HidlComposer::getReleaseFences(Display display, std::vector<Layer>* outLay
      return Error::NONE;
  }
  
@@ -116,12 +116,13 @@ index 12ab2c2..8009726 100644
 +}
 +
 +// Asks SurfaceFlinger (this process) to composite one more frame, like
-+// `service call SurfaceFlinger 1004`. Called off the binder and main threads, so
-+// the calling uid is our own (system).
++// `service call SurfaceFlinger 1004` (which also sends the interface token).
++// Called off the binder and main threads, so the calling uid is our own (system).
 +void booxosRequestFrame() {
 +    sp<IBinder> sf = defaultServiceManager()->checkService(String16("SurfaceFlinger"));
 +    if (sf == nullptr) return;
 +    Parcel data, reply;
++    data.writeInterfaceToken(sf->getInterfaceDescriptor());  // CHECK_INTERFACE
 +    const status_t err = sf->transact(1004, data, &reply);
 +    ALOGW_IF(err != NO_ERROR, "BOOXOS: e-ink clean frame request failed: %d", err);
 +}
@@ -204,7 +205,7 @@ index 12ab2c2..8009726 100644
  
      mReader.takePresentFence(display, outPresentFence);
  
-@@ -696,6 +831,7 @@ Error HidlComposer::presentOrValidateDisplay(Display display, nsecs_t /*expected
+@@ -696,6 +832,7 @@ Error HidlComposer::presentOrValidateDisplay(Display display, nsecs_t /*expected
                                               uint32_t* state) {
      ATRACE_NAME("HwcPresentOrValidateDisplay");
      mWriter.selectDisplay(display);
@@ -212,7 +213,7 @@ index 12ab2c2..8009726 100644
      mWriter.presentOrvalidateDisplay();
  
      Error error = execute();
-@@ -707,6 +843,7 @@ Error HidlComposer::presentOrValidateDisplay(Display display, nsecs_t /*expected
+@@ -707,6 +844,7 @@ Error HidlComposer::presentOrValidateDisplay(Display display, nsecs_t /*expected
  
      if (*state == 1) { // Present succeeded
          mReader.takePresentFence(display, outPresentFence);

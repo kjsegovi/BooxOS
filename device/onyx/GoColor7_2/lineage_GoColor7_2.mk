@@ -56,6 +56,15 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.surface_flinger.booxos_epdc_clean_pct=500 \
     ro.surface_flinger.booxos_epdc_idle_ms=1000
 
+# Device init (touch controller fix): init/init.booxos.rc.
+PRODUCT_COPY_FILES += \
+    device/onyx/GoColor7_2/init/init.booxos.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.booxos.rc
+
+# No swipe lock screen by default: on e-ink the screen looks the same asleep or
+# awake, and the swipe keyguard puts it back to sleep after 10 s.
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.lockscreen.disable.default=true
+
 # Debug-only bring-up helpers (early USB adb + log snapshots). Never ship.
 ifeq ($(BOOXOS_BRINGUP),1)
 $(call inherit-product, device/onyx/GoColor7_2/bringup/bringup.mk)
