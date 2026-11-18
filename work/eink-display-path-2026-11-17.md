@@ -27,3 +27,24 @@ Make forced client composition the boot default instead of a runtime toggle:
 - Refresh mode, waveform selection, and A2/fast modes are the Onyx framework's job (EpdController-style); the next phase is REA on stock system pieces.
 
 Captures: `.local/captures/guest-bringup13-20261117/epd-guest-*.txt`.
+
+## Update (night of 2026-11-17): forced GPU composition alone is not enough
+
+Bring-up 14 (forced client composition at boot) had no plane errors, but the panel only refreshed on explicit requests. Reading `sepdc/debug/panel_init` / `panel_clean` **triggers** a panel init / full clean (side-effect reads). The bring-up 13 refresh was a one-off.
+
+### How stock drives the panel (REA/Ghidra on stock binaries)
+- Stock **system** is Onyx-patched: `libgui` (`Surface::transferEpdc`, `EpdcWrapper`, `hwc_epdc_llist`) and `surfaceflinger` (`EpdcManager`, `EpdcSchemaManager`, "add full screen epdc"). Apps pass update regions and modes through `View.invalidateWithUpdateMode` / `EpdController`.
+- Stock **vendor** composer (`vendor.qti.hardware.display.composer-service`, unchanged in the guest):
+  - `QtiComposerClient::CommandReader::parse` @0x13cd50 handles opcode **0x802** (`0x8020000|len`): word0 = item count, then 5-word items `{left, top, right, bottom, mode}` (count must equal (len-1)/5).
+  - `CommandReader::presentDisplay` @0x145ebc turns items into `onyx_epdc_update_to_display` entries (max 8 per present): rect clamped to the display; `mode & 0xf` selects the waveform (1→1, 2→2, 3→3, 4→4, **5→0xff auto**, 6→5 (+flag 0x8000 if bit12), 7→0xf, 8→8, 9→0x10, 0xb, 0xc, 0xd); **bit 5 → update_mode** (full); bits 6/8/19/20-21/22/28 → driver flags.
+  - `libsdedrm` sets DRM plane props `EPDC_UPDATE_CNT` / `EPDC_UPDATE_PARMS_ADDR`; the kernel's `__sde_plane_atomic_update_epdc` acts only on those.
+- Lineage sent no 0x802, so the kernel never got update parameters.
+
+### Fix (bring-up 15, `tools/build-host/patches/frameworks_native-0001-epdc-update-list.patch`)
+`HidlComposer` writes one full-screen 0x802 item before every `presentDisplay`/`presentOrValidateDisplay`. Mode word: `debug.booxos.epdc_mode` (live), else `ro.surface_flinger.booxos_epdc_mode` (=5); optional periodic full refresh `ro.surface_flinger.booxos_epdc_full_every` (=0, off) with `..._full_mode` (=34 = 2|0x20).
+
+Result on device: EPDC frame counter advances with every screen change (87 stuck → 2553 → 2695 → 2907 … ; idle = no change); `epdc_update`/`epdc_power` wakeup sources active. Panel not visually confirmed yet (overnight, user asleep).
+
+### Other hardware in the guest
+Touch `onyx_ts_istaric` (raw 0–1263 × 0–1679, rotation 0, matches panel), pen `onyx_emp_istaric_pen`, keys (`gpio-keys` volume up/down = page buttons, `qpnp_pon` power, `onyx-hall` cover → KEY_POWER), battery OK, Wi-Fi `wlan0` scans, audio HAL up, WebView 156.
+**Not working:** brightness slider → front light (`onyx_bl_br` 0–32 stays at 16; Android reports display brightness unsupported).
