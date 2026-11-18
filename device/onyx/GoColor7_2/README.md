@@ -1,8 +1,10 @@
 # Go Color 7 Gen II bring-up target
 
-This is an incomplete, experimental LineageOS 21 / Android 14 target for the
-exact `GoColor7_2`. It has not passed a complete build or booted on hardware.
-It does not constitute an installable release.
+Experimental LineageOS 21 / Android 14 target for the exact `GoColor7_2`. As
+of 2026-11-18 it boots on hardware as a DSU guest (system, system_ext and product
+images over the stock vendor/odm/boot), with working e-ink updates, touch, front
+light and Wi-Fi. See the top-level README.md. It is not an installable release;
+bring-up builds are debug builds.
 
 The initial design reuses the matched original boot image, color DTB/DTBO and
 ODM; provides the VNDK30 framework snapshot; retains dynamic/Virtual A/B layout;
