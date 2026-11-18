@@ -39,6 +39,16 @@ else
 fi
 git -c safe.directory='*' -C packages/modules/Connectivity diff --stat > /logs/connectivity-diff.txt
 
+# All builds: stock vendor /vendor/etc/fstab.emmc mounts /data with "dirsync".
+# Onyx's fs_mgr maps it to MS_DIRSYNC; upstream's kMountFlagsList lacks it, so
+# it falls through to f2fs data and mount(2) fails with EINVAL ("Unrecognized
+# mount option dirsync"; DSU probe v5, 2026-11-17). Restore, then patch.
+FSTAB_CPP=fs_mgr/libfstab/fstab.cpp
+git -c safe.directory='*' -C system/core checkout -- "$FSTAB_CPP"
+sed -i 's/^\(\s*\){"sync", MS_SYNCHRONOUS},$/&\n\1{"dirsync", MS_DIRSYNC},  \/\/ BOOXOS: stock vendor fstab/' system/core/$FSTAB_CPP
+grep -q '{"dirsync", MS_DIRSYNC},  // BOOXOS' system/core/$FSTAB_CPP
+git -c safe.directory='*' -C system/core diff > /logs/system-core.diff
+
 P=out/target/product/GoColor7_2
 python3 .repo/repo/repo manifest -r -o /logs/resolved-manifest.xml
 sha256sum device/onyx/GoColor7_2/prebuilts/*.img > /logs/prebuilt-images.sha256
