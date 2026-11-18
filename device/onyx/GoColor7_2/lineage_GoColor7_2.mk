@@ -37,6 +37,12 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.sf.lcd_density=300 \
     persist.sys.sf.color_mode=7
 
+# E-ink: the kernel's SDE EPDC hook only accepts one full-screen plane, so
+# SurfaceFlinger must GPU-compose everything (stock: "h/w composer disabled").
+# Read by the BOOXOS patch in SurfaceFlinger.cpp (tools/build-host/kpc_build.sh).
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.surface_flinger.booxos_force_client_composition=true
+
 # Debug-only bring-up helpers (early USB adb + log snapshots). Never ship.
 ifeq ($(BOOXOS_BRINGUP),1)
 $(call inherit-product, device/onyx/GoColor7_2/bringup/bringup.mk)

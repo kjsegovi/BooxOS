@@ -49,6 +49,15 @@ sed -i 's/^\(\s*\){"sync", MS_SYNCHRONOUS},$/&\n\1{"dirsync", MS_DIRSYNC},  \/\/
 grep -q '{"dirsync", MS_DIRSYNC},  // BOOXOS' system/core/$FSTAB_CPP
 git -c safe.directory='*' -C system/core diff > /logs/system-core.diff
 
+# All builds: e-ink needs SurfaceFlinger to GPU-compose into one full-screen
+# layer (the kernel EPDC hook rejects partial overlay planes). Make the
+# "Disable HW overlays" state the boot default when the device asks for it.
+SF_CPP=services/surfaceflinger/SurfaceFlinger.cpp
+git -c safe.directory='*' -C frameworks/native checkout -- "$SF_CPP"
+sed -i 's/^\(\s*\)mDebugFlashDelay = base::GetUintProperty("debug.sf.showupdates"s, 0u);$/&\n\1\/\/ BOOXOS: e-ink, force client composition\n\1mDebugDisableHWC = base::GetBoolProperty("ro.surface_flinger.booxos_force_client_composition"s, false);/' frameworks/native/$SF_CPP
+grep -q 'ro.surface_flinger.booxos_force_client_composition' frameworks/native/$SF_CPP
+git -c safe.directory='*' -C frameworks/native diff > /logs/frameworks-native.diff
+
 P=out/target/product/GoColor7_2
 python3 .repo/repo/repo manifest -r -o /logs/resolved-manifest.xml
 sha256sum device/onyx/GoColor7_2/prebuilts/*.img > /logs/prebuilt-images.sha256
