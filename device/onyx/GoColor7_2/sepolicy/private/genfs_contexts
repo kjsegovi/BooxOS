@@ -1,0 +1,2 @@
+genfscon sysfs /devices/platform/soc/soc:onyx_bl/backlight/onyx_bl_ct/brightness u:object_r:booxos_sysfs_light:s0
+genfscon sysfs /devices/platform/soc/988000.i2c/i2c-2/2-0055/reset u:object_r:booxos_sysfs_touch:s0

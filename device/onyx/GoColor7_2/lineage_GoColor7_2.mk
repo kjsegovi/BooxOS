@@ -63,6 +63,21 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.surface_flinger.booxos_epdc_switch_pct=50 \
     ro.surface_flinger.booxos_epdc_clean_pct=0
 
+# Resource overlays: home screen with only the app store, privacy and e-ink
+# first-boot defaults (animations, sounds, location off), Lineage stats off.
+DEVICE_PACKAGE_OVERLAYS += device/onyx/GoColor7_2/overlay
+
+# App stores instead of Google Play: Aurora Store (Play apps, no Google account)
+# and F-Droid (open-source apps). See prebuilt/apps/Android.bp.
+PRODUCT_PACKAGES += \
+    BooxosAuroraStore \
+    BooxosFDroid
+
+# Light (brightness + warmth) and B&W/Color Quick Settings tiles, first-boot text
+# defaults (bold + high contrast). apps/BooxosDisplay.
+PRODUCT_PACKAGES += \
+    BooxosDisplay
+
 # Device init (touch controller fix): init/init.booxos.rc.
 PRODUCT_COPY_FILES += \
     device/onyx/GoColor7_2/init/init.booxos.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.booxos.rc

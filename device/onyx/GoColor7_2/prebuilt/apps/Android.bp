@@ -1,0 +1,27 @@
+// BOOXOS: app stores bundled instead of Google Play (no Google apps in the build).
+// APKs are fetched and hash-checked by tools/fetch_store_apks.sh (not in git).
+// Both are GPL-3.0 and published by F-Droid; signatures are kept as-is.
+
+android_app_import {
+    name: "BooxosAuroraStore",
+    apk: "com.aurora.store.apk",
+    presigned: true,
+    preprocessed: true,
+    skip_preprocessed_apk_checks: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
+
+android_app_import {
+    name: "BooxosFDroid",
+    apk: "org.fdroid.fdroid.apk",
+    presigned: true,
+    preprocessed: true,
+    skip_preprocessed_apk_checks: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}

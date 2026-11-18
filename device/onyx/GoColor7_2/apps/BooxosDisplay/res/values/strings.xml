@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BooxOS Display</string>
+    <string name="light">Light</string>
+    <string name="mono">B&amp;W</string>
+    <string name="mono_on">Black &amp; white</string>
+    <string name="mono_off">Color</string>
+    <string name="brightness">Brightness</string>
+    <string name="warmth">Warmth</string>
+    <string name="done">Done</string>
+</resources>

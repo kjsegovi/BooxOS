@@ -1,0 +1,13 @@
+// BOOXOS: Quick Settings tiles for the front light (warmth) and B&W/Color, plus
+// first-boot text defaults. Runs as the system uid (platform certificate).
+android_app {
+    name: "BooxosDisplay",
+    srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
+    platform_apis: true,
+    certificate: "platform",
+    system_ext_specific: true,
+    optimize: {
+        enabled: false,
+    },
+}

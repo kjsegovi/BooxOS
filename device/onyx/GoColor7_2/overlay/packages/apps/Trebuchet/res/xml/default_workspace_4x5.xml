@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BOOXOS: the home screen holds only the app store (Aurora Store, which installs
+     Play Store apps without a Google account). Every other app stays installed and
+     is in the app drawer. Same layout for every grid size. -->
+<favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+    <favorite
+        launcher:container="-101"
+        launcher:screen="0"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:packageName="com.aurora.store"
+        launcher:className="com.aurora.store.ComposeActivity" />
+</favorites>

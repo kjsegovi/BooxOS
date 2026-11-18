@@ -1,0 +1,2 @@
+persist.booxos.light.warmth u:object_r:booxos_light_prop:s0 exact int
+persist.booxos.display.mono u:object_r:booxos_display_prop:s0 exact bool

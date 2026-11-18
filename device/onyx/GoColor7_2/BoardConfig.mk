@@ -71,3 +71,6 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 # Truthful stock boot/vendor patch metadata. The framework has its own SPL.
 BOOT_SECURITY_PATCH := 2025-10-01
 VENDOR_SECURITY_PATCH := 2025-10-01
+
+# BOOXOS: device sepolicy (sysfs labels, properties) on top of system_ext.
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += device/onyx/GoColor7_2/sepolicy/private

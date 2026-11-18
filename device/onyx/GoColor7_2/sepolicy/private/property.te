@@ -1,0 +1,3 @@
+# BOOXOS: set by the BooxOS Display app (system uid).
+system_internal_prop(booxos_light_prop)    # persist.booxos.light.warmth
+system_internal_prop(booxos_display_prop)  # persist.booxos.display.mono

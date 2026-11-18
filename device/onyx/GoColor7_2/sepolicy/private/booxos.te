@@ -1,0 +1,12 @@
+# BOOXOS device policy (system_ext private).
+
+# init: warmth trigger (init.booxos.rc) and the boot-time touch controller reset.
+allow init booxos_sysfs_light:file { w_file_perms setattr };
+allow init booxos_sysfs_touch:file w_file_perms;
+
+# BooxOS Display app (system_app): warmth slider and B&W/Color tile.
+set_prop(system_app, booxos_light_prop)
+set_prop(system_app, booxos_display_prop)
+
+# SurfaceFlinger redraws cleanly when B&W/Color is switched.
+get_prop(surfaceflinger, booxos_display_prop)

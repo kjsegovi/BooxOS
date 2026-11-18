@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BOOXOS: vendor/lineage's common overlay turns stats collection on; keep it off. -->
+<resources>
+    <bool name="def_stats_collection">false</bool>
+</resources>

@@ -1,0 +1,3 @@
+# BOOXOS: Onyx sysfs nodes that init writes (generic sysfs is not writable by init).
+type booxos_sysfs_light, fs_type, sysfs_type;  # front-light warmth (onyx_bl_ct)
+type booxos_sysfs_touch, fs_type, sysfs_type;  # istaric touch controller reset
